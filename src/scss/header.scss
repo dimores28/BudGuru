@@ -1,0 +1,46 @@
+.header {
+
+    // .header__container
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    // .header__logo
+
+    &__logo {
+
+        img {
+            width: 100%;
+            height: auto;
+            @include adaptiveValue("max-width", 120, 76);
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+    }
+
+    // .header__phone
+
+    &__phone {
+        color: #fff;
+        @include adaptiveValue("font-size", 20, 12);
+        font-style: normal;
+        font-family: "Inter",sans-serif;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+
+        @media (max-width:$mobile){
+            font-family: "Jost",sans-serif;
+            font-weight: 400;
+        }
+    }
+}
+

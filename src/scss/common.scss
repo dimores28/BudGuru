@@ -1,0 +1,51 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.btn {
+    color: #1e1e1e;
+    font-size: 22px;
+    @include adaptiveValue("font-size", 22, 14);
+    font-style: normal;
+    text-align: right;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    padding: 26px 64px;
+    background: #F9C98C;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+
+    @media (max-width:$tablet){
+        padding: 20px 32px;
+    }
+    
+
+    @media (max-width:$mobile){
+        padding: 15px 25px;  
+    }
+
+    &:hover {
+        background: #FFF2E1;
+    }
+}
+
+.h2 {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 76, 20);
+    font-style: normal;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -2px;
+
+    @media (max-width:$tablet){
+        letter-spacing: -1px;
+    }
+
+    @media (max-width:$tablet){
+        letter-spacing: 0;
+    }
+
+    span {
+        font-weight: 500;
+    }
+}
