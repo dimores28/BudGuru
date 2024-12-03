@@ -1,7 +1,6 @@
 // Заголовки, загальні БЕМ блоки та інше...
 .btn {
     color: #1e1e1e;
-    font-size: 22px;
     @include adaptiveValue("font-size", 22, 14);
     font-style: normal;
     text-align: right;

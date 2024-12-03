@@ -16,6 +16,7 @@
         justify-content: space-between;
         gap: 20px;
         margin-bottom: 40px;
+        position: relative;
 
        @media (max-width:$tablet){
             margin-bottom: 30px;
@@ -87,6 +88,7 @@
 
    &__slider {
       position: relative;
+      overflow-x: hidden;
    }
 
    &__prev,
@@ -99,15 +101,40 @@
       border-radius: 50% !important;
       background: #f9c98c;
       color: #000 !important;
+      top: 32% !important;
 
       &::after {
          font-size: 28px !important;
          font-weight: 600;
+
+         @media (max-width:$mobile){
+            font-size: 18px !important;
+         }
       }
       
 
       &:hover {
          background: #fff2e1;
+      }
+
+      @media (max-width:$mobile){
+         width: 45px !important;
+         height: 45px !important;
+      }
+
+      &.swiper-button-disabled {
+         border: 1px solid #0A1537;
+         background: transparent;
+         opacity: 0.9 !important;
+      }
+   }
+
+   &__prev {
+      left: unset !important;
+      right: 120px !important;
+
+      @media (max-width:$mobile){
+         right: 76px !important;
       }
    }
 }
