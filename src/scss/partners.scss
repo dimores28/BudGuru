@@ -1,0 +1,40 @@
+.partners {
+    padding: 75px 0;
+
+    @media (max-width:$tablet){
+        padding: 50px 0;
+    }
+
+    // .partners__container
+    &__container {
+    }
+
+    // .partners__heading
+    &__heading {
+        @include adaptiveValue("margin-bottom", 78, 20);
+    }
+
+    // .partners__row
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+
+    // .partners__col
+    &__col {
+        width: calc(100% / 4 - 45px);
+
+        @media (max-width:$mobile){
+            width: calc(100% / 2 - 30px);  
+        }
+    }
+
+    // .partners__logo
+    &__logo {
+        width: 100%;
+        height: auto;
+    }
+}
+
