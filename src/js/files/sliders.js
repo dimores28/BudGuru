@@ -98,6 +98,37 @@ function initSliders() {
          on: {}
       });
    }
+
+   if (document.querySelector('.certificates__slider')) {
+      new Swiper('.certificates__slider', {
+         modules: [Navigation, Grid, Pagination],
+         slidesPerView: 1,
+         spaceBetween: 20,
+         navigation: {
+            prevEl: '.certificates__prev',
+            nextEl: '.certificates__next'
+         },
+         // pagination: {
+         //    el: '.reviews__pagination',
+         //    clickable: true, 
+         //  },
+
+         // Брейкпоінти
+         breakpoints: {
+            768: {
+            	slidesPerView: 2,
+            	spaceBetween: 20,
+            },
+            920: {
+            	slidesPerView: 3,
+            	spaceBetween: 30,
+            },
+         },
+
+         // Події
+         on: {}
+      });
+   }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
