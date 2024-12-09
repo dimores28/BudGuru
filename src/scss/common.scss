@@ -35,6 +35,7 @@
     font-weight: 300;
     line-height: normal;
     letter-spacing: -2px;
+    line-height: 1;
 
     @media (max-width:$tablet){
         letter-spacing: -1px;
@@ -57,4 +58,42 @@
     font-weight: 400;
     line-height: 0.95;
     @include adaptiveValue("letter-spacing", -5, -2);
+}
+
+.input {
+    color: #1E1E1E;
+    @include adaptiveValue("font-size", 16, 14);
+    font-style: normal;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400;
+    background: #FFFFFF;
+    border-radius: 96px;
+    padding: 20px 28px;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+        color: #605e5e;
+    }
+
+    &:focus,
+    &:active,
+    &:focus-visible {
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, #F9C98C 0px 0px 0px 3px;
+    }
+
+    @media (max-width:$mobile){
+         padding: 8px 20px; 
+    }
+}
+
+.textarea {
+    height: 120px;
+    border-radius: 30px;
+    resize: none;
+
+    @media (max-width:$mobile){
+        height: 74px; 
+        border-radius: 20px;
+    }
 }

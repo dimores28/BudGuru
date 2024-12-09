@@ -1,0 +1,112 @@
+<section class="calculator">
+    <div class="calculator__container">
+        <div class="calculator__ilustration">
+            <img src="@img/calculator/calculator.png" width="740" height="770" alt="Калькулятор">
+        </div>
+
+        <div class="calculator__steps">
+            <form>
+                <h2 class="calculator__heading h2">
+                    Калькулятор вартості <span>ремонту</span>
+                </h2>
+
+                <div class="calculator__step calculator__step-1 active">
+                    <div class="calculator__step-counter">
+                        <span>Оберіть тип приміщення</span>
+                        <div class="counter">
+                            Крок <span>1</span> \ 4
+                        </div>
+                    </div>
+                    <div class="calculator__radio-wrap">
+                        <div class="custon-radio-btn">
+                            <input type="radio" name="rooms" id="living-quarters">
+                            <label for="living-quarters">Житлове</label>
+                        </div>
+
+                        <div class="custon-radio-btn">
+                            <input type="radio" name="rooms" id="commercial-premises">
+                            <label for="commercial-premises">Житлове</label>
+                        </div>
+                    </div>
+                    <button class="calculator__nextstep-btn btn">
+                        Далі
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white"/>
+                            <path d="M13.9261 21.9501L14.8473 22.8705L19.8651 17.8544C19.946 17.774 20.0102 17.6785 20.054 17.5732C20.0978 17.4679 20.1204 17.355 20.1204 17.241C20.1204 17.127 20.0978 17.0141 20.054 16.9088C20.0102 16.8035 19.946 16.7079 19.8651 16.6275L14.8473 11.6089L13.927 12.5293L18.6365 17.2397L13.9261 21.9501Z" fill="#1E1E1E"/>
+                        </svg> 
+                    </button>
+                </div>
+
+                <div class="calculator__step calculator__step-2">
+                    <div class="calculator__step-counter">
+                        <span>Вкажіть площу</span>
+                        <div class="counter">
+                            Крок <span>2</span> \ 4
+                        </div>
+                    </div>
+
+                    <div class="calculator__range-wrap">
+                        <div id="range" data-from="1"></div>
+                        <input type="text" name="area" id="range-nput">
+                    </div>
+
+                    <button class="calculator__nextstep-btn btn">
+                        Далі
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white"/>
+                            <path d="M13.9261 21.9501L14.8473 22.8705L19.8651 17.8544C19.946 17.774 20.0102 17.6785 20.054 17.5732C20.0978 17.4679 20.1204 17.355 20.1204 17.241C20.1204 17.127 20.0978 17.0141 20.054 16.9088C20.0102 16.8035 19.946 16.7079 19.8651 16.6275L14.8473 11.6089L13.927 12.5293L18.6365 17.2397L13.9261 21.9501Z" fill="#1E1E1E"/>
+                        </svg> 
+                    </button>
+                </div>
+
+                <div class="calculator__step calculator__step-3">
+                    <div class="calculator__step-counter">
+                        <span>Чи потрібен дизайн на ваш проект?</span>
+                        <div class="counter">
+                            Крок <span>3</span> \ 4
+                        </div>
+                    </div>
+
+                    <div class="calculator__radio-wrap">
+                        <div class="custon-radio-btn">
+                            <input type="radio" name="desing" id="need-desing">
+                            <label for="need-desing">Потрібен</label>
+                        </div>
+    
+                        <div class="custon-radio-btn">
+                            <input type="radio" name="desing" id="without-design">
+                            <label for="without-design">Без дизайну</label>
+                        </div>
+                    </div>
+
+                    <button class="calculator__nextstep-btn btn">
+                        Далі
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white"/>
+                            <path d="M13.9261 21.9501L14.8473 22.8705L19.8651 17.8544C19.946 17.774 20.0102 17.6785 20.054 17.5732C20.0978 17.4679 20.1204 17.355 20.1204 17.241C20.1204 17.127 20.0978 17.0141 20.054 16.9088C20.0102 16.8035 19.946 16.7079 19.8651 16.6275L14.8473 11.6089L13.927 12.5293L18.6365 17.2397L13.9261 21.9501Z" fill="#1E1E1E"/>
+                        </svg> 
+                    </button>
+                </div>
+
+                <div class="calculator__step calculator__step-4">
+                    <div class="calculator__step-counter">
+                        <span>Ваше імʼя та номер телефону</span>
+                        <div class="counter">
+                            Крок <span>4</span> \ 4
+                        </div>
+                    </div>
+
+                    <div class="calculator__input-wrap">
+                        <input class="calculator__input input" type="text" name="user-name" placeholder="Ваше імʼя">
+                        <input class="calculator__input input" type="text" name="user-phone" placeholder="Номер телефону">
+                        <textarea class="calculator__textarea input textarea" name="user-question" placeholder="Ваше питання"></textarea>
+                        <input class="calculator__btn-submit btn" type="submit" value="Відправити заявку"
+                            aria-label="Відправити заявку">
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

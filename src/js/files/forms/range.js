@@ -1,5 +1,7 @@
 // Підключення з node_modules
 import * as noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
+
 
 // Підключення стилів з scss/base/forms/range.scss 
 // у файлі scss/forms/forms.scss
@@ -17,13 +19,15 @@ export function rangeInit() {
 			connect: [true, false],
 			range: {
 				'min': [0],
-				'max': [200000]
+				'max': [5000]
 			},
-			/*
-			format: wNumb({
-				decimals: 0
-			})
-			*/
+			step: 1,
+			tooltips: wNumb({ decimals: 0, suffix: ' м²' })
+			
+			// format: wNumb({
+			// 	decimals: 0
+			// })
+			
 		});
 		/*
 		const priceStart = document.getElementById('price-start');
@@ -42,6 +46,10 @@ export function rangeInit() {
 			}
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 		}
+
+		priceSlider.noUiSlider.on('update', function (values) {
+			document.querySelector('#range-nput').value = values;
+		});
 	}
 }
 rangeInit();

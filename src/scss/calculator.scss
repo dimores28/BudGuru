@@ -1,0 +1,272 @@
+.calculator {
+
+    // .calculator__container
+    &__container {
+        display: flex;
+        background: #1E1E1E;
+        padding: 40px 60px 40px 40px;
+        border-radius: 40px;
+        @include adaptiveValue("gap", 80, 20);
+
+        @media (max-width:$mobile){
+             flex-direction: column-reverse; 
+             padding: 30px 30px 20px 30px;
+             border-radius: 22px;
+        }
+    }
+
+    // .calculator__ilustration
+    &__ilustration {
+        flex: 1 1 50%;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 40px;
+
+            @media (max-width:$mobile){
+                border-radius: 22px;  
+            }
+
+            @media (max-width:$mobileSmall){
+                 height: 230px;
+                 object-fit: cover; 
+            }
+        }
+    }
+
+    // .calculator__steps
+    &__steps {
+        flex: 1 1 50%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    // .calculator__heading
+    &__heading {
+        color: #fff;
+        @include adaptiveValue("font-size", 76, 24);
+        font-style: normal;
+        font-family: "Gilroy",sans-serif;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -2px;
+        @include adaptiveValue("margin-bottom", 60, 30);
+
+        @media (max-width:$tablet){
+            letter-spacing: -1px;
+        }
+
+        @media (max-width:$mobile){
+             text-align: center; 
+        }
+
+        span {
+            font-weight: 300; 
+        }
+    }
+
+    // .calculator__step
+    &__step {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    // .calculator__step-1
+    &__step-1 {
+    }
+
+    // .calculator__step-counter
+    &__step-counter {
+        color: #fff;
+        @include adaptiveValue("font-size", 30, 14);
+        font-style: normal;
+        text-align: left;
+        font-family: "Gilroy",sans-serif;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        @include adaptiveValue("margin-bottom", 60, 20);
+
+        .counter span {
+            color: #F9C98C;
+        }
+    }
+
+    // .calculator__radio-wrap
+    &__radio-wrap {
+        display: flex;
+        @include adaptiveValue("gap", 40, 14);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .calculator__step-2
+    &__step-2 {
+    }
+
+    // .calculator__step-3
+    &__step-3 {
+    }
+
+    // .calculator__step-4
+    &__step-4 {
+    }
+
+    // .calculator__input-wrap
+    &__input-wrap {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap", 30, 14);
+    }
+
+    // .calculator__input
+    &__input {
+    }
+
+    // .calculator__textarea
+    &__textarea {
+    }
+
+    // .calculator__btn-submit
+    &__btn-submit {
+        margin-top: 20px;
+        @media (max-width:$mobile){
+             margin-top: 10px; 
+        }
+    }
+
+    &__nextstep-btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 4px 4px 4px 40px;
+        margin-top: auto;
+        margin-left: auto;
+
+        @media (max-width: 842px){
+            margin-top: 44px;
+        }
+
+        &:hover {
+            svg circle{
+                transition: all 0.3s ease;
+                fill: #F9C98C;
+            }
+        }
+    }
+
+    &__step {
+        display: none; 
+    }
+
+    &__step.active {
+        display: flex;
+    }
+
+    &__range-wrap {
+        @include adaptiveValue("margin-top", 56, 38);
+        input {
+            display: none;
+        }
+    }
+
+    .noUi-horizontal {
+        height: 2px !important;
+
+        @media (max-width:$mobile){
+            height: 1px !important;  
+        }
+
+        .noUi-connect {
+            background: #F9C98C !important;
+        }
+    }
+
+    .noUi-handle:before,
+    .noUi-handle:after{
+        display: none !important;
+    }
+
+    .noUi-handle.noUi-handle-lower {
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        background: #F9C98C;
+        border-color: transparent !important;
+        border: none;
+        box-shadow: none;
+
+        @media (max-width:$mobile){
+            height: 12px;
+            width: 12px;   
+        }
+    }
+
+    .noUi-tooltip {
+        background: transparent !important;
+        border: none;
+        color: #fff;
+        @include adaptiveValue("font-size", 20, 11);
+        font-style: normal;
+        font-family: "Jost",sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    .noUi-horizontal .noUi-handle {
+        top: -12px;
+
+        @media (max-width:$mobile){
+            top: -6px;
+        }
+    }
+
+}
+
+.counter {
+    min-width: 106px;
+    text-align: right;
+
+    @media (max-width: toEm(784)){
+        min-width: 84px;
+    }
+}
+
+.custon-radio-btn {
+    width: 100%;
+    input {
+        display: none;
+    }
+
+    label {
+        color: #fff;
+        @include adaptiveValue("font-size", 22, 14);
+        font-style: normal;
+        font-family: "Jost",sans-serif;
+        font-weight: 500;
+        text-align: center;
+        border: 1px solid #F9C98C;
+        border-radius: 96px;
+        padding: 8px 20px;
+        width: 100%;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    input[type="radio"]:checked ~ label{
+        color: #1e1e1e;
+        background: #F9C98C;
+    }
+}
