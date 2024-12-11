@@ -1,0 +1,123 @@
+.prices {
+    padding: 75px 0;
+
+    @media (max-width: $tablet) {
+      padding: 50px 0;
+    }
+
+    // .prices__container
+    &__container {
+    }
+
+    // .prices__heading
+    &__heading {
+        color: #1e1e1e;
+        @include adaptiveValue("font-size", 76, 20);
+        font-style: normal;
+        text-align: left;
+        font-family: "Gilroy",sans-serif;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -3px;
+        @include adaptiveValue("margin-bottom", 40, 20);
+
+        @media (max-width:$tablet){
+            letter-spacing: -2px;
+        }
+
+        @media (max-width:$mobile){
+            letter-spacing: -1px; 
+        }
+    }
+
+    // .prices__row
+    &__row {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap", 20, 10);
+    }
+}
+
+.price {
+    background: #1E1E1E;
+    padding: 42px 60px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @media (max-width:$tablet){
+        padding: 32px 20px;
+    }
+
+    @media (max-width:$mobile){
+        padding: 16px 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        border-radius: 20px;
+    }
+
+    // .price__heading
+    &__heading,
+    &__text {
+        color: #fff;
+        font-style: normal;
+        text-align: left;
+        font-family: "Gilroy",sans-serif;
+        line-height: 1.2;
+        letter-spacing: -2px;
+
+        @media (max-width:$tablet){
+            letter-spacing: -1px; 
+        }
+
+        @media (max-width:$mobile){
+            letter-spacing: 0px;  
+        }
+    }
+
+    &__heading {
+        flex: 1 1 auto;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 34 , 18);
+
+        @media (max-width:$mobile){
+             margin-bottom: -22px; 
+        }
+    }
+
+
+    // .price__desc
+    &__desc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex: 1 1 auto;
+        max-width: 656px;
+
+        @media (max-width:$mobile){
+             max-width: 100%; 
+             align-items: flex-end;
+        }
+    }
+
+    // .price__text
+    &__text {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 34 , 14);
+
+    }
+
+    // .price__btn
+    &__btn {
+
+        @media (max-width:$mobile){
+             padding: 14px 18px; 
+             border-radius: 16px;
+        }
+    }
+}
+

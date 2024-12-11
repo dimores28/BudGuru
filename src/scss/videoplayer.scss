@@ -1,0 +1,45 @@
+.videoplayer {
+    padding: 75px 0;
+
+    @media (max-width: $tablet) {
+      padding: 50px 0;
+    }
+
+    // .videoplayer__container
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue("height", 570, 500);
+
+        position: relative;
+    }
+
+    // .videoplayer__video
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+
+        @media (max-width:$mobile){
+            border-radius: 22px;  
+        }
+    }
+
+    // .videoplayer__btn-play
+    &__btn-play {
+        position: relative;
+        z-index: 1;
+
+        svg {
+            @include adaptiveValue("width", 120, 80);
+            @include adaptiveValue("height", 120, 80);
+        }
+    }
+}

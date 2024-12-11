@@ -34,4 +34,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+
+    const video = document.getElementById("videoPlayer");
+    const playButton = document.getElementById("btn-play");
+
+    // Функція для запуску/паузи відео
+    const togglePlay = () => {
+        if (video.paused) {
+            video.play(); // Запуск відео
+            playButton.style.display = "none"; // Приховати кнопку
+        } else {
+            video.pause(); // Пауза відео
+        }
+    };
+
+    // Обробник кліку на кнопку Play
+    playButton.addEventListener("click", togglePlay);
+
+    // Показати кнопку, коли відео зупинено або на паузі
+    video.addEventListener("pause", () => {
+        playButton.style.display = "block";
+    });
+
+    // Додатково: Обробка завершення відео (повернення кнопки)
+    video.addEventListener("ended", () => {
+        playButton.style.display = "block";
+    });
 });
