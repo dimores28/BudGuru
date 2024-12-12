@@ -199,7 +199,6 @@
     // .footer__menu-link
     &__menu-link {
         color: #1e1e1e;
-        font-size: 20px;
         @include adaptiveValue("font-size", 20, 14);
         font-style: normal;
         margin-top: 0;

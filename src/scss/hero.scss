@@ -52,7 +52,7 @@
     &__heading {
         // max-width: 860px;
         position: relative;
-        @include adaptiveValue("max-width", 860, 240);
+        @include adaptiveValue("max-width", 760, 240);
 
         @media (max-width: 1168px){
             margin-top: 60px;  
@@ -245,7 +245,7 @@
 
     // .hero__sticker
     &__sticker {
-        max-width: 523px;
+        max-width: 398px;
     }
 
     // .hero__baner
@@ -255,14 +255,13 @@
 
 .sticker {
     background: rgba(30,30,30, 0.25);
-    border-radius: 37px;
     background: rgba(30, 30, 30, 0.26);
-    border-radius: 16px;
+    border-radius: 28px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.2px);
     -webkit-backdrop-filter: blur(9.2px);
     border: 1px solid #fff;
-    padding: 20px 42px 30px 42px;
+    padding: 14px 32px 20px 32px;
     text-align: center;
 
     @media (max-width:$mobile){
@@ -272,7 +271,7 @@
     // .sticker__desc
     &__desc {
         color: #fff;
-        font-size: 14px;
+        font-size: 10px;
         font-style: normal;
         text-align: center;
         font-family: "Gilroy",sans-serif;
@@ -280,12 +279,12 @@
         line-height: 0.95;
         letter-spacing: 8px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
 
         @media (max-width:$mobile){
             font-size: 9px;  
             letter-spacing: 5px;
-            margin-bottom: 13px;
+            margin-bottom: 12px;
         }
     }
 
@@ -293,16 +292,16 @@
     &__heading {
         color: #fff;
         font-size: 36px;
-        @include adaptiveValue("font-size", 36, 23);
+        @include adaptiveValue("font-size", 30, 22);
         font-style: normal;
         font-family: "Gilroy",sans-serif;
         font-weight: 600;
         line-height: normal;
         letter-spacing: -2px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
 
         @media (max-width:$mobile){
-            margin-bottom: 13px; 
+            margin-bottom: 12px; 
         }
 
         mark {
@@ -318,6 +317,7 @@
 
     // .sticker__btn
     &__btn {
+        padding: 10px 42px;
     }
 }
 
@@ -326,7 +326,7 @@
     background: #F2F2F2;
     border-radius: 26px;
     display: flex;
-    padding: 16px 20px 25px 0;
+    padding: 14px 16px 14px 0;
     text-align: center;
 
     @media (max-width: 1080px){
@@ -335,7 +335,8 @@
 
     // .baner__img
     &__img {
-        margin-top: -142px;
+        max-width: 332px;
+        margin-top: -132px;
         margin-right: -32px;
     }
 
@@ -350,7 +351,7 @@
     // .baner__heading
     &__heading {
         color: #212121;
-        font-size: 22px;
+        font-size: 20px;
         font-style: normal;
         text-align: left;
         font-family: "Gilroy",sans-serif;
@@ -372,13 +373,13 @@
         line-height: normal;
         letter-spacing: -1px;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     // .baner__link
     &__link {
         color: #fff;
-        font-size: 22px;
+        font-size: 20px;
         font-style: normal;
         font-family: "Jost",sans-serif;
         font-weight: 600;

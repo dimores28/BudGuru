@@ -58,6 +58,10 @@
     font-weight: 400;
     line-height: 0.95;
     @include adaptiveValue("letter-spacing", -6, -2);
+
+    span {
+        font-weight: 500;
+    }
 }
 
 .input {
@@ -95,5 +99,35 @@
     @media (max-width:$mobile){
         height: 74px; 
         border-radius: 20px;
+    }
+}
+
+.rounded-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #F9C98C;
+    transition: all 0.3s ease;
+
+    @media (max-width:$tablet){
+        width: 60px;
+        height: 60px;
+    }
+
+    &:hover {
+        background: #FFF2E1;
+    }
+
+    svg {
+        width: 25px; 
+        height: 25px;
+
+        @media (max-width:$mobile){
+            width: 20px; 
+            height: 18px;  
+        }
     }
 }
