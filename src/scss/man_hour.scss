@@ -1,0 +1,120 @@
+.man_hour {
+   padding: 75px 0;
+
+   @media (max-width: $tablet) {
+      padding: 50px 0;
+   }
+
+    // .man_hour__container
+    &__container {
+    }
+
+    // .man_hour__heading
+    &__heading {
+        @include adaptiveValue("max-width", 1324, 284);
+        @include adaptiveValue("margin-bottom", 40, 20);
+    }
+
+    // .man_hour__content
+    &__content {
+        display: flex;
+        gap: 18px;
+
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+
+    // .man_hour__text-box
+    &__text-box {
+        flex: 1 1 630px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        @include adaptiveValue("gap", 40, 20);
+
+        @media (max-width:$mobile){
+             flex: 1 1 auto; 
+        }
+    }
+
+    // .man_hour__text
+    &__text {
+        color: #373737;
+        @include adaptiveValue("font-size", 18, 14);
+        font-style: normal;
+        text-align: left;
+        font-family: "Jost",sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    // .man_hour__list-box
+    &__list-box {
+    }
+
+    // .man_hour__title
+    &__title {
+        color: #373737;
+        @include adaptiveValue("font-size", 30, 16);
+        font-style: normal;
+        text-align: left;
+        font-family: "Jost",sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+        @media (max-width:$mobile){
+            margin-bottom: 12px;   
+        }
+    }
+
+    // .man_hour__list
+    &__list {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        @media (max-width:$mobile){
+            gap: 8px;
+        }
+    }
+
+    // .man_hour__list-item
+    &__list-item {
+        color: #373737;
+        @include adaptiveValue("font-size", 18, 14);
+        font-style: normal;
+        text-align: left;
+        font-family: "Jost",sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -1px;
+        list-style: square;
+    }
+
+    // .man_hour__btn
+    &__btn {
+    }
+
+    // .man_hour__illustration
+    &__illustration {
+        flex: 1 1 522px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include adaptiveValue("gap", 68, 20);
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @media (max-width:$mobile){
+                display: none;
+                 
+            }
+        }
+    }
+}
+

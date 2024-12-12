@@ -33,7 +33,7 @@ $minWidth: 375;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1600;
+$maxWidthContainer: 1200;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -171,3 +171,5 @@ body {
 @import "videoplayer";
 @import "design_prices";
 @import "blog";
+@import "man_hour";
+@import "work_performed";
