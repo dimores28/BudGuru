@@ -408,13 +408,46 @@
 
 
 .about-hero {
-
     .hero__heading {
         @include adaptiveValue("max-width", 500, 400);
     }
 }
 
 .services-hero {
+    .hero__heading  {
+        height: 160px;
+
+        @media (max-width:$mobile){
+            height: auto;  
+        }
+    }
+
+    .hero__link {
+        bottom: unset;
+        right: -120px;
+        top: 10px;
+
+    }
+}
+
+.cooperation-hero {
+    .hero__heading  {
+        height: 160px;
+
+        @media (max-width:$mobile){
+            height: auto;  
+        }
+    }
+
+    .hero__link {
+        bottom: unset;
+        right: -120px;
+        top: 10px;
+
+    }
+}
+
+.contacts-hero {
     .hero__heading  {
         height: 160px;
 

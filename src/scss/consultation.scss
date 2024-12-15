@@ -196,6 +196,15 @@
         }
     }
 
+    &__form-group {
+        display: flex; 
+        @include adaptiveValue("gap", 20, 14);
+
+        @media (max-width:$tablet){
+            flex-direction: column;
+        }
+    }
+
     // .consultation__btn-submit
     &__btn-submit {
         margin-top: 30px;

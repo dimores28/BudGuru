@@ -57,7 +57,7 @@
     font-family: "Gilroy",sans-serif;
     font-weight: 400;
     line-height: 0.95;
-    @include adaptiveValue("letter-spacing", -6, -2);
+    @include adaptiveValue("letter-spacing", -4, -1);
 
     span {
         font-weight: 500;
