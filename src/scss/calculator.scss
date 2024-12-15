@@ -4,20 +4,24 @@
     &__container {
         display: flex;
         background: #1E1E1E;
-        padding: 40px 60px 40px 40px;
+        padding: 35px 40px 35px 35px;
         border-radius: 40px;
-        @include adaptiveValue("gap", 80, 20);
+        @include adaptiveValue("gap", 24, 20);
 
         @media (max-width:$mobile){
              flex-direction: column-reverse; 
-             padding: 30px 30px 20px 30px;
+             padding: 30px 24px 20px 24px;
              border-radius: 22px;
         }
     }
 
     // .calculator__ilustration
     &__ilustration {
-        flex: 1 1 50%;
+        flex: 1 1 490px;
+
+        @media (max-width:$tablet){
+            flex: 1 1 auto;
+        }
 
         img {
             width: 100%;
@@ -38,25 +42,29 @@
 
     // .calculator__steps
     &__steps {
-        flex: 1 1 50%;
+        flex: 1 1 610px;
 
         form {
             display: flex;
             flex-direction: column;
             height: 100%;
         }
+
+        @media (max-width:$tablet){
+            flex: 1 1 auto;
+        }
     }
 
     // .calculator__heading
     &__heading {
         color: #fff;
-        @include adaptiveValue("font-size", 76, 24);
+        @include adaptiveValue("font-size", 64, 24);
         font-style: normal;
         font-family: "Gilroy",sans-serif;
         font-weight: 500;
-        line-height: 1.1;
+        line-height: 0.9;
         letter-spacing: -2px;
-        @include adaptiveValue("margin-bottom", 60, 30);
+        @include adaptiveValue("margin-bottom", 40, 30);
 
         @media (max-width:$tablet){
             letter-spacing: -1px;
@@ -128,7 +136,7 @@
     &__input-wrap {
         display: flex;
         flex-direction: column;
-        @include adaptiveValue("gap", 30, 14);
+        @include adaptiveValue("gap", 20, 12);
     }
 
     // .calculator__input
@@ -141,10 +149,7 @@
 
     // .calculator__btn-submit
     &__btn-submit {
-        margin-top: 20px;
-        @media (max-width:$mobile){
-             margin-top: 10px; 
-        }
+        margin-top: 10px;
     }
 
     &__nextstep-btn {
@@ -236,12 +241,8 @@
 }
 
 .counter {
-    min-width: 106px;
+    flex-shrink: 0;
     text-align: right;
-
-    @media (max-width: toEm(784)){
-        min-width: 84px;
-    }
 }
 
 .custon-radio-btn {

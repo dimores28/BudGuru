@@ -53,11 +53,8 @@
 .number-block {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 
-    @media (max-width: 1080px){
-        gap: 20px;
-    }
 
     @media (max-width:$mobile){
         flex-direction: column; 
@@ -66,10 +63,10 @@
 
     // .number-block__item
     &__item {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 10px);
         background: #FFFFFF;
-        border-radius: 40px;
-        padding: 46px 22px;
+        border-radius: 30px;
+        padding: 30px 20px;
 
         display: flex;
         align-items: center;
@@ -81,6 +78,7 @@
             text-align: center; 
             border-radius: 22px;
             padding: 16px 20px;
+            gap: 12px;
             box-shadow: 0 0 25px 0 rgba(0,0,0,.12);
         }
     }
@@ -113,20 +111,21 @@
     // .number-block__number
     &__number {
         color: #0a1537;
-        @include adaptiveValue("font-size", 230, 180);
+        @include adaptiveValue("font-size", 172, 132);
         font-style: normal;
         font-family: "Jost",sans-serif;
         font-weight: 500;
         line-height: normal;
         letter-spacing: -10px;
+        line-height: 0.9;
 
         @media (max-width:$tablet){
-            letter-spacing: -12px;
+            letter-spacing: -8px;
         }
 
         @media (max-width:$mobile){
-            letter-spacing: -15px;
-            line-height: 0.6;
+            letter-spacing: -6px;
+            line-height: 0.8;
         }
     }
 
@@ -138,14 +137,14 @@
     // .number-block__title
     &__title {
         color: #1e1e1e;
-        @include adaptiveValue("font-size", 48, 20);
+        @include adaptiveValue("font-size", 30, 18);
         font-style: normal;
         text-align: left;
         font-family: "Gilroy",sans-serif;
         font-weight: 500;
         line-height: normal;
         letter-spacing: -2px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         @media (max-width:$mobile){
             letter-spacing: -1px; 
@@ -157,7 +156,7 @@
     // .number-block__text
     &__text {
         color: #373737;
-        font-size: 16px;
+        @include adaptiveValue("font-size", 16, 14);
         font-style: normal;
         text-align: left;
         font-family: "Jost",sans-serif;

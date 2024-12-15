@@ -96,7 +96,7 @@
 
 
 .post {
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 2 - 15px);
     @include adaptiveValue("height", 580, 340);
     position: relative;
     display: flex;
@@ -108,9 +108,9 @@
             align-items: flex-end;
             padding-right: 30px;
 
-            @media (max-width: toEm(1440)) {
-                padding-right: 0; 
-            }
+            // @media (max-width: toEm(1440)) {
+            //     padding-right: 0; 
+            // }
 
             @media (max-width:$tablet){
                 padding-right: 20px;
@@ -118,9 +118,6 @@
         }
     }
 
-    @media (max-width: toEm(1178)){
-        width: calc(100% / 2 - 15px);  
-    }
 
     @media (max-width: 580px){
         width: 100%;
@@ -209,7 +206,7 @@
     // .post__title
     &__title {
         color: #f9c98c;
-        @include adaptiveValue("font-size", 24, 16);
+        @include adaptiveValue("font-size", 30, 16);
         font-style: normal;
         text-align: left;
         font-family: "Gilroy",sans-serif;
@@ -221,7 +218,7 @@
     // .post__text
     &__text {
         color: #fff;
-        @include adaptiveValue("font-size", 16, 12);
+        @include adaptiveValue("font-size", 18, 13);
         font-style: normal;
         text-align: left;
         font-family: "Jost",sans-serif;
@@ -239,7 +236,7 @@
     // .post__url
     &__url {
         color: #f9c98c;
-        @include adaptiveValue("font-size", 16, 12);
+        @include adaptiveValue("font-size", 18, 12);
         font-style: normal;
         text-align: left;
         font-family: "Jost",sans-serif;

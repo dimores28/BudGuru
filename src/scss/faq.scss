@@ -33,14 +33,14 @@
     // .spollers__title
     &__title {
         color: #1e1e1e;
-        @include adaptiveValue("font-size", 38, 14);
+        @include adaptiveValue("font-size", 30, 14);
         font-style: normal;
         text-align: left;
         font-family: "Gilroy",sans-serif;
         font-weight: 500;
         line-height: 1.3;
 
-        padding: 36px 107px 36px 0;
+        padding: 28px 82px 28px 0;
         border: none;
         border-bottom: 1px solid #0A1537;
         border-radius: 0;
@@ -57,7 +57,7 @@
     // .spollers__body
     &__body {
         color: #373737;
-        @include adaptiveValue("font-size", 26, 14);
+        @include adaptiveValue("font-size", 20, 14);
         font-style: normal;
         text-align: left;
         font-family: "Jost",sans-serif;

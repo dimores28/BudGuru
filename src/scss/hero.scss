@@ -405,3 +405,11 @@
         }
     }
 }
+
+
+.about-hero {
+
+    .hero__heading {
+        @include adaptiveValue("max-width", 500, 400);
+    }
+}

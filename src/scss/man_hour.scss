@@ -106,13 +106,23 @@
         align-items: flex-end;
         @include adaptiveValue("gap", 68, 20);
 
+        @media (max-width:$mobile){
+            flex: 1 1 auto; 
+        }
+
         img {
             width: 100%;
             height: auto;
+            border-radius: 30px;
 
             @media (max-width:$mobile){
-                display: none;
-                 
+                 height: 340px;
+                 object-fit: cover; 
+                 border-radius: 22px;
+            }
+
+            @media (max-width:$mobileSmall){
+                height: 260px; 
             }
         }
     }

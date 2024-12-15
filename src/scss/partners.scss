@@ -18,13 +18,29 @@
     &__row {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 60px;
-        row-gap: 40px;
+        column-gap: 160px;
+        row-gap: 60px;
+
+        @media (max-width: toEm(1200)){
+            column-gap: 100px;  
+        }
+
+        @media (max-width:$tablet){
+            column-gap: 60px;
+        }
     }
 
     // .partners__col
     &__col {
-        width: calc(100% / 4 - 45px);
+        width: calc(100% / 4 - 120px);
+
+        @media (max-width: toEm(1200)){
+            width: calc(100% / 4 - 75px);
+        }
+
+        @media (max-width:$tablet){
+            width: calc(100% / 4 - 45px);  
+        }
 
         @media (max-width:$mobile){
             width: calc(100% / 2 - 30px);  

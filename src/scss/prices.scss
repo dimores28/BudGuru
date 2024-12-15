@@ -12,14 +12,14 @@
     // .prices__heading
     &__heading {
         color: #1e1e1e;
-        @include adaptiveValue("font-size", 76, 20);
+        @include adaptiveValue("font-size", 64, 20);
         font-style: normal;
         text-align: left;
         font-family: "Gilroy",sans-serif;
         font-weight: 500;
         line-height: 1.1;
         letter-spacing: -3px;
-        @include adaptiveValue("margin-bottom", 40, 20);
+        @include adaptiveValue("margin-bottom", 34, 16);
 
         @media (max-width:$tablet){
             letter-spacing: -2px;
@@ -40,15 +40,15 @@
 
 .price {
     background: #1E1E1E;
-    padding: 42px 60px;
-    border-radius: 40px;
+    padding: 32px 48px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
 
     @media (max-width:$tablet){
-        padding: 32px 20px;
+        padding: 24px 18px;
     }
 
     @media (max-width:$mobile){
@@ -81,7 +81,7 @@
     &__heading {
         flex: 1 1 auto;
         font-weight: 500;
-        @include adaptiveValue("font-size", 34 , 18);
+        @include adaptiveValue("font-size", 30 , 18);
 
         @media (max-width:$mobile){
              margin-bottom: -22px; 
@@ -96,7 +96,15 @@
         justify-content: space-between;
         gap: 16px;
         flex: 1 1 auto;
-        max-width: 656px;
+        max-width: 560px;
+
+        @media (max-width: toEm(1100)){
+            max-width: 530px;  
+        }
+
+        @media (max-width:$tablet){
+            max-width: 480px; 
+        }
 
         @media (max-width:$mobile){
              max-width: 100%; 
@@ -107,7 +115,7 @@
     // .price__text
     &__text {
         font-weight: 400;
-        @include adaptiveValue("font-size", 34 , 14);
+        @include adaptiveValue("font-size", 28 , 14);
 
     }
 

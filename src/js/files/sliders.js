@@ -55,7 +55,7 @@ function initSliders() {
             },
             992: {
                slidesPerView: 3,
-               spaceBetween: 30,
+               spaceBetween: 20,
                grid: {
                   rows: 2,
                   fill: 'row'
