@@ -1,4 +1,9 @@
 .design-prices {
+    padding: 75px 0;
+
+   @media (max-width: $tablet) {
+      padding: 50px 0;
+   }
 
     // .design-prices__container
     &__container {
@@ -226,3 +231,6 @@
     }
 }
 
+.prices-wrapper {
+    @include adaptiveValue("padding-top", 120, 60);
+}

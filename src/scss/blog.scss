@@ -55,6 +55,11 @@
              gap: 20px; 
         }
     }
+
+    // .blog__pagination
+    &__pagination {
+        @include adaptiveValue("margin-top", 60, 20);
+    }
 }
 
 

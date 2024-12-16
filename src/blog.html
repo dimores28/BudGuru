@@ -7,7 +7,219 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				@@include('html/_hero.htm',{})
+				<section class="hero blog-hero">
+					<img src="@img/hero_bg.jpg" class="hero__bg-image" width="1920" height="1100" alt="hero">
+					<div class="hero__container">
+						<div class="hero__top-block">
+							<h1 class="hero__heading h1">
+								Наш <span>блог</span>
+								<a href="#" class="hero__link">
+									<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M23.9281 1.74694L1.77207 23.9029M23.9281 1.74694L23.8607 20.6705M23.9281 1.74694L5.00456 1.81428"
+											stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</h1>
+				
+							<div class="hero__lang">
+								ua
+							</div>
+						</div>
+						<div class="hero__center-block">
+							<a href="#" class="hero__btn-coll">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M23.7788 32.6107C21.4709 32.5258 14.9303 31.622 8.08029 24.775C1.23191 17.9265 0.329588 11.3888 0.243042 9.07972C0.114825 5.56089 2.81058 2.14301 5.92465 0.808232C6.29964 0.646338 6.7103 0.5847 7.11631 0.629367C7.52232 0.674033 7.90974 0.823469 8.24056 1.06301C10.8049 2.93139 12.5743 5.75799 14.0937 7.98049C14.428 8.46878 14.5709 9.06297 14.4952 9.64984C14.4196 10.2367 14.1306 10.7752 13.6834 11.1628L10.5565 13.4847C10.4054 13.5937 10.2991 13.7539 10.2572 13.9355C10.2154 14.117 10.2408 14.3076 10.3289 14.4717C11.0373 15.7584 12.297 17.6749 13.7395 19.117C15.1819 20.5592 17.1901 21.902 18.5668 22.6903C18.7394 22.7872 18.9426 22.8143 19.1346 22.766C19.3266 22.7177 19.4927 22.5978 19.599 22.4308L21.6344 19.3334C22.0086 18.8364 22.5606 18.5034 23.1749 18.4043C23.7891 18.3051 24.4179 18.4474 24.9296 18.8014C27.1846 20.3621 29.8162 22.1007 31.7427 24.5667C32.0017 24.8999 32.1665 25.2965 32.2198 25.7151C32.2731 26.1337 32.2129 26.5589 32.0456 26.9463C30.7041 30.0757 27.3096 32.7405 23.7788 32.6107Z"
+										fill="#F9C98C" />
+								</svg>
+							</a>
+				
+							<ul class="hero__social">
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/whatsapp-icon.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/telegram.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/viber.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+							</ul>
+						</div>
+						<div class="hero__bottom-block">
+							<div class="hero__sticker sticker">
+								<div class="sticker__desc">
+									сучасний ремонт  та дизайн
+								</div>
+				
+								<h3 class="sticker__heading">
+									Замовте ремонт під ключ <span>та отримайте</span> <mark>дизайн проект у подарунок</ь>
+								</h3>
+				
+								<a href="#" class="sticker__btn btn">
+									Обговорити проект
+								</a>
+							</div>
+				
+							<div class="hero__baner baner">
+								<img src="@img/3d-house.png" alt="house" class="baner__img">
+								<div class="baner__content">
+									<h4 class="baner__heading">
+										Готові проекти будинків
+									</h4>
+									<p class="baner__text">
+										Переходтье в наше архітектурне бюро  та дізнайтеся більше про готові проекти будинків
+									</p>
+									<a href="#" class="baner__link">
+										<span>Детальніше</span>
+										<svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.8865 9.93992L10.0889 22.7375M22.8865 9.93992L22.8476 20.8704M22.8865 9.93992L11.956 9.97882" stroke="white" stroke-width="1.28358" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>                            
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="blog">
+					<div class="blog__container">
+						<div class="blog_top-block">
+							<div class="blog__box">
+								<h2 class="blog__heading h2">Блог</h2>
+								<div class="blog__filters filters" data-da=".filters-wrap,1120,0">
+									<a href="#" class="filters__item">Всі теми</a>
+									<a href="#" class="filters__item">Ремонт</a>
+									<a href="#" class="filters__item">Дизайн</a>
+									<a href="#" class="filters__item">Інше</a>
+								</div>
+							</div>
+				
+							<a href="#" class="blog__btn btn">
+								Дивитися більше
+							</a>
+						</div>
+				
+						<div class="filters-wrap">
+				
+						</div>
+				
+						<div class="blog__posts">
+				
+							<div class="post">
+								<div class="post__top-block">
+									<div class="post__tags">
+										<p class="post__tag">
+											Дизайн
+										</p>
+										<p class="post__tag">
+											Ресторани
+										</p>
+									</div>
+								</div>
+				
+								<div class="post__content">
+									<div class="post__date">25.10.2024</div>
+									<h4 class="post__title">
+										Ідеї для дизану вишуканого ресторану?
+									</h4>
+									<p class="post__text">
+										Створення розкішного ресторану – це складний, але захопливий процес, у якому кожен елемент, від
+										інтер'єру до освітлення, має підкреслювати загальну концепцію.
+									</p>
+				
+									<a href="#" class="post__url">Дивитись більше</a>
+								</div>
+								<img src="@img/blog/post1.png" class="post__image" alt="Image">
+							</div>
+				
+							<div class="post">
+								<div class="post__top-block">
+									<div class="post__tags">
+										<p class="post__tag">
+											Дизайн
+										</p>
+										<p class="post__tag">
+											Квартири
+										</p>
+									</div>
+								</div>
+				
+								<div class="post__content">
+									<div class="post__date">25.10.2024</div>
+									<h4 class="post__title">
+										Що таке дизан в стилі лофт?
+									</h4>
+									<p class="post__text">
+										Стиль лофт відомий своїм мінімалізмом, відкритими просторами та незавершеними елементами, що
+										створюють унікальну атмосферу.
+									</p>
+				
+									<a href="#" class="post__url">Дивитись більше</a>
+								</div>
+								<img src="@img/blog/post2.png" class="post__image" alt="Image">
+							</div>
+				
+							<!-- <div class="post">
+								<div class="post__top-block">
+									<div class="post__tags">
+										<p class="post__tag">
+											Дизайн
+										</p>
+										<p class="post__tag">
+											Квартири
+										</p>
+									</div>
+								</div>
+				
+								<div class="post__content">
+									<div class="post__date">25.10.2024</div>
+									<h4 class="post__title">
+										З чого почати ремонт квартири?
+									</h4>
+									<p class="post__text">
+										Ремонт квартири – це процес, що потребує ретельного планування, послідовності та підготовки.
+										Почати варто з основ, щоб уникнути зайвих витрат і затримок.
+									</p>
+				
+									<a href="#" class="post__url">Дивитись більше</a>
+								</div>
+								<img src="@img/blog/post3.png" class="post__image" alt="Image">
+							</div> -->
+				
+						</div>
+
+						<div class="blog__pagination pagination">
+							<a href="#" class="pagination__prev">
+								<svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.42298 1.95796C6.47561 1.89432 6.51675 1.81944 6.54406 1.73763C6.57137 1.65581 6.58431 1.56864 6.58214 1.48111C6.57998 1.39357 6.56275 1.30738 6.53143 1.22746C6.50012 1.14753 6.45534 1.07544 6.39965 1.0153C6.34396 0.955151 6.27845 0.90813 6.20685 0.87692C6.13526 0.84571 6.05899 0.83092 5.9824 0.833397C5.90581 0.835873 5.83039 0.855566 5.76046 0.891352C5.69052 0.927138 5.62744 0.978315 5.57481 1.04196L0.616481 7.04196C0.514085 7.16574 0.457031 7.32962 0.457031 7.49996C0.457031 7.6703 0.514085 7.83418 0.616481 7.95796L5.57481 13.9586C5.6271 14.0237 5.69016 14.0762 5.76035 14.1131C5.83054 14.1501 5.90646 14.1707 5.98369 14.1739C6.06092 14.177 6.13792 14.1626 6.21023 14.1314C6.28254 14.1002 6.34871 14.053 6.4049 13.9923C6.46108 13.9317 6.50617 13.8589 6.53753 13.7782C6.5689 13.6975 6.58591 13.6104 6.5876 13.5221C6.58928 13.4338 6.57559 13.346 6.54733 13.2638C6.51907 13.1816 6.47681 13.1067 6.42298 13.0433L1.84265 7.49996L6.42298 1.95796Z" fill="white"/>
+								</svg>									
+							</a>
+
+							<ul class="pagination__list">
+								<li class="pagination__item"><a href="#">1</a></li>
+								<li class="pagination__item"><a href="#">2</a></li>
+								<li class="pagination__item"><a href="#">3</a></li>
+								<li class="pagination__item"><a href="#">4</a></li>
+								<li class="pagination__item"><a href="#">5</a></li>
+								<li class="pagination__item"><a href="#">6</a></li>
+							</ul>
+
+							<a href="#" class="pagination__next">
+								<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.513802 1.95796C0.453657 1.89432 0.406637 1.81944 0.375426 1.73763C0.344216 1.65581 0.329426 1.56864 0.331903 1.48111C0.334379 1.39357 0.354072 1.30738 0.389858 1.22746C0.425644 1.14753 0.476821 1.07544 0.540469 1.0153C0.604116 0.955151 0.678987 0.90813 0.760806 0.87692C0.842625 0.84571 0.92979 0.83092 1.01732 0.833397C1.10486 0.835873 1.19105 0.855566 1.27097 0.891352C1.3509 0.927138 1.42299 0.978315 1.48314 1.04196L7.1498 7.04196C7.26683 7.16574 7.33203 7.32962 7.33203 7.49996C7.33203 7.6703 7.26683 7.83418 7.1498 7.95796L1.48314 13.9586C1.42339 14.0237 1.35131 14.0762 1.27109 14.1131C1.19087 14.1501 1.10411 14.1707 1.01585 14.1739C0.927589 14.177 0.839583 14.1626 0.756945 14.1314C0.674307 14.1002 0.598684 14.053 0.534471 13.9923C0.470257 13.9317 0.418732 13.8589 0.382887 13.7782C0.347043 13.6975 0.327595 13.6104 0.325672 13.5221C0.323749 13.4338 0.339389 13.346 0.371686 13.2638C0.403982 13.1816 0.452289 13.1067 0.513802 13.0433L5.74847 7.49996L0.513802 1.95796Z" fill="white"/>
+								</svg>									
+							</a>
+						</div>
+					</div>
+				</section>
 
 				@@include('html/_consultation.htm',{})
 			</main>

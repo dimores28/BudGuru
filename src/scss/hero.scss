@@ -52,7 +52,7 @@
     &__heading {
         // max-width: 860px;
         position: relative;
-        @include adaptiveValue("max-width", 790, 240);
+        @include adaptiveValue("max-width", 800, 240);
 
         @media (max-width: 1168px){
             margin-top: 60px;  
@@ -468,5 +468,39 @@
     .hero__link {
         right: 60px;
         bottom: 80px;
+    }
+}
+
+.blog-hero {
+    .hero__heading  {
+        height: 160px;
+
+        @media (max-width:$mobile){
+            height: auto;  
+        }
+    }
+
+    .hero__link {
+        bottom: unset;
+        right: -120px;
+        top: 10px;
+
+    }
+}
+
+.portfolio-hero {
+    .hero__heading  {
+        height: 160px;
+
+        @media (max-width:$mobile){
+            height: auto;  
+        }
+    }
+
+    .hero__link {
+        bottom: unset;
+        right: -120px;
+        top: 10px;
+
     }
 }

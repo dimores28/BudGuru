@@ -7,7 +7,895 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				@@include('html/_hero.htm',{})
+				<section class="hero">
+					<img src="@img/hero_bg.jpg" class="hero__bg-image" width="1920" height="1100" alt="hero">
+					<div class="hero__container">
+						<div class="hero__top-block">
+							<h1 class="hero__heading h1">
+								ЦІни на <span>дизайн інтерʼєру</span> та <span>ремонт</span>
+								<a href="#" class="hero__link">
+									<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M23.9281 1.74694L1.77207 23.9029M23.9281 1.74694L23.8607 20.6705M23.9281 1.74694L5.00456 1.81428"
+											stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+							</h1>
+				
+							<div class="hero__lang">
+								ua
+							</div>
+						</div>
+						<div class="hero__center-block">
+							<a href="#" class="hero__btn-coll">
+								<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M23.7788 32.6107C21.4709 32.5258 14.9303 31.622 8.08029 24.775C1.23191 17.9265 0.329588 11.3888 0.243042 9.07972C0.114825 5.56089 2.81058 2.14301 5.92465 0.808232C6.29964 0.646338 6.7103 0.5847 7.11631 0.629367C7.52232 0.674033 7.90974 0.823469 8.24056 1.06301C10.8049 2.93139 12.5743 5.75799 14.0937 7.98049C14.428 8.46878 14.5709 9.06297 14.4952 9.64984C14.4196 10.2367 14.1306 10.7752 13.6834 11.1628L10.5565 13.4847C10.4054 13.5937 10.2991 13.7539 10.2572 13.9355C10.2154 14.117 10.2408 14.3076 10.3289 14.4717C11.0373 15.7584 12.297 17.6749 13.7395 19.117C15.1819 20.5592 17.1901 21.902 18.5668 22.6903C18.7394 22.7872 18.9426 22.8143 19.1346 22.766C19.3266 22.7177 19.4927 22.5978 19.599 22.4308L21.6344 19.3334C22.0086 18.8364 22.5606 18.5034 23.1749 18.4043C23.7891 18.3051 24.4179 18.4474 24.9296 18.8014C27.1846 20.3621 29.8162 22.1007 31.7427 24.5667C32.0017 24.8999 32.1665 25.2965 32.2198 25.7151C32.2731 26.1337 32.2129 26.5589 32.0456 26.9463C30.7041 30.0757 27.3096 32.7405 23.7788 32.6107Z"
+										fill="#F9C98C" />
+								</svg>
+							</a>
+				
+							<ul class="hero__social">
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/whatsapp-icon.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/telegram.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+								<li class="hero__social_item">
+									<a href="http://" class="hero__social_link">
+										<img src="@img/viber.png" width="32" height="32" class="hero__social_icon" alt="Image">
+									</a> 
+								</li>
+							</ul>
+						</div>
+						<div class="hero__bottom-block">
+							<div class="hero__sticker sticker">
+								<div class="sticker__desc">
+									сучасний ремонт  та дизайн
+								</div>
+				
+								<h3 class="sticker__heading">
+									Замовте ремонт під ключ <span>та отримайте</span> <mark>дизайн проект у подарунок</ь>
+								</h3>
+				
+								<a href="#" class="sticker__btn btn">
+									Обговорити проект
+								</a>
+							</div>
+				
+							<div class="hero__baner baner">
+								<img src="@img/3d-house.png" alt="house" class="baner__img">
+								<div class="baner__content">
+									<h4 class="baner__heading">
+										Готові проекти будинків
+									</h4>
+									<p class="baner__text">
+										Переходтье в наше архітектурне бюро  та дізнайтеся більше про готові проекти будинків
+									</p>
+									<a href="#" class="baner__link">
+										<span>Детальніше</span>
+										<svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.8865 9.93992L10.0889 22.7375M22.8865 9.93992L22.8476 20.8704M22.8865 9.93992L11.956 9.97882" stroke="white" stroke-width="1.28358" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>                            
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="prices-wrapper">
+					<div class="custom-tab__wrapp">
+                        <button class="custom-tab__tab active">
+                            Ціни на дизайн
+                        </button>
+                        <button class="custom-tab__tab">
+                            Ціни на послуги Чоловік на годину
+                        </button>
+                    </div>
+
+					<section class="design-prices custom-tab__content">
+						<div class="design-prices__container">
+							<h2 class="design-prices__heading h2">
+								Ціни на дизайн інтерʼєру в Києві
+							</h2>
+					
+							<div class="design-prices__table-wrap">
+								<table class="design-prices__table table">
+									<thead class="table__header">
+										<tr class="table__row">
+											<th class="table__head table__head--packages">Пакети</th>
+											<th class="table__head table__head--visual">Візуальний</th>
+											<th class="table__head table__head--technical">Технічний</th>
+											<th class="table__head table__head--all-included">Все враховано</th>
+											<th class="table__head table__head--maximum">Максимальний</th>
+										</tr>
+									</thead>
+									<tbody class="table__body">
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Склад проекту</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>                                
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37"  style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg>                                
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Обмірний план</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План розташування стін</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Візуалізація</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg>                                
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Підбір матеріалів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg>
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План розміщення меблів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План демонтажу</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg>                                
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План підлоги із зазначенням типу покриття, плінтуса і теплої підлоги</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План стелі</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План розташування розеток і вимикачів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План привʼязки світильників зі схемою включення</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План оздоблення стін</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Відомість обробки із зазначенням типу, кількості та назви покриттів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">План привʼязки сантехнічного обладнання</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Розгортки стін санвузла та кухні зі схемою розкладки плитки</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Специфікація електрофурнітури</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Специфікація освітлювальних приладів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Специфікація сантехнічного обладнання</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Розгортки стін усіх приміщень</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Креслення меблів</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row table__row-divider">
+											<td class="table__cell table__cell--title">Правки</td>
+											<td class="table__cell"></td>
+											<td class="table__cell"></td>
+											<td class="table__cell"></td>
+											<td class="table__cell"></td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">До 3-х правок на кожний етап</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Необмежена кількість правок</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+					
+										<tr class="table__row">
+											<td class="table__cell table__cell--title">Авторський нагляд
+												(до 4 виїздів на обʼєкт)</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white"/>
+												</svg> 
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E"/>
+												</svg>  
+											</td>
+											<td class="table__cell">
+												<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white"/>
+													<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E"/>
+												</svg> 
+											</td>
+										</tr>
+										
+										<tr class="table__row table__row-divider table__row-last">
+											<td class="table__cell table__cell--title">Вартість:</td>
+											<td class="table__cell">
+												25$/m2
+												<a href="#" class="table__link">Замовити</a>
+											</td>
+											<td class="table__cell">
+												22$/m2
+												<a href="#" class="table__link">Замовити</a>
+											</td>
+											<td class="table__cell">
+												32$/m2
+												<a href="#" class="table__link">Замовити</a>
+											</td>
+											<td class="table__cell">
+												45$/m2
+												<a href="#" class="table__link">Замовити</a>
+											</td>
+										</tr>
+									  
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+					
+					<section class="prices custom-tab__content">
+						<div class="prices__container">
+							<h2 class="prices__heading">
+								Ціни на послуги чоловіка на годину
+							</h2>
+					
+							<div class="prices__row">
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Ремонт труб у ванній
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 500грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Ремонт труб каналізації
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 500грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+								
+								<div class="price">
+									<h3 class="price__heading">
+										Розведення труб каналізації
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 250грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Штроблення стін під труби
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 30грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Ремонт труб у ванній
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 500грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Заміна стояка каналізації
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 1500грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Заміна каналізаційних труб
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 300грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Розведення труб у ванній
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 300грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+								<div class="price">
+									<h3 class="price__heading">
+										Заміна труб у ванній ціна
+									</h3>
+					
+									<div class="price__desc">
+										<p class="price__text">
+											Ціна від 450грн за точку
+										</p>
+										<button class="price__btn btn">
+											Замовити
+										</button>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+					</section>
+				</div>
+				
 
 				@@include('html/_consultation.htm',{})
 			</main>

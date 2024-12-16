@@ -61,4 +61,56 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener("ended", () => {
         playButton.style.display = "block";
     });
+
 });
+
+
+    // Отримуємо елементи
+    const tabs = document.querySelectorAll(".calculator__tab");
+    const headings = document.querySelectorAll(".calculator__heading");
+
+    // Додаємо обробник подій для кожної кнопки-таб
+    tabs?.forEach((tab, index) => {
+        tab.addEventListener("click", function () {
+            // Прибираємо клас active у всіх табах
+            tabs.forEach((t) => t.classList.remove("active"));
+            // Додаємо клас active до поточного табу
+            tab.classList.add("active");
+
+            // Перемикаємо видимість заголовків
+            headings.forEach((heading, i) => {
+                if (i === index) {
+                    heading.style.display = "block"; // Показати вибраний заголовок
+                } else {
+                    heading.style.display = "none"; // Сховати інші заголовки
+                }
+            });
+        });
+    });
+
+    // Ініціалізуємо стан при завантаженні сторінки
+    headings?.forEach((heading, i) => {
+        if (i !== 0) heading.style.display = "none"; // Сховати всі заголовки, крім першого
+    });
+
+    const customTabs = document.querySelectorAll(".custom-tab__tab");
+    const customTabsContent = document.querySelectorAll(".custom-tab__content");
+
+    customTabs?.forEach((tab, index) => {
+        tab.addEventListener("click", function () {
+            customTabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            customTabsContent.forEach((element, i) => {
+                if (i === index) {
+                    element.style.display = "block"; 
+                } else {
+                    element.style.display = "none";
+                }
+            });
+        });
+    });
+
+    customTabsContent?.forEach((element, i) => {
+        if (i !== 0) element.style.display = "none"; // Сховати всі заголовки, крім першого
+    });

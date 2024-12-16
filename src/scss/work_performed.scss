@@ -72,6 +72,11 @@
     // .work-performed__grid
     &__grid {
     }
+
+    // .work-performed__pagination
+    &__pagination {
+        @include adaptiveValue("margin-top", 60, 20);
+    }
 }
 
 
