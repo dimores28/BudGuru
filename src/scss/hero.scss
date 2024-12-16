@@ -52,7 +52,7 @@
     &__heading {
         // max-width: 860px;
         position: relative;
-        @include adaptiveValue("max-width", 760, 240);
+        @include adaptiveValue("max-width", 790, 240);
 
         @media (max-width: 1168px){
             margin-top: 60px;  
@@ -461,5 +461,12 @@
         right: -120px;
         top: 10px;
 
+    }
+}
+
+.projects-hero {
+    .hero__link {
+        right: 60px;
+        bottom: 80px;
     }
 }
