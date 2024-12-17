@@ -504,3 +504,20 @@
 
     }
 }
+
+.one-row-heading {
+    .hero__heading  {
+        height: 160px;
+
+        @media (max-width:$mobile){
+            height: auto;  
+        }
+    }
+
+    .hero__link {
+        bottom: unset;
+        right: -120px;
+        top: 10px;
+
+    }
+}

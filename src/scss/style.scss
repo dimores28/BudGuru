@@ -139,6 +139,74 @@ body {
 	}
 }
 
+
+.page-404 {
+	width: 100%;
+	height: 100vh;
+	padding-top: toRem(200);
+	position: relative;
+
+	// .404__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("gap", 30, 14);
+		position: relative;
+		z-index: 1;
+	}
+
+	// .404__heading
+	&__heading {
+		text-align: center;
+		max-width: 1000px;
+	}
+
+	// .404__desc
+	&__desc {
+		color: #fff;
+		@include adaptiveValue("font-size", 30, 18);
+		font-style: normal;
+		text-align: center;
+		font-family: "Gilroy",sans-serif;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -2px;
+
+		@media (max-width:$tablet){
+			letter-spacing: -1px;
+		}
+
+		@media (max-width:$mobile){
+			letter-spacing: 0; 
+		}
+
+	}
+
+	// .404__link
+	&__link {
+		@include adaptiveValue("margin-top", 50, 26);
+		padding: 26px 142px !important;
+
+		@media (max-width:$mobile){
+			padding: 14px 84px !important;  
+		}
+	}
+
+	&__bg-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+
 // Підключення базових стилів, шаблонів (заготівель) та допоміжних класів
 // Для підключення/вимкнення конкретних стилів дивись base.scss
 @import "base";
@@ -175,3 +243,4 @@ body {
 @import "work_performed";
 @import "about";
 @import "contacts";
+@import "vacancies";

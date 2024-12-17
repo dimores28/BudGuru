@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ua">
+	@@include('html/_head.htm',{
+	"title":"Vacancies page"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page-404">
+					<div class="page-404__container">
+						<h1 class="page-404__heading h1">
+							Здається, <span>такої сторінки не існує</span>
+						</h1>
+
+						<p class="page-404__desc">
+							Перейдіть на головну та спробуйте ще раз
+						</p>
+
+						<a href="/" class="page-404__link btn">
+							На головну
+						</a>
+					</div>
+					<img src="@img/404.png" class="page-404__bg-img" alt="Image">
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
