@@ -69,8 +69,8 @@
     // .header__phone
 
     &__phone {
-        color: #fff;
-        @include adaptiveValue("font-size", 20, 12);
+        color: #000000;
+        @include adaptiveValue("font-size", 18, 12);
         font-style: normal;
         font-family: "Inter",sans-serif;
         font-weight: 700;
@@ -79,15 +79,15 @@
         text-transform: uppercase;
         margin-left: auto;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: #F9C98C;
+        border-radius: 20px;
+        padding: 6px 12px;
 
         @media (max-width: 1200px) {
-            color: #000000;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            background: #F9C98C;
             padding: 4px 10px;
-            border-radius: 20px;
             margin-left: auto;
         }
 
@@ -98,17 +98,16 @@
         }
 
         svg {
-            fill: #fff;
+            fill: #000000;
+            display: inline-block;
             width: 20px;
             height: 20px;
             margin-bottom: -4px;
             transition: all 0.3s ease;
 
             @media (max-width: 1200px) {
-                display: inline-block;
                 width: 18px;
                 height: 18px;
-                fill: #000000;
                 margin-bottom: -2px;
             }
 
@@ -120,10 +119,10 @@
         }
 
         &:hover {
-            color: #F9C98C;
+            color: #fff;
 
             svg {
-                fill: #F9C98C;
+                fill: #fff;
             }
         }
     }

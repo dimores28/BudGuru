@@ -112,6 +112,32 @@
     &__pagination {
         @include adaptiveValue("margin-top", 60, 20);
     }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        border-radius: 0 0 40px 40px;
+        background: rgba(30, 30, 30, 0.38);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(11.5px);
+        -webkit-backdrop-filter: blur(11.5px);
+        border: 1px solid rgba(30, 30, 30, 0.03);
+        
+        color: #fff;
+        @include adaptiveValue("font-size", 30, 16);
+        font-style: normal;
+        text-align: center;
+        font-family: "Gilroy",sans-serif;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -1px;
+        width: 100%;
+        padding: 18px 20px;
+
+        @media (max-width:$mobile){
+            border-radius: 0 0 22px 22px; 
+        }
+    }
 }
 
 
@@ -119,13 +145,14 @@
     position: relative;
     border-radius: 40px;
     height: 380px;
-    padding: 30px;
+    padding: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media (max-width:$mobile){
         border-radius: 22px; 
-        padding: 20px;
         height: 350px;
 
         &:nth-child(even) {
@@ -156,25 +183,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         background: #F9C98C;
         transition: all 0.3s ease;
+        margin-top: 20px;
+        margin-left: 20px;
         
         &:hover {
             background: #FFF2E1;
         }
 
         @media (max-width:$mobile){
-            width: 60px;
-            height: 60px;
+            width: 48px;
+            height: 48px;
         }
 
         svg {
+            width: 20px;
+            height: 24px; 
             @media (max-width:$mobile){
-                width: 20px;
-                height: 24px; 
+                width: 18px;
+                height: 18px; 
             }
         }
     }
