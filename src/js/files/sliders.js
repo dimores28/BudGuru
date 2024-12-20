@@ -129,6 +129,50 @@ function initSliders() {
          on: {}
       });
    }
+
+   if(document.querySelector('.desc__slider')) {
+      new Swiper('.desc__slider', {
+         modules: [Navigation, Pagination],
+         slidesPerView: 1,
+         spaceBetween: 20,
+         navigation: {
+            prevEl: '.desc__prev',
+            nextEl: '.desc__next'
+         },
+         // pagination: {
+         //    el: '.reviews__pagination',
+         //    clickable: true, 
+         //  },
+
+         // Брейкпоінти
+         // breakpoints: {
+         //    768: {
+         //    	slidesPerView: 2,
+         //    	spaceBetween: 20,
+         //    },
+         //    920: {
+         //    	slidesPerView: 3,
+         //    	spaceBetween: 30,
+         //    },
+         // },
+
+         // Події
+         on: {}
+      });
+   }
+
+   if(document.querySelector('.one-work__slider')) {
+      new Swiper('.one-work__slider', {
+         modules: [Navigation, Pagination],
+         slidesPerView: 1,
+         spaceBetween: 20,
+         navigation: {
+            prevEl: '.one-work__prev',
+            nextEl: '.one-work__next'
+         },
+         on: {}
+      });
+   }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
