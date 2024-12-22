@@ -228,6 +228,41 @@
             }
         }
     }
+
+    &__scroll-to {
+        position: fixed;
+        right: 30px;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #F9C98C;
+        z-index: 100;
+        transition: all 0.3s ease;
+
+        @media (max-width:$tablet){
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover {
+            background: #FFF2E1;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            transform: rotate(-45deg);
+
+            @media (max-width:$tablet){
+                width: 18px;
+                height: 18px; 
+            }
+        }
+    }
 }
 
 //====================================================================================================

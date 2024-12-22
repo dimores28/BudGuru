@@ -114,3 +114,14 @@ document.addEventListener("DOMContentLoaded", function () {
     customTabsContent?.forEach((element, i) => {
         if (i !== 0) element.style.display = "none"; // Сховати всі заголовки, крім першого
     });
+
+    const scrollTopButton = document.getElementById("scroll-top");
+
+    scrollTopButton?.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,         
+            behavior: "smooth"
+        });
+    });
