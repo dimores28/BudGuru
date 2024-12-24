@@ -125,3 +125,29 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         });
     });
+
+    document.querySelectorAll('.dropdown-nav-special-toggle').forEach(button => {
+        button.addEventListener('click', (event) => {
+            
+            button.classList.toggle('active');
+            // Знаходимо батьківський елемент menu__item
+            const menuItem = button.closest('.menu__item');
+
+
+            if (menuItem) {
+                // Знаходимо вкладене меню sub-menu
+                const subMenu = menuItem.querySelector('.sub-menu');
+                
+                if (subMenu) {
+                    // Тогл класу active
+                    subMenu.classList.toggle('active');
+                    
+                    // Оновлюємо aria-expanded для доступності
+                    const isExpanded = subMenu.classList.contains('active');
+                    button.setAttribute('aria-expanded', isExpanded);
+                }
+            }
+        });
+    });
+    
+    

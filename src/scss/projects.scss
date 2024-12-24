@@ -359,6 +359,10 @@
                 margin-top: toRem(-6);
              } 
         }
+
+        span {
+            font-weight: 600;
+        }
     }
 
     ul {
@@ -366,6 +370,7 @@
         flex-direction: column;
         gap: 12px;
         padding-left: 42px;
+        margin-bottom: 16px;
 
         @media (max-width:$mobile){
              gap: 10px; 
@@ -398,6 +403,12 @@
         @media (max-width:$mobile){
              gap: 10px; 
         }
+    }
+
+    &__price {
+        @include adaptiveValue("font-size", 24, 16);
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
