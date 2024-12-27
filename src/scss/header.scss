@@ -36,7 +36,7 @@
     }
 
     // .header__logo
-
+    .site-logo-mobile,
     &__logo {
 
         img {
@@ -55,6 +55,20 @@
                 fill:#000000;
                 margin-bottom: -8px;
             }
+        }
+    }
+
+    .site-logo-mobile {
+        display: none;
+
+        @media (max-width: toEm(1200)){
+             display: block; 
+        }
+    }
+
+    &__logo {
+        @media (max-width: toEm(1200)){
+             display: none; 
         }
     }
 

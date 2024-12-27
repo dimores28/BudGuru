@@ -9,7 +9,7 @@ Template Name: Home
     <main class="page">
         
         <section class="hero">
-            <img src="img/hero_bg.webp" class="hero__bg-image" width="1920" height="1100" alt="hero">
+            <img src="<?php bloginfo('template_url'); ?>/assets/img/hero_bg.webp" class="hero__bg-image" width="1920" height="1100" alt="hero">
             <div class="hero__container">
                 <div class="hero__top-block">
                     <h1 class="hero__heading h1">
@@ -35,17 +35,17 @@ Template Name: Home
                     <ul class="hero__social">
                         <li class="hero__social_item">
                             <a href="http://" class="hero__social_link">
-                                <img src="img/whatsapp-icon.webp" width="32" height="32" class="hero__social_icon" alt="Image">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/whatsapp-icon.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                             </a>
                         </li>
                         <li class="hero__social_item">
                             <a href="http://" class="hero__social_link">
-                                <img src="img/telegram.webp" width="32" height="32" class="hero__social_icon" alt="Image">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/telegram.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                             </a>
                         </li>
                         <li class="hero__social_item">
                             <a href="http://" class="hero__social_link">
-                                <img src="img/viber.webp" width="32" height="32" class="hero__social_icon" alt="Image">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/viber.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                             </a>
                         </li>
                     </ul>
@@ -66,7 +66,7 @@ Template Name: Home
                     </div>
 
                     <div class="hero__baner baner">
-                        <img src="img/3d-house.webp" alt="house" class="baner__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/3d-house.webp" alt="house" class="baner__img">
                         <div class="baner__content">
                             <h4 class="baner__heading">
                                 Готові проекти будинків
@@ -112,7 +112,7 @@ Template Name: Home
                             <p class="about__card-text">
                                 Задоволених клієнтів
                             </p>
-                            <img src="img/about/card-bg_1.webp" class="about__card-inage" alt="Image">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/about/card-bg_1.webp" class="about__card-inage" alt="Image">
                         </div>
 
                         <div class="about__card">
@@ -122,7 +122,7 @@ Template Name: Home
                             <p class="about__card-text">
                                 Реалізованих проектів
                             </p>
-                            <img src="img/about/card-bg_2.webp" class="about__card-inage" alt="Image">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/about/card-bg_2.webp" class="about__card-inage" alt="Image">
                         </div>
 
                         <div class="about__card">
@@ -137,22 +137,22 @@ Template Name: Home
                                     <path d="M23.9281 1.74694L1.77208 23.9029M23.9281 1.74694L23.8607 20.6705M23.9281 1.74694L5.00457 1.81428" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </a>
-                            <img src="img/about/card-bg_3.webp" class="about__card-inage" alt="Image">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/about/card-bg_3.webp" class="about__card-inage" alt="Image">
                         </div>
                     </div>
                 </div>
 
                 <div class="about__right-box">
-                    <img src="img/about/about.webp" alt="Про нас" width="640" height="630" class="about__img">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/about/about.webp" alt="Про нас" width="640" height="630" class="about__img">
                 </div>
             </div>
         </section>
 
         <section class="videoplayer">
             <div class="videoplayer__container">
-                <video poster="img/video/preview.webp" muted loop controls playsinline preload="yes" width="1600" height="570" class="videoplayer__video" id="videoPlayer">
-                    <source src="img/video/Comp2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                    <source src="img/video/Comp2.mp4" type="video/mp4" />
+                <video poster="<?php bloginfo('template_url'); ?>/assets/img/video/preview.webp" muted loop controls playsinline preload="yes" width="1600" height="570" class="videoplayer__video" id="videoPlayer">
+                    <source src="<?php bloginfo('template_url'); ?>/assets/img/video/Comp2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                    <source src="<?php bloginfo('template_url'); ?>/assets/img/video/Comp2.mp4" type="video/mp4" />
                 </video>
                 <button class="videoplayer__btn-play" id="btn-play">
                     <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,7 @@ Template Name: Home
                             </div>
 
                             <div class="consultation__form-success form-success">
-                                <img src="img/smile.webp" class="form-success__img" width="120" height="120" alt="smile">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/smile.webp" class="form-success__img" width="120" height="120" alt="smile">
                                 <h3 class="form-success__heading">
                                     Дякуємо за звернення!
                                 </h3>
@@ -205,7 +205,7 @@ Template Name: Home
                 </div>
 
                 <div class="consultation__illustration">
-                    <img class="consultation__img" src="img/Rectangle26103829.webp" width="740" height="720" alt="form illustration">
+                    <img class="consultation__img" src="<?php bloginfo('template_url'); ?>/assets/img/Rectangle26103829.webp" width="740" height="720" alt="form illustration">
                 </div>
             </div>
         </section>
@@ -227,7 +227,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/repair.webp" alt="repair" width="600" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/repair.webp" alt="repair" width="600" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Ремонт квартири під ключ</h3>
                         </div>
@@ -239,7 +239,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/desing.webp" alt="desing" width="970" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/desing.webp" alt="desing" width="970" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Дизайн інтерʼєру</h3>
                             <a href="/service1.html" class="our-services__big-col_link">
@@ -258,7 +258,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/plumbing_services.webp" alt="Plumbing services" width="600" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/plumbing_services.webp" alt="Plumbing services" width="600" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Послуги сантехніка</h3>
                         </div>
@@ -270,7 +270,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/repair_house.webp" alt="repair_house" width="970" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/repair_house.webp" alt="repair_house" width="970" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Ремонт будинків</h3>
                             <a href="#" class="our-services__big-col_link">
@@ -289,7 +289,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/men.webp" alt="Послуга “Чоловік на годину”" width="600" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/men.webp" alt="Послуга “Чоловік на годину”" width="600" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Послуга “Чоловік на годину”</h3>
                         </div>
@@ -301,7 +301,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/comercial_room.webp" alt="Ремонт комерційних приміщень" width="970" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/comercial_room.webp" alt="Ремонт комерційних приміщень" width="970" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Ремонт комерційних приміщень</h3>
                             <a href="#" class="our-services__big-col_link">
@@ -320,7 +320,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/desing_house.webp" alt="Дизайн будинків, котеджів" width="600" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/desing_house.webp" alt="Дизайн будинків, котеджів" width="600" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Дизайн будинків, котеджів</h3>
                         </div>
@@ -332,7 +332,7 @@ Template Name: Home
                                 <path d="M23.3031 1.74685L1.14708 23.9029M23.3031 1.74685L23.2357 20.6704M23.3031 1.74685L4.37957 1.81419" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <img src="img/services/desing_comercial_room.webp" alt="desing" width="970" height="400" class="our-services__img">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/services/desing_comercial_room.webp" alt="desing" width="970" height="400" class="our-services__img">
                         <div class="our-services__desc">
                             <h3 class="our-services__text">Дизайн комерційних приміщень</h3>
                             <a href="#" class="our-services__big-col_link">
@@ -364,7 +364,7 @@ Template Name: Home
                     <div class="our-team__wrapper swiper-wrapper">
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Оксана
@@ -378,7 +378,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Дмитро
@@ -392,7 +392,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Daria.webp" width="510" height="550" class="human__img" alt="Головний архітектор">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Daria.webp" width="510" height="550" class="human__img" alt="Головний архітектор">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Дарія
@@ -406,7 +406,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Roman.webp" width="510" height="550" class="human__img" alt="Виконроб">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Roman.webp" width="510" height="550" class="human__img" alt="Виконроб">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Роман
@@ -420,7 +420,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Katja.webp" width="510" height="550" class="human__img" alt="Архітектор">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Katja.webp" width="510" height="550" class="human__img" alt="Архітектор">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Катерина
@@ -434,7 +434,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Viktoria.webp" width="510" height="550" class="human__img" alt="Дизайнер">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Viktoria.webp" width="510" height="550" class="human__img" alt="Дизайнер">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Вікторія
@@ -449,7 +449,7 @@ Template Name: Home
                         <!-- Тестові слайди -->
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Оксана
@@ -463,7 +463,7 @@ Template Name: Home
                         </div>
                         <div class="our-team__slide swiper-slide">
                             <div class="human">
-                                <img src="img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
                                 <div class="human__desc">
                                     <h3 class="human__name">
                                         Дмитро
@@ -585,8 +585,8 @@ Template Name: Home
                                 в ЖК “Варшавський”
                             </h4>
                         </div>
-                        <img src="img/performed/card_1.webp" class="work__bg-img" alt="Дизайн">
-                        <img src="img/performed/card_mob_1.webp" class="work__bg-mobile" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_1.webp" class="work__bg-img" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_mob_1.webp" class="work__bg-mobile" alt="Дизайн">
                     </div>
 
                     <div class="work__card work__card_2">
@@ -601,8 +601,8 @@ Template Name: Home
                                 в ЖК “Італійський квартал”
                             </h4>
                         </div>
-                        <img src="img/performed/card_2.webp" class="work__bg-img" alt="Дизайн">
-                        <img src="img/performed/card_mob_2.webp" class="work__bg-mobile" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_2.webp" class="work__bg-img" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_mob_2.webp" class="work__bg-mobile" alt="Дизайн">
                     </div>
 
                     <div class="work__card work__card_3">
@@ -617,8 +617,8 @@ Template Name: Home
                                 в ЖК “Італійський квартал”
                             </h4>
                         </div>
-                        <img src="img/performed/card_3.webp" class="work__bg-img" alt="Дизайн">
-                        <img src="img/performed/card_mob_3.webp" class="work__bg-mobile" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_3.webp" class="work__bg-img" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_mob_3.webp" class="work__bg-mobile" alt="Дизайн">
                     </div>
 
                     <div class="work__card work__card_4">
@@ -633,8 +633,8 @@ Template Name: Home
                                 в ЖК “Озерний гай”
                             </h4>
                         </div>
-                        <img src="img/performed/card_4.webp" class="work__bg-img" alt="Дизайн">
-                        <img src="img/performed/card_mob_4.webp" class="work__bg-mobile" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_4.webp" class="work__bg-img" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_mob_4.webp" class="work__bg-mobile" alt="Дизайн">
                     </div>
 
                     <div class="work__card work__card_5">
@@ -649,7 +649,7 @@ Template Name: Home
                                 в ЖК “Озерний гай”
                             </h4>
                         </div>
-                        <img src="img/performed/card_5.webp" class="work__bg-img" alt="Дизайн">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/performed/card_5.webp" class="work__bg-img" alt="Дизайн">
                     </div>
 
 
@@ -706,7 +706,7 @@ Template Name: Home
 
                     </div>
                     <div class="man_hour__illustration">
-                        <img src="img/man_hour.webp" width="552" height="598" alt="Викликати майстра">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/man_hour.webp" width="552" height="598" alt="Викликати майстра">
 
                         <a href="#" class="man_hour__btn btn">
                             Викликати майстра
@@ -738,7 +738,7 @@ Template Name: Home
                                     Перший зідзіон та обговорення всіх деталей проекту та ваших побажань
                                 </p>
                             </div>
-                            <img class="stages__right-arrow" src="img/stages/right_arrow.svg" width="37" height="102" alt="right arrow">
+                            <img class="stages__right-arrow" src="<?php bloginfo('template_url'); ?>/assets/img/stages/right_arrow.svg" width="37" height="102" alt="right arrow">
                         </div>
 
                         <div class="stages__item">
@@ -754,7 +754,7 @@ Template Name: Home
                                     На консультації ми обговорюємо всі варіанти реалізації проекту та ви отриимуєте відповіді на всі запитання
                                 </p>
                             </div>
-                            <img class="stages__left-arrow" src="img/stages/left_arrow.svg" width="37" height="102" alt="left arrow">
+                            <img class="stages__left-arrow" src="<?php bloginfo('template_url'); ?>/assets/img/stages/left_arrow.svg" width="37" height="102" alt="left arrow">
                         </div>
 
                         <div class="stages__item">
@@ -787,7 +787,7 @@ Template Name: Home
                                     Приїжджаємо на обʼєкт з метою оцінки роботи та планування.
                                 </p>
                             </div>
-                            <img class="stages__right-arrow" src="img/stages/right_arrow.svg" width="37" height="102" alt="right arrow">
+                            <img class="stages__right-arrow" src="<?php bloginfo('template_url'); ?>/assets/img/stages/right_arrow.svg" width="37" height="102" alt="right arrow">
                         </div>
 
                         <div class="stages__item">
@@ -803,7 +803,7 @@ Template Name: Home
                                     Плануємо роботи та всі задачі по проекту
                                 </p>
                             </div>
-                            <img class="stages__left-arrow" src="img/stages/left_arrow.svg" width="37" height="102" alt="left arrow">
+                            <img class="stages__left-arrow" src="<?php bloginfo('template_url'); ?>/assets/img/stages/left_arrow.svg" width="37" height="102" alt="left arrow">
                         </div>
 
                         <div class="stages__item">
@@ -845,13 +845,13 @@ Template Name: Home
 
                         <div class="reviews__slide swiper-slide">
                             <div class="review-card">
-                                <img src="img/reviews/rating.webp" width="184" height="32" alt="rating">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
                                 <div class="review-card__bio">
                                     <h4 class="review-card__user-name">
                                         Анна Скляренко
                                     </h4>
 
-                                    <img src="img/reviews/user1.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user1.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
                                 </div>
                                 <div class="review-card__text">
                                     Ми залишились дуже задоволені студією BUDGURU, відмінна якість, сервіс на висоті, а а
@@ -862,13 +862,13 @@ Template Name: Home
 
                         <div class="reviews__slide swiper-slide">
                             <div class="review-card">
-                                <img src="img/reviews/rating.webp" width="184" height="32" alt="rating">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
                                 <div class="review-card__bio">
                                     <h4 class="review-card__user-name">
                                         Віктор Бондар
                                     </h4>
 
-                                    <img src="img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
                                 </div>
                                 <div class="review-card__text">
                                     Ми залишились дуже задоволені студією BUDGURU, всі наші зауваження були враховані, в
@@ -879,13 +879,13 @@ Template Name: Home
 
                         <div class="reviews__slide swiper-slide">
                             <div class="review-card">
-                                <img src="img/reviews/rating.webp" width="184" height="32" alt="rating">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
                                 <div class="review-card__bio">
                                     <h4 class="review-card__user-name">
                                         Вікторія Грищук
                                     </h4>
 
-                                    <img src="img/reviews/user3.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user3.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
                                 </div>
                                 <div class="review-card__text">
                                     Виконано всі роботи якісно та в срок, задоволені, це справждні спеціалісти своєї справи.
@@ -896,13 +896,13 @@ Template Name: Home
 
                         <div class="reviews__slide swiper-slide">
                             <div class="review-card">
-                                <img src="img/reviews/rating.webp" width="184" height="32" alt="rating">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
                                 <div class="review-card__bio">
                                     <h4 class="review-card__user-name">
                                         Анна Скляренко
                                     </h4>
 
-                                    <img src="img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
                                 </div>
                                 <div class="review-card__text">
                                     Виконано всі роботи якісно та в срок, задоволені, це справждні спеціалісти своєї справи.
@@ -922,7 +922,7 @@ Template Name: Home
         <section class="calculator">
             <div class="calculator__container">
                 <div class="calculator__ilustration">
-                    <img src="img/calculator/calculator.webp" width="740" height="770" alt="Калькулятор">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/calculator/calculator.webp" width="740" height="770" alt="Калькулятор">
                 </div>
 
                 <div class="calculator__steps">
@@ -1111,28 +1111,28 @@ Template Name: Home
 
                 <div class="partners__row">
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                     <div class="partners__col">
-                        <img src="img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/partners/smile.webp" class="partners__logo" width="174" height="90" alt="Image">
                     </div>
                 </div>
             </div>
@@ -1159,7 +1159,7 @@ Template Name: Home
                 </div>
                 <div class="master__right-col">
                     <a href="#" class="master__btn btn">Викликати майстра</a>
-                    <img src="img/master.webp" width="680" alt="550" class="master__img" alt="Викликати майстра">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/master.webp" width="680" alt="550" class="master__img" alt="Викликати майстра">
                 </div>
             </div>
         </section>
@@ -1250,7 +1250,7 @@ Template Name: Home
 
                 <div class="projects__row">
                     <div class="projects__col project">
-                        <img src="img/projects/project1.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project1.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1262,7 +1262,7 @@ Template Name: Home
                     </div>
 
                     <div class="projects__col project">
-                        <img src="img/projects/project2.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project2.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1274,7 +1274,7 @@ Template Name: Home
                     </div>
 
                     <div class="projects__col project">
-                        <img src="img/projects/project3.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project3.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1286,7 +1286,7 @@ Template Name: Home
                     </div>
 
                     <div class="projects__col project">
-                        <img src="img/projects/project4.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project4.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1298,7 +1298,7 @@ Template Name: Home
                     </div>
 
                     <div class="projects__col project">
-                        <img src="img/projects/project5.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project5.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1310,7 +1310,7 @@ Template Name: Home
                     </div>
 
                     <div class="projects__col project">
-                        <img src="img/projects/project6.webp" class="project__img" width="510" height="436" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project6.webp" class="project__img" width="510" height="436" alt="Image">
                         <a href="#" class="project__link">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
@@ -1376,7 +1376,7 @@ Template Name: Home
 
                             <a href="#" class="post__url">Дивитись більше</a>
                         </div>
-                        <img src="img/blog/post1.webp" class="post__image" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/post1.webp" class="post__image" alt="Image">
                     </div>
 
                     <div class="post">
@@ -1403,7 +1403,7 @@ Template Name: Home
 
                             <a href="#" class="post__url">Дивитись більше</a>
                         </div>
-                        <img src="img/blog/post2.webp" class="post__image" alt="Image">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/post2.webp" class="post__image" alt="Image">
                     </div>
                 </div>
             </div>
