@@ -80,6 +80,11 @@
                  height: auto; 
             }
         }
+
+        span {
+            @include adaptiveValue("margin-right", 26, 18);
+            display: inline-block;
+        }
     }
 
     // .announcement__action

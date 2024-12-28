@@ -73,6 +73,12 @@
     &__grid {
     }
 
+    &__grid.loading {
+        opacity: 0.5;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
     // .work-performed__pagination
     &__pagination {
         @include adaptiveValue("margin-top", 60, 20);
@@ -85,10 +91,20 @@
     grid-template-areas: 'card_1 card_3 card_3'
                          'card_2 card_4 card_5';
     grid-template-columns: 487px 1fr 1fr;
+    grid-auto-rows: 374px auto;
+
+    &.archive-portfolio {
+        grid-template-areas: 'card_1 card_3 card_3'
+                             'card_2 card_4 card_5'
+                             'card_6 card_8 card_8'
+                             'card_7 card_9 card_10';
+        grid-auto-rows: 374px auto 374px auto;                     
+    }
     gap: 20px;
 
     @media (max-width: toEm(1080)){
         grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows:  unset;
     }
 
     @media (max-width:$tablet){
@@ -96,11 +112,25 @@
         grid-template-areas: 'card_1 card_2'
                              'card_3 card_3'  
                              'card_4 card_5';
+
+        &.archive-portfolio {
+            grid-template-areas: 'card_1 card_2'
+                                 'card_3 card_3'  
+                                 'card_4 card_5'
+                                 'card_6 card_7'
+                                 'card_8 card_9'
+                                 'card_10 card_10';
+        }
     }
 
     @media (max-width:$mobile){
         grid-template-columns: 1fr; 
-        grid-template-areas: 'card_1' 'card_2' 'card_3' 'card_4' 'card_5' 'card_6';
+        grid-template-areas: 'card_1' 'card_2' 'card_3' 'card_4' 'card_5';
+
+        &.archive-portfolio {
+            grid-template-areas: 'card_1' 'card_2' 'card_3' 'card_4' 'card_5' 
+                                 'card_6' 'card_7' 'card_8' 'card_9' 'card_10';
+        }
     }
 
     // .work__card
@@ -123,13 +153,46 @@
 
             @media (max-width:$mobile){
                 height: 330px; 
-           }
+            }
+        }
+
+        &_6 {
+            grid-area: card_6;
+            height: 300px;
+            .work__title {
+                @media (max-width:$tablet){
+                    max-width: 266px;
+                }
+            }
+
+            @media (max-width:$mobile){
+                height: 330px; 
+            }
         }
 
         // .work__card_2
         &_2 {
             height: 550px;
             grid-area: card_2;
+            margin-top: -72px;
+
+            @media (max-width:$tablet){
+                margin-top: 0px; 
+                height: 300px;
+            }
+
+            @media (max-width:$mobile){
+                height: 330px; 
+            }
+
+            .work__title {
+                max-width: 370px;
+            }
+        }
+
+        &_7 {
+            grid-area: card_7;
+            height: 550px;
             margin-top: -72px;
 
             @media (max-width:$tablet){
@@ -176,10 +239,51 @@
             }
         }
 
+        &_8 {
+            grid-area: card_8;
+            height: 372px;
+            @media (max-width:$mobile){
+                height: 330px; 
+            }
+
+            .work__link {
+                top: 4px;
+                left: 76px;
+                right: unset;
+
+                @media (max-width:$mobile){
+                    left: 56px;   
+                }
+
+                @media (max-width:$mobileSmall){
+                    top: 12px;
+                    right: 12px; 
+                    left: unset; 
+                }
+            }
+
+            .work__title {
+                max-width: 556px;
+            }
+        }
+
         // .work__card_4
         &_4 {
             height: 473px;
             grid-area: card_4;
+            .work__title {
+                max-width: 266px;
+            }
+
+            @media (max-width:$mobile){
+                height: 330px; 
+            }
+        }
+
+        &_9 {
+            grid-area: card_9;
+            height: 473px;
+
             .work__title {
                 max-width: 266px;
             }
@@ -202,6 +306,19 @@
                 max-width: 266px;
             }
         }
+
+        &_10 {
+            grid-area: card_10;
+            height: 473px;
+
+            @media (max-width:$mobile){
+                display: none;
+            }
+
+            .work__title {
+                max-width: 266px;
+            }
+        }   
     }
 
     // .work__link
