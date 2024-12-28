@@ -1,14 +1,7 @@
-<?php
-/*
-Template Name: Portfolio
-*/
-?>
-
 <?php 
 get_header(); 
 $portfolio_data = getPortfolioWithPagination();
 ?>
-
 <main class="page">
     <section class="work-performed">
         <div class="work-performed__container">
@@ -80,5 +73,4 @@ $portfolio_data = getPortfolioWithPagination();
         </div>
     </section>
 </main>
-
-<?php get_footer() ?>
+<?php get_footer(); ?>

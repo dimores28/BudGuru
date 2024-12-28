@@ -60,3 +60,48 @@ add_filter('theme_page_templates', function($page_templates, $wp_theme, $post) {
     
     return $page_templates;
 }, 10, 3);
+
+
+function custom_template_include($template) {
+    // Отримуємо поточний post type
+    $post_type = get_post_type();
+    
+    // Масив зареєстрованих custom post types
+    $custom_post_types = ['portfolio', 'services', 'projects', 'other-cpt', 'jobs'];
+    
+    // Якщо це один з наших custom post types
+    if (in_array($post_type, $custom_post_types)) {
+        // Для single post
+        if (is_singular()) {
+            $new_template = locate_template([
+                "template-parts/post-types/{$post_type}/single.php"
+            ]);
+            if ($new_template) {
+                return $new_template;
+            }
+        }
+        
+        // Для archive
+        if (is_post_type_archive()) {
+            $new_template = locate_template([
+                "template-parts/post-types/{$post_type}/archive.php"
+            ]);
+            if ($new_template) {
+                return $new_template;
+            }
+        }
+        
+        // Для taxonomy
+        if (is_tax()) {
+            $new_template = locate_template([
+                "template-parts/post-types/{$post_type}/taxonomy.php"
+            ]);
+            if ($new_template) {
+                return $new_template;
+            }
+        }
+    }
+    
+    return $template;
+}
+add_filter('template_include', 'custom_template_include');
