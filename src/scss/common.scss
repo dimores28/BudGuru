@@ -163,7 +163,8 @@
             background: #F9C98C;
         }
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
             background: #8F8F8F;
         }
 
@@ -182,6 +183,11 @@
     &__prev {
     }
 
+    &__prev:disabled {
+        background: #8F8F8F;
+        
+    }
+
     // .pagination__list
     &__list {
         display: flex;
@@ -190,6 +196,12 @@
 
     // .pagination__item
     &__item {
+
+        &.active {
+            a {
+                color: #F9C98C;
+            }
+        }
 
         a {
             color: #1e1e1e;

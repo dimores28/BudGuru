@@ -295,7 +295,7 @@
     &__block {
         display: flex;
         align-items: flex-start;
-        gap: 48px;
+        gap: 32px;
         margin-bottom: 62px;
 
         @media (max-width:$mobile){
@@ -306,7 +306,7 @@
 
     // .project-desc__slider
     &__slider {
-        width: 60%;
+        width: 55%;
 
         @media (max-width:$mobile){
              width: 100%; 
@@ -315,7 +315,7 @@
 
     // .project-desc__text-block
     &__text-block {
-        width: 40%;
+        width: 45%;
         @media (max-width:$mobile){
             width: 100%; 
        }
@@ -348,9 +348,9 @@
         font-weight: 400;
         line-height: 1.5;
 
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
+        // display: flex;
+        // align-items: flex-start;
+        // gap: 20px;
         @include adaptiveValue("margin-bottom", 30, 10);
 
         @media (max-width:$mobile){
@@ -488,6 +488,7 @@
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     @include adaptiveValue("gap", 80, 30);
  
     @media (max-width: 580px){
@@ -496,6 +497,11 @@
 
     // .plan__item
     &__item {
+        width: calc(50% - 40px);
+
+        @media (max-width: 580px){
+            width: 100%; 
+       }
     }
 
     // .plan__tetle

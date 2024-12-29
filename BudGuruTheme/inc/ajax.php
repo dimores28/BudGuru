@@ -123,3 +123,60 @@ add_action('wp_ajax_load_portfolio', 'load_portfolio_ajax');
 add_action('wp_ajax_nopriv_load_portfolio', 'load_portfolio_ajax');
 
 //--------------------------------------------------------------//
+function register_projects_scripts() {
+    wp_enqueue_script(
+        'projects-pagination', 
+        get_template_directory_uri() . '/assets/js/projects-pagination.js', 
+        array('jquery'), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'register_projects_scripts');
+
+function load_projects() {
+    $page = $_POST['page'];
+    
+    $args = array(
+        'post_type' => 'projects',
+        'posts_per_page' => get_option('posts_per_page'),
+        'paged' => $page
+    );
+    
+    $query = new WP_Query($args);
+    
+    if($query->have_posts()):
+        while($query->have_posts()): $query->the_post();
+            ?>
+            <div class="projects__col project">
+                <?php if(has_post_thumbnail()): ?>
+                    <img src="<?php the_post_thumbnail_url('full'); ?>" 
+                         class="project__img" 
+                         width="510" 
+                         height="436" 
+                         alt="<?php the_title(); ?>">
+                <?php endif; ?>
+                
+                <a href="<?php the_permalink(); ?>" class="project__link">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <div class="projects__title">
+                    <?php the_title(); ?>
+                </div>
+            </div>
+            <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    die();
+}
+add_action('wp_ajax_load_projects', 'load_projects');
+add_action('wp_ajax_nopriv_load_projects', 'load_projects');
+
+// Додаємо ajaxurl в frontend
+function add_ajax_url() {
+    echo '<script>var ajaxurl = "' . admin_url('admin-ajax.php') . '";</script>';
+}
+add_action('wp_head', 'add_ajax_url');
+
+//--------------------------------------------------------------//

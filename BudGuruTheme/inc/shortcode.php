@@ -19,3 +19,10 @@ function consultation_section_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('consultation_section', 'consultation_section_shortcode');
+
+function projects_section_shortcode() {
+    ob_start();
+    include get_template_directory() . '/template-parts/sections/projects-section.php';
+    return ob_get_clean();
+}
+add_shortcode('projects_section', 'projects_section_shortcode');

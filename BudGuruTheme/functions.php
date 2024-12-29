@@ -18,6 +18,7 @@ define('WPTEST_DIR_iMG', get_template_directory_uri() . '/assets/img/');
 include_once('inc/functions-modules/services.php');
 include_once('inc/functions-modules/jobs.php');
 include_once('inc/functions-modules/portfolio.php');
+include_once('inc/functions-modules/projects.php');
 // include_once('inc/functions-modules/reviews.php');
 
 include_once('inc/menu.php');
