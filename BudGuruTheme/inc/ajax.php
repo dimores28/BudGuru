@@ -180,3 +180,147 @@ function add_ajax_url() {
 add_action('wp_head', 'add_ajax_url');
 
 //--------------------------------------------------------------//
+// Блог
+function register_blog_scripts() {
+    wp_enqueue_script(
+        'blog-pagination', 
+        get_template_directory_uri() . '/assets/js/blog.js', 
+        array('jquery'), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'register_blog_scripts');
+
+// Фільтрація постів
+function filter_posts() {
+    $category = $_POST['category'];
+    
+    $args = array(
+        'posts_per_page' => 8,
+        'post_status' => 'publish'
+    );
+    
+    if($category !== 'all') {
+        $args['cat'] = $category;
+    }
+    
+    $query = new WP_Query($args);
+    
+    if($query->have_posts()):
+        while($query->have_posts()): $query->the_post();
+            ?>
+            <div class="post">
+                <div class="post__top-block">
+                    <div class="post__tags">
+                    <?php 
+                        $post_tags = get_the_tags();
+                    if($post_tags): 
+                        foreach($post_tags as $tag): 
+                    ?>
+                        <p class="post__tag">
+                            <?php echo $tag->name; ?>
+                        </p>
+                    <?php 
+                        endforeach;
+                    endif; 
+                    ?>
+                    </div>
+                </div>
+
+                <div class="post__content">
+                    <div class="post__date"><?php echo get_the_date('d.m.Y'); ?></div>
+                    <h4 class="post__title">
+                        <?php echo wp_trim_words(get_the_title(), 10); ?>
+                    </h4>
+                    <p class="post__text">
+                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                    </p>
+
+                    <a href="<?php the_permalink(); ?>" class="post__url">Дивитись більше</a>
+                </div>
+                <?php if(has_post_thumbnail()): ?>
+                    <img src="<?php the_post_thumbnail_url(); ?>" 
+                         class="post__image" 
+                         alt="<?php the_title(); ?>">
+                <?php endif; ?>
+            </div>
+            <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    die();
+}
+add_action('wp_ajax_filter_posts', 'filter_posts');
+add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');
+
+// Завантаження постів (пагінація)
+function load_posts() {
+    $page = $_POST['page'];
+    $category = $_POST['category'];
+    
+    $args = array(
+        'posts_per_page' => 8,
+        'post_status' => 'publish',
+        'paged' => $page
+    );
+    
+    if($category !== 'all') {
+        $args['cat'] = $category;
+    }
+    
+    $query = new WP_Query($args);
+    
+    if($query->have_posts()):
+        while($query->have_posts()): $query->the_post();
+            ?>
+            <div class="post">
+                <div class="post__top-block">
+                    <div class="post__tags">
+                    <?php 
+                        $post_tags = get_the_tags();
+                    if($post_tags): 
+                        foreach($post_tags as $tag): 
+                    ?>
+                        <p class="post__tag">
+                            <?php echo $tag->name; ?>
+                        </p>
+                    <?php 
+                        endforeach;
+                    endif; 
+                    ?>
+                    </div>
+                </div>
+
+                <div class="post__content">
+                    <div class="post__date"><?php echo get_the_date('d.m.Y'); ?></div>
+                    <h4 class="post__title">
+                        <?php echo wp_trim_words(get_the_title(), 10); ?>
+                    </h4>
+                    <p class="post__text">
+                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                    </p>
+
+                    <a href="<?php the_permalink(); ?>" class="post__url">Дивитись більше</a>
+                </div>
+                <?php if(has_post_thumbnail()): ?>
+                    <img src="<?php the_post_thumbnail_url(); ?>" 
+                         class="post__image" 
+                         alt="<?php the_title(); ?>">
+                <?php endif; ?>
+            </div>
+            <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    die();
+}
+add_action('wp_ajax_load_posts', 'load_posts');
+add_action('wp_ajax_nopriv_load_posts', 'load_posts');
+
+// Встановлюємо кількість постів на сторінці
+function set_posts_per_page($query) {
+    if (!is_admin() && $query->is_main_query() && is_home()) {
+        $query->set('posts_per_page', 8);
+    }
+}
+add_action('pre_get_posts', 'set_posts_per_page');

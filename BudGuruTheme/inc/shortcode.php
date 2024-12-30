@@ -26,3 +26,10 @@ function projects_section_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('projects_section', 'projects_section_shortcode');
+
+function blog_section_shortcode() {
+    ob_start();
+    include get_template_directory() . '/template-parts/sections/blog-section.php';
+    return ob_get_clean();
+}
+add_shortcode('blog_section', 'blog_section_shortcode');
