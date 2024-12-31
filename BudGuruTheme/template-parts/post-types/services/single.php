@@ -20,11 +20,11 @@
                     <table class="design-prices__table table">
 							<thead class="table__header">
 								<tr class="table__row">
-									<th class="table__head table__head--packages">Пакети</th>
-									<th class="table__head table__head--visual">Візуальний</th>
-									<th class="table__head table__head--technical">Технічний</th>
-									<th class="table__head table__head--all-included">Все враховано</th>
-									<th class="table__head table__head--maximum">Максимальний</th>
+									<th class="table__head table__head--packages"><?php _e('Пакети', 'budguru'); ?></th>
+									<th class="table__head table__head--visual"><?php _e('Візуальний', 'budguru'); ?></th>
+									<th class="table__head table__head--technical"><?php _e('Технічний', 'budguru'); ?></th>
+									<th class="table__head table__head--all-included"><?php _e('Все враховано', 'budguru'); ?></th>
+									<th class="table__head table__head--maximum"><?php _e('Максимальний', 'budguru'); ?></th>
 								</tr>
 							</thead>
 							<tbody class="table__body">
@@ -56,7 +56,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Обмірний план</td>
+									<td class="table__cell table__cell--title"><?php _e('Обмірний план', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -83,7 +83,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План розташування стін</td>
+									<td class="table__cell table__cell--title"><?php _e('План розташування стін', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -110,7 +110,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Візуалізація</td>
+									<td class="table__cell table__cell--title"><?php _e('Візуалізація', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -136,7 +136,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Підбір матеріалів</td>
+									<td class="table__cell table__cell--title"><?php _e('Підбір матеріалів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -162,7 +162,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План розміщення меблів</td>
+									<td class="table__cell table__cell--title"><?php _e('План розміщення меблів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -189,7 +189,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План демонтажу</td>
+									<td class="table__cell table__cell--title"><?php _e('План демонтажу', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -215,7 +215,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План підлоги із зазначенням типу покриття, плінтуса і теплої підлоги</td>
+									<td class="table__cell table__cell--title"><?php _e('План підлоги із зазначенням типу покриття, плінтуса і теплої підлоги', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -241,7 +241,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План стелі</td>
+									<td class="table__cell table__cell--title"><?php _e('План стелі', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -267,7 +267,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План розташування розеток і вимикачів</td>
+									<td class="table__cell table__cell--title"><?php _e('План розташування розеток і вимикачів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -293,7 +293,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План привʼязки світильників зі схемою включення</td>
+									<td class="table__cell table__cell--title"><?php _e('План привʼязки світильників зі схемою включення', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -319,7 +319,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План оздоблення стін</td>
+									<td class="table__cell table__cell--title"><?php _e('План оздоблення стін', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -345,7 +345,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Відомість обробки із зазначенням типу, кількості та назви покриттів</td>
+									<td class="table__cell table__cell--title"><?php _e('Відомість обробки із зазначенням типу, кількості та назви покриттів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -371,7 +371,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">План привʼязки сантехнічного обладнання</td>
+									<td class="table__cell table__cell--title"><?php _e('План привʼязки сантехнічного обладнання', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -397,7 +397,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Розгортки стін санвузла та кухні зі схемою розкладки плитки</td>
+									<td class="table__cell table__cell--title"><?php _e('Розгортки стін санвузла та кухні зі схемою розкладки плитки', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -423,7 +423,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Специфікація електрофурнітури</td>
+									<td class="table__cell table__cell--title"><?php _e('Специфікація електрофурнітури', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -448,7 +448,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Специфікація освітлювальних приладів</td>
+									<td class="table__cell table__cell--title"><?php _e('Специфікація освітлювальних приладів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -473,7 +473,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Специфікація сантехнічного обладнання</td>
+									<td class="table__cell table__cell--title"><?php _e('Специфікація сантехнічного обладнання', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -498,7 +498,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Розгортки стін усіх приміщень</td>
+									<td class="table__cell table__cell--title"><?php _e('Розгортки стін усіх приміщень', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -523,7 +523,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Креслення меблів</td>
+									<td class="table__cell table__cell--title"><?php _e('Креслення меблів', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -548,7 +548,7 @@
 								</tr>
 
 								<tr class="table__row table__row-divider">
-									<td class="table__cell table__cell--title">Правки</td>
+									<td class="table__cell table__cell--title"><?php _e('Правки', 'budguru'); ?></td>
 									<td class="table__cell"></td>
 									<td class="table__cell"></td>
 									<td class="table__cell"></td>
@@ -556,7 +556,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">До 3-х правок на кожний етап</td>
+									<td class="table__cell table__cell--title"><?php _e('До 3-х правок на кожний етап', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -583,7 +583,7 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Необмежена кількість правок</td>
+									<td class="table__cell table__cell--title"><?php _e('Необмежена кількість правок', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -608,8 +608,10 @@
 								</tr>
 
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Авторський нагляд
-										(до 4 виїздів на обʼєкт)</td>
+									<td class="table__cell table__cell--title">
+										<?php _e('Авторський нагляд', 'budguru'); ?>
+										(<?php _e('до 4 виїздів на обʼєкт', 'budguru'); ?>)
+									</td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
@@ -637,19 +639,19 @@
 									<td class="table__cell table__cell--title">Вартість:</td>
 									<td class="table__cell">
                                         <?php echo $prices['vizual']; ?>
-										<a href="#consultation-section" class="table__link">Замовити</a>
+										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
                                         <?php echo $prices['tehnical']; ?>
-										<a href="#consultation-section" class="table__link">Замовити</a>
+										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
                                         <?php echo $prices['everything_considered'] ?? '32$/m2'; ?>
-										<a href="#consultation-section" class="table__link">Замовити</a>
+										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
                                         <?php echo $prices['maximum'] ?? '45$/m2'; ?>
-										<a href="#consultation-section" class="table__link">Замовити</a>
+										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 								</tr>
 
@@ -682,7 +684,7 @@
                                             <?php echo $item['desc']; ?>
                                         </p>
                                         <a href="#consultation-section" class="price__btn btn">
-                                            Замовити
+                                            <?php _e('Замовити', 'budguru'); ?>
                                         </a>
                                     </div>
                                 </div>

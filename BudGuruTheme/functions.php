@@ -24,7 +24,7 @@ include_once('inc/functions-modules/projects.php');
 include_once('inc/menu.php');
 include_once('inc/modules.php');
 include_once('inc/ajax.php');
-include_once('inc/shortcode.php');
+include_once('inc/shortcodes.php');
 
 add_action('wp_enqueue_scripts', function(){
     wp_enqueue_style('main', WPTEST_DIR_CSS . 'style.min.css');
@@ -106,3 +106,23 @@ function custom_template_include($template) {
     return $template;
 }
 add_filter('template_include', 'custom_template_include');
+
+function budguru_load_theme_textdomain() {
+    load_theme_textdomain('budguru', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'budguru_load_theme_textdomain');
+
+// Підключаємо систему лайків
+require_once get_template_directory() . '/inc/like-system.php';
+
+// Додаємо скрипти і стилі
+function add_like_system_scripts() {
+    wp_enqueue_script('like-system', get_template_directory_uri() . '/assets/js/like-system.js', array('jquery'), '1.0', true);
+    wp_localize_script('like-system', 'budguruAjax', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('like_post_nonce')
+    ));
+}
+add_action('wp_enqueue_scripts', 'add_like_system_scripts');
+
+require_once get_template_directory() . '/inc/post-views.php';

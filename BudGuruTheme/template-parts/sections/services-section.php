@@ -2,7 +2,7 @@
     <div class="our-services__container">
         <div class="our-services__head-block">
             <h2 class="our-services__heding">
-                Наші <span>Послуги</span>
+                <?php _e('Наші', 'budguru'); ?> <span><?php _e('Послуги', 'budguru'); ?></span>
             </h2>
 
             

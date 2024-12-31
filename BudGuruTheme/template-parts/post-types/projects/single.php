@@ -26,7 +26,7 @@
     <section class="project-desc">
         <div class="project-desc__container">
             <h2 class="project-desc__heading h2">
-                Опис роботи
+                <?php _e('Опис роботи', 'budguru'); ?>
             </h2>
 
             <div class="project-desc__block">
@@ -49,12 +49,12 @@
 
                 <div class="project-desc__text-block">
                     <h3 class="project-desc__title">
-                        Про проект
+                        <?php _e('Про проект', 'budguru'); ?>
                     </h3>
 
                     <?php if($cost_house_project = get_field('cost_house_project')): ?>
                         <div class="project-desc__adress project-desc__price">
-                            <span>Вартість проекту будинку:</span> <?php echo $cost_house_project; ?>
+                            <span><?php _e('Вартість проекту будинку:', 'budguru'); ?></span> <?php echo $cost_house_project; ?>
                         </div>
                     <?php endif; ?>
 
@@ -66,19 +66,19 @@
 
                     <?php if($cost_building_house = get_field('cost_building_house')): ?>
                         <div class="project-desc__adress project-desc__price">
-                            <span>Вартість будівництва будинку:</span> <?php echo $cost_building_house; ?>
+                            <span><?php _e('Вартість будівництва будинку:', 'budguru'); ?></span> <?php echo $cost_building_house; ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if($cost_building_box = get_field('cost_building_box')): ?>
                         <div class="project-desc__adress project-desc__price">
-                            <span>Вартість будівництва будинку ( коробка будинку ):</span> <?php echo $cost_building_box; ?>
+                            <span><?php _e('Вартість будівництва будинку ( коробка будинку ):', 'budguru'); ?></span> <?php echo $cost_building_box; ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if($cost_interior_decoration = get_field('cost_interior_decoration')): ?>
                         <div class="project-desc__adress project-desc__price">
-                            <span>Вартість будинку з внутрішнім оздобленням ( під ключ ):</span> <?php echo $cost_interior_decoration; ?>
+                            <span><?php _e('Вартість будинку з внутрішнім оздобленням ( під ключ ):', 'budguru'); ?></span> <?php echo $cost_interior_decoration; ?>
                         </div>
                     <?php endif; ?>
                 </div>

@@ -107,8 +107,6 @@
 
     // .hero__lang
     &__lang {
-        padding: 9px 20px;
-        background: #F9C98C;
         border-radius: 20px;
 
         color: #1e1e1e;
@@ -119,6 +117,34 @@
         line-height: normal;
         letter-spacing: -1px;
         margin-top: 30px;
+
+        .lang-select {
+            color: #1e1e1e;
+            font-size: 18px;
+            @include adaptiveValue("font-size", 18, 14);
+            font-style: normal;
+            font-family: "Inter",sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -1px;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            
+            &:focus {
+                outline: none;
+            }
+    
+
+            option { 
+                background: #FFF2E1;
+                padding: 8px 16px;
+            }
+        }
+
+        
     }
 
     // .hero__center-block
@@ -519,5 +545,71 @@
         right: -120px;
         top: 10px;
 
+    }
+}
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+}
+
+.select-selected {
+    color: #1e1e1e;
+    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 14);
+    font-style: normal;
+    font-family: "Inter",sans-serif;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    padding: 10px 30px 12px 20px;
+    background: #F9C98C;
+    border-radius: 16px;
+    position: relative;
+    z-index: 100;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 44%;
+        transform: translateY(-50%);
+        border: solid #1e1e1e;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: translateY(-50%) rotate(45deg);
+        transition: all 0.3s ease;
+    }
+}
+
+.select-items {
+    position: absolute;
+    top: 72%;
+    left: 0;
+    right: 0;
+    background-color: #FFF2E1;
+    z-index: 99;
+    border-radius: 0 0 16px 16px;
+    padding-top: 10px;
+    
+    div {
+        color: #000;
+        padding: 8px 16px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-selected.active {
+    &::after {
+        transform: translateY(-50%) rotate(225deg);
     }
 }

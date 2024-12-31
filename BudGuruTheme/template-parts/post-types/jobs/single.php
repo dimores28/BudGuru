@@ -13,7 +13,7 @@
                         <div class="vacancies__announcement announcement">
                             <div class="announcement__text-block">
                                 <h4 class="announcement__title">
-                                    Вакансія дизайнера іетерʼєру
+                                    <?php the_title(); ?>
                                 </h4>
 
                                 <p class="announcement__desc">
@@ -30,7 +30,7 @@
                             </div>
                             <div class="announcement__action">
                                 <a href="mailto:<?php echo get_field('email', 'option'); ?>" class="announcement__link btn">
-                                    Відправити резюме
+                                    <?php _e('Відправити резюме', 'budguru'); ?>
                                 </a>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                         <?php if($requirements = get_field('requirements')): ?>
                             <div class="job-desc__block">
                                 <h3 class="job-desc__title">
-                                    Ми пропонуємо:
+                                    <?php _e('Ми пропонуємо:', 'budguru'); ?>
                                 </h3>
                                 <?php echo $requirements; ?>
                             </div>
@@ -50,7 +50,7 @@
                         <?php if($benefits = get_field('benefits')): ?>
                             <div class="job-desc__block">
                                 <h3 class="job-desc__title">
-                                    Вимоги до кандидатів
+                                    <?php _e('Вимоги до кандидатів', 'budguru'); ?>
                                 </h3>
 
                                 <?php echo $benefits; ?>

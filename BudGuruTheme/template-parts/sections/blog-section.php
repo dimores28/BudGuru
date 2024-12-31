@@ -12,7 +12,9 @@ $posts_query = new WP_Query([
             <div class="blog__box">
                 <h2 class="blog__heading h2">Блог</h2>
                 <div class="blog__filters filters" data-da=".filters-wrap,1120,0">
-                    <a href="#" class="filters__item active" data-category="all">Всі теми</a>
+                    <a href="#" class="filters__item active" data-category="all">
+                        <?php _e('Всі теми', 'budguru'); ?>
+                    </a>
                     <?php foreach($categories as $category): ?>
                         <a href="#" 
                            class="filters__item" 
@@ -24,7 +26,7 @@ $posts_query = new WP_Query([
             </div>
 
             <a href="/blog" class="blog__btn btn">
-                Дивитися більше
+                <?php _e('Дивитися більше', 'budguru'); ?>
             </a>
         </div>
 
@@ -59,7 +61,9 @@ $posts_query = new WP_Query([
                             <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                         </p>
 
-                        <a href="<?php the_permalink(); ?>" class="post__url">Дивитись більше</a>
+                        <a href="<?php the_permalink(); ?>" class="post__url">
+                            <?php _e('Дивитися більше', 'budguru'); ?>
+                        </a>
                     </div>
                     <?php if(has_post_thumbnail()): ?>
                         <img src="<?php the_post_thumbnail_url(); ?>" 

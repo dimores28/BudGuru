@@ -4,22 +4,22 @@
 
             <div class="work-performed__head-wrap">
                 <h2 class="work-performed__heading h2">
-                    <span>Виконані роботи</span>
+                    <span><?php _e('Виконані роботи', 'budguru'); ?></span>
                 </h2>
                 <a href="<?php echo bloginfo('url'); ?>/portfolio" class="work-performed__btn btn">
-                    Дивитись більше
+                    <?php _e('Дивитись більше', 'budguru'); ?>
                 </a>
             </div>
 
             <div class="work-performed__filters">
                 <a href="#" class="work-performed__filters_link active" data-category="">
-                    Усі
+                    <?php _e('Усі', 'budguru'); ?>
                 </a>
                 <a href="#" class="work-performed__filters_link" data-category="residential">
-                    Житлові приміщення
+                    <?php _e('Житлові приміщення', 'budguru'); ?>
                 </a>
                 <a href="#" class="work-performed__filters_link" data-category="commercial">
-                    Комерційні приміщення
+                    <?php _e('Комерційні приміщення', 'budguru'); ?>
                 </a>
             </div>
 

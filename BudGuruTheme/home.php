@@ -21,10 +21,44 @@ Template Name: Home
                         </a>
                     </h1>
 
-                    <div class="hero__lang">
-                        ua
+                    <div class="hero__lang custom-select">
+                        <?php
+                        if(function_exists('pll_the_languages')) {
+                            $languages = pll_the_languages(array(
+                                'show_flags' => 0,
+                                'show_names' => 1,
+                                'hide_if_empty' => 0,
+                                'raw' => 1
+                            ));
+                            
+                            if($languages) {
+                                $current_lang = '';
+                                echo '<div class="select-selected">';
+                                foreach($languages as $language) {
+                                    if($language['current_lang']) {
+                                        echo $language['name'];
+                                        $current_lang = $language['name'];
+                                    }
+                                }
+                                echo '</div>';
+                                
+                                echo '<div class="select-items select-hide">';
+                                foreach($languages as $language) {
+                                    if($language['name'] !== $current_lang) {
+                                        echo sprintf(
+                                            '<div data-url="%s">%s</div>',
+                                            $language['url'],
+                                            $language['name']
+                                        );
+                                    }
+                                }
+                                echo '</div>';
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
+
                 <div class="hero__center-block">
                     <a href="#" class="hero__btn-coll">
                         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,6 +84,7 @@ Template Name: Home
                         </li>
                     </ul>
                 </div>
+                
                 <div class="hero__bottom-block">
                     <div class="hero__sticker sticker">
                         <div class="sticker__desc">

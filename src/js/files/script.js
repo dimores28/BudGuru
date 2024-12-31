@@ -150,4 +150,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     
+    document.addEventListener('DOMContentLoaded', function() {
+        const customSelect = document.querySelector('.custom-select');
+        if(!customSelect) return;
     
+        const selected = customSelect.querySelector('.select-selected');
+        const items = customSelect.querySelector('.select-items');
+    
+        selected.addEventListener('click', function(e) {
+            e.stopPropagation();
+            items.classList.toggle('select-hide');
+            selected.classList.toggle('active');
+        });
+    
+        items.querySelectorAll('div').forEach(item => {
+            item.addEventListener('click', function() {
+                window.location.href = this.dataset.url;
+            });
+        });
+    
+        document.addEventListener('click', function() {
+            items.classList.add('select-hide');
+            selected.classList.remove('active');
+        });
+    });

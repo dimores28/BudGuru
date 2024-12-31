@@ -3,7 +3,7 @@
         <div class="consultation__content">
             <div class="consultation__head-block">
                 <h2 class="consultation__heading">
-                    Потрібна <span>консультація спеціаліста?</span>
+                    <?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
                 </h2>
             </div>
 
@@ -11,8 +11,7 @@
                 <form class="consultation__form">
                     <div class="consultation__field-wrap">
                         <p class="consultation__text">
-                            Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя,
-                            вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!
+                            <?php _e('Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя, вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
                         </p>
 
                         <input class="consultation__form-input" 
@@ -48,10 +47,10 @@
                              height="120" 
                              alt="smile">
                         <h3 class="form-success__heading">
-                            Дякуємо за звернення!
+                            <?php _e('Дякуємо за звернення!', 'budguru'); ?>
                         </h3>
                         <p class="form-success__text">
-                            Наші спеціалісти звʼяжуться з вами найближчим часом!
+                            <?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
                         </p>
                     </div>
                 </form>

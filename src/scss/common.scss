@@ -27,7 +27,7 @@
     }
 }
 
-.h2 {
+.h2, h2 {
     color: #1e1e1e;
     @include adaptiveValue("font-size", 64, 20);
     font-style: normal;
@@ -50,7 +50,7 @@
     }
 }
 
-.h1 {
+.h1, h1 {
     color: #fff;
     @include adaptiveValue("font-size", 88, 26);
     font-style: normal;
@@ -268,4 +268,36 @@
         }
     }
 }
+
+h3, .h3 {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 42, 24);
+    font-style: normal;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+
+    @media (max-width:$tablet){
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+}
+
+h4, .h4 {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 20, 16);
+    font-style: normal;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400;
+}
+
+h5, .h5 {
+    color: #1e1e1e;
+    @include adaptiveValue("font-size", 18, 14);
+    font-style: normal;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400;
+}
+
 

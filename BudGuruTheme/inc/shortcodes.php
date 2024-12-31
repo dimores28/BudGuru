@@ -33,3 +33,24 @@ function blog_section_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('blog_section', 'blog_section_shortcode');
+
+function hero_section_shortcode($atts) {
+    // Перетворюємо атрибути в масив
+    $atts = shortcode_atts(
+        array(
+            'title' => '',
+            'show_link' => 'true' // за замовчуванням true
+        ),
+        $atts,
+        'hero_section'
+    );
+
+    // Конвертуємо строкове значення в булеве
+    $atts['show_link'] = filter_var($atts['show_link'], FILTER_VALIDATE_BOOLEAN);
+
+    // Буферизуємо вивід
+    ob_start();
+    include get_template_directory() . '/template-parts/sections/hero-section.php';
+    return ob_get_clean();
+}
+add_shortcode('hero_section', 'hero_section_shortcode'); 

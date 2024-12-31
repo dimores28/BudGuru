@@ -18,6 +18,8 @@ Template Name: Blog
 ?>
 
 <main class="page">
+    <?php echo do_shortcode('[hero_section title="Наш <span>блог</span>" show_link="false"]'); ?>
+    
     <section class="blog">
         <div class="blog__container">
             <div class="blog_top-block">

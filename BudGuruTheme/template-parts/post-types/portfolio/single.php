@@ -24,7 +24,7 @@
                 <?php endif; ?>
                  
                 <h2 class="project-desc__heading h2">
-                    Опис роботи
+                    <?php _e('Опис роботи', 'budguru'); ?>
                 </h2>
 
                 <div class="project-desc__block">
@@ -47,13 +47,13 @@
 
                     <div class="project-desc__text-block">
                         <h3 class="project-desc__title">
-                            Про проект
+                            <?php _e('Про проект', 'budguru'); ?>
                         </h3>
 
                         <div class="project-desc__list">
                             <?php if(!empty($portfolio['cost_project'])): ?>
                                 <div class="project-desc__adress project-desc__price">
-                                    <span>Вартість проекту будинку:</span> <?php echo $portfolio['cost_project']; ?>
+                                    <span><?php _e('Вартість проекту будинку:', 'budguru'); ?></span> <?php echo $portfolio['cost_project']; ?>
                                 </div>
                             <?php endif; ?>
 
@@ -80,7 +80,7 @@
                         <?php if(!empty($portfolio['project_team'])): ?>
                             <div class="project__team">
                                 <h3 class="project__team-title">
-                                    Команда проекту
+                                    <?php _e('Команда проекту', 'budguru'); ?>
                                 </h3>
                                 <div class="project__team-row">
                                     <?php foreach($portfolio['project_team'] as $team): ?>
