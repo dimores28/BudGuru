@@ -8,7 +8,20 @@ Template Name: Home
 
     <main class="page">
         
-        <?php echo do_shortcode('[hero_section title="Студія <span>дизайну інтерʼєру</span> та <span>ремонту</span>" show_link="false"]'); ?>
+        <?php
+            $page_title = get_the_title();
+            $words = explode(' ', $page_title);
+
+            $middle = ceil(count($words) / 2);
+            $first_part = array_slice($words, 0, $middle);
+            $second_part = array_slice($words, $middle);
+
+            echo do_shortcode(sprintf(
+                '[hero_section title="%s <span>%s</span>" show_link="false"]',
+                implode(' ', $first_part),
+                implode(' ', $second_part)
+            ));
+        ?>
 
         <section class="about">
             <div class="about__container">
@@ -78,140 +91,7 @@ Template Name: Home
 
         <?php echo do_shortcode('[services_section]'); ?>
 
-        <section class="our-team">
-            <div class="our-team__container">
-
-                <div class="our-team__head-block">
-                    <h2 class="our-team__heading h2">
-                        Наша <span>команда</span>
-                    </h2>
-
-                    <div>
-                        <div class="our-team__next swiper-button-next"></div>
-                        <div class="our-team__prev swiper-button-prev"></div>
-                    </div>
-                </div>
-
-                <div class="our-team__slider team-swiper">
-                    <div class="our-team__wrapper swiper-wrapper">
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Оксана
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Головний дизайнер
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Дмитро
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Засновник та керівник
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Daria.webp" width="510" height="550" class="human__img" alt="Головний архітектор">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Дарія
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Головний архітектор
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Roman.webp" width="510" height="550" class="human__img" alt="Виконроб">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Роман
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Виконроб
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Katja.webp" width="510" height="550" class="human__img" alt="Архітектор">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Катерина
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Архітектор
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Viktoria.webp" width="510" height="550" class="human__img" alt="Дизайнер">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Вікторія
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Дизайнер
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Тестові слайди -->
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Ocsana.webp" width="510" height="550" class="human__img" alt="Головний дизайнер">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Оксана
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Головний дизайнер
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-team__slide swiper-slide">
-                            <div class="human">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/teem/Dmytro.webp" width="510" height="550" class="human__img" alt="Засновник та керівник">
-                                <div class="human__desc">
-                                    <h3 class="human__name">
-                                        Дмитро
-                                    </h3>
-
-                                    <p class="human__position">
-                                        Засновник та керівник
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        <?php get_template_part('template-parts/sections/team-slider'); ?>
 
         <?php get_template_part('template-parts/sections/info/why-us'); ?>
 

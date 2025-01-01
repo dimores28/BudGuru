@@ -7,10 +7,25 @@ Template Name: Vacancies
 <?php get_header() ?>
 
 <main class="page">
+    <?php
+        $page_title = get_the_title();
+        $words = explode(' ', $page_title);
+
+        $middle = ceil(count($words) / 2);
+        $first_part = array_slice($words, 0, $middle);
+        $second_part = array_slice($words, $middle);
+
+        echo do_shortcode(sprintf(
+            '[hero_section title="%s <span>%s</span>" show_link="false"]',
+            implode(' ', $first_part),
+            implode(' ', $second_part)
+        ));
+    ?>
+
     <section class="vacancies">
         <div class="vacancies__container">
             <h2 class="vacancies__heading h2">
-                Наші <span>вакансії</span>
+                <?php _e('Наші <span>вакансії</span>', 'budguru'); ?>
             </h2>
 
             <div class="vacancies__bord">
@@ -32,7 +47,7 @@ Template Name: Vacancies
                     </div>
                     <div class="announcement__action">
                         <a href="<?php echo $job['link']; ?>" class="announcement__link btn">
-                            Детальніше
+                            <?php _e('Детальніше', 'budguru'); ?>
                         </a>
                     </div>
                 </div>
@@ -43,7 +58,7 @@ Template Name: Vacancies
             <div class="job-desc">
                 <div class="job-desc__block">
                     <h3 class="job-desc__title">
-                        Ми пропонуємо:
+                        <?php _e('Ми пропонуємо:', 'budguru'); ?>
                     </h3>
 
                     <?php if($benefits = get_field('benefits')): ?>
@@ -53,7 +68,7 @@ Template Name: Vacancies
 
                 <div class="job-desc__block">
                     <h3 class="job-desc__title">
-                        Вимоги до кандидатів
+                        <?php _e('Вимоги до кандидатів', 'budguru'); ?>
                     </h3>
 
                     <?php if($requirements = get_field('requirements')): ?>
@@ -63,6 +78,8 @@ Template Name: Vacancies
             </div>
         </div>
     </section>
+
+    <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 
 <?php get_footer() ?>

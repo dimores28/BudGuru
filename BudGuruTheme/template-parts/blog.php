@@ -18,15 +18,28 @@ Template Name: Blog
 ?>
 
 <main class="page">
-    <?php echo do_shortcode('[hero_section title="Наш <span>блог</span>" show_link="false"]'); ?>
+    <?php
+        $page_title = get_the_title();
+        $words = explode(' ', $page_title);
+
+        $middle = ceil(count($words) / 2);
+        $first_part = array_slice($words, 0, $middle);
+        $second_part = array_slice($words, $middle);
+
+        echo do_shortcode(sprintf(
+            '[hero_section title="%s <span>%s</span>" show_link="false"]',
+            implode(' ', $first_part),
+            implode(' ', $second_part)
+        ));
+    ?>
     
     <section class="blog">
         <div class="blog__container">
             <div class="blog_top-block">
                 <div class="blog__box">
-                    <h2 class="blog__heading h2">Блог</h2>
+                    <h2 class="blog__heading h2"><?php _e('Блог', 'budguru'); ?></h2>
                     <div class="blog__filters filters" data-da=".filters-wrap,1120,0">
-                        <a href="#" class="filters__item active" data-category="all">Всі теми</a>
+                        <a href="#" class="filters__item active" data-category="all"><?php _e('Всі теми', 'budguru'); ?></a>
                         <?php foreach($categories as $category): ?>
                             <a href="#" 
                             class="filters__item" 

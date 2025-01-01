@@ -10,24 +10,35 @@ $portfolio_data = getPortfolioWithPagination();
 ?>
 
 <main class="page">
+    <?php
+        $page_title = get_the_title();
+        $words = explode(' ', $page_title);
+
+        $middle = ceil(count($words) / 2);
+        $first_part = array_slice($words, 0, $middle);
+        $second_part = array_slice($words, $middle);
+
+        echo do_shortcode(sprintf('[hero_section title="%s <span>%s</span>" show_link="false"]', implode(' ', $first_part), implode(' ', $second_part)));
+    ?>
+
     <section class="work-performed">
         <div class="work-performed__container">
             <div class="work-performed__top-block">
                 <div class="work-performed__head-wrap">
                     <h2 class="work-performed__heading h2">
-                        <span>Виконані роботи</span>
+                        <span><?php _e('Виконані роботи', 'budguru'); ?></span>
                     </h2>
                 </div>
 
                 <div class="work-performed__filters">
                     <a href="#" class="work-performed__filters_link active" data-category="">
-                        Усі
+                        <?php _e('Усі', 'budguru'); ?>
                     </a>
                     <a href="#" class="work-performed__filters_link" data-category="residential">
-                        Житлові приміщення
+                        <?php _e('Житлові приміщення', 'budguru'); ?>
                     </a>
                     <a href="#" class="work-performed__filters_link" data-category="commercial">
-                        Комерційні приміщення
+                        <?php _e('Комерційні приміщення', 'budguru'); ?>
                     </a>
                 </div>
             </div>
@@ -79,6 +90,12 @@ $portfolio_data = getPortfolioWithPagination();
             <?php endif; ?>
         </div>
     </section>
+
+    <?php echo do_shortcode('[calculator]'); ?>
+
+    <?php get_template_part('template-parts/sections/clients-section'); ?>
+
+    <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 
 <?php get_footer() ?>

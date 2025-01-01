@@ -7,5 +7,7 @@ if (function_exists('acf_add_options_page')) {
         'menu_slug'  => 'site-contacts',
         'capability' => 'edit_posts',
         'redirect'   => false,
+        'icon_url'   => 'dashicons-phone',
+        'position'   => 25
     ));
 }

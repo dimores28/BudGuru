@@ -5,6 +5,17 @@
 ?>
 
 <main class="page">
+    <?php
+        $page_title = get_the_title();
+        $words = explode(' ', $page_title);
+
+        $middle = ceil(count($words) / 2);
+        $first_part = array_slice($words, 0, $middle);
+        $second_part = array_slice($words, $middle);
+
+        echo do_shortcode(sprintf('[hero_section title="%s <span>%s</span>" show_link="false"]', implode(' ', $first_part), implode(' ', $second_part)));
+    ?>
+
     <section class="projects">
         <div class="projects__container">
             <div class="projects__top-block">

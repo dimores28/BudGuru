@@ -19,6 +19,7 @@ include_once('inc/functions-modules/services.php');
 include_once('inc/functions-modules/jobs.php');
 include_once('inc/functions-modules/portfolio.php');
 include_once('inc/functions-modules/projects.php');
+include_once('inc/functions-modules/contacts.php');
 // include_once('inc/functions-modules/reviews.php');
 
 // Підключаємо модуль партнерів
@@ -26,6 +27,9 @@ require_once get_template_directory() . '/inc/functions-modules/partners.php';
 
 // Підключаємо модуль клієнтів
 require_once get_template_directory() . '/inc/functions-modules/clients.php';
+
+// Підключаємо модуль команди
+require_once get_template_directory() . '/inc/functions-modules/team.php';
 
 include_once('inc/menu.php');
 include_once('inc/modules.php');
