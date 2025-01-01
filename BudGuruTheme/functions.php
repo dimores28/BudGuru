@@ -21,6 +21,12 @@ include_once('inc/functions-modules/portfolio.php');
 include_once('inc/functions-modules/projects.php');
 // include_once('inc/functions-modules/reviews.php');
 
+// Підключаємо модуль партнерів
+require_once get_template_directory() . '/inc/functions-modules/partners.php';
+
+// Підключаємо модуль клієнтів
+require_once get_template_directory() . '/inc/functions-modules/clients.php';
+
 include_once('inc/menu.php');
 include_once('inc/modules.php');
 include_once('inc/ajax.php');

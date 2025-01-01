@@ -1,7 +1,7 @@
 <?php
 // Додаємо метабокс для лайків
 function add_post_likes_meta() {
-    add_post_meta_box(
+    add_meta_box(
         'post_likes', // ID
         __('Лайки', 'budguru'), // Заголовок
         'post_likes_meta_box', // Функція виводу
@@ -9,6 +9,13 @@ function add_post_likes_meta() {
     );
 }
 add_action('add_meta_boxes', 'add_post_likes_meta');
+
+// Функція виводу метабоксу
+function post_likes_meta_box($post) {
+    $likes = get_post_meta($post->ID, 'post_likes', true);
+    if(empty($likes)) $likes = 0;
+    echo '<p>' . __('Кількість лайків:', 'budguru') . ' ' . $likes . '</p>';
+}
 
 // Обробка AJAX запиту
 function handle_post_like() {

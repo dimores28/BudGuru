@@ -54,3 +54,16 @@ function hero_section_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode('hero_section', 'hero_section_shortcode'); 
+
+
+function calculator_shortcode($atts) {
+    // Буферизуємо вивід
+    ob_start();
+    
+    // Підключаємо шаблон
+    include get_template_directory() . '/template-parts/sections/calculator-section.php';
+    
+    // Повертаємо результат
+    return ob_get_clean();
+}
+add_shortcode('calculator', 'calculator_shortcode'); 

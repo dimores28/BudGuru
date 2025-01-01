@@ -53,6 +53,7 @@
         // max-width: 860px;
         position: relative;
         @include adaptiveValue("max-width", 800, 240);
+        min-height: 160px;
 
         @media (max-width: 1168px){
             margin-top: 60px;  
@@ -60,6 +61,7 @@
 
         @media (max-width:$mobile){
             margin-top: 30px;  
+            height: auto; 
         }
     }
 

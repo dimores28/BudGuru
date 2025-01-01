@@ -52,5 +52,14 @@
         width: 100%;
         height: auto;
     }
+
+    &__link {
+        display: block;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
