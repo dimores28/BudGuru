@@ -157,98 +157,7 @@ Template Name: Home
 
         <?php get_template_part('template-parts/sections/info/stages-work'); ?>
 
-        <section class="reviews">
-            <div class="reviews__container">
-                <div class="reviews__top-block">
-                    <h2 class="reviews__heading h2">
-                        <span>Відгуки</span> наших клієнтів
-                    </h2>
-                    <div class="reviews__btn-wrap">
-                        <a href="#" class="reviews__btn btn">Опишіть ваші враження</a>
-
-                        <div class="reviews__next swiper-button-next"></div>
-                        <div class="reviews__prev swiper-button-prev"></div>
-                    </div>
-                </div>
-
-                <div class="reviews__slider swiper">
-                    <div class="reviews__wrapper swiper-wrapper">
-
-                        <div class="reviews__slide swiper-slide">
-                            <div class="review-card">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
-                                <div class="review-card__bio">
-                                    <h4 class="review-card__user-name">
-                                        Анна Скляренко
-                                    </h4>
-
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user1.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
-                                </div>
-                                <div class="review-card__text">
-                                    Ми залишились дуже задоволені студією BUDGURU, відмінна якість, сервіс на висоті, а а
-                                    фвхівці справді професіонали своєї справи, рекомендую!
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="reviews__slide swiper-slide">
-                            <div class="review-card">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
-                                <div class="review-card__bio">
-                                    <h4 class="review-card__user-name">
-                                        Віктор Бондар
-                                    </h4>
-
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
-                                </div>
-                                <div class="review-card__text">
-                                    Ми залишились дуже задоволені студією BUDGURU, всі наші зауваження були враховані, в
-                                    результати отримали саме те що очікували.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="reviews__slide swiper-slide">
-                            <div class="review-card">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
-                                <div class="review-card__bio">
-                                    <h4 class="review-card__user-name">
-                                        Вікторія Грищук
-                                    </h4>
-
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user3.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
-                                </div>
-                                <div class="review-card__text">
-                                    Виконано всі роботи якісно та в срок, задоволені, це справждні спеціалісти своєї справи.
-                                    Також зі всіма було буже легко співпрацювати, одразу знайшли спільну мову.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="reviews__slide swiper-slide">
-                            <div class="review-card">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" width="184" height="32" alt="rating">
-                                <div class="review-card__bio">
-                                    <h4 class="review-card__user-name">
-                                        Анна Скляренко
-                                    </h4>
-
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/user2.webp" class="review-card__avatar" width="60" height="60" alt="avatar">
-                                </div>
-                                <div class="review-card__text">
-                                    Виконано всі роботи якісно та в срок, задоволені, це справждні спеціалісти своєї справи.
-                                    Також зі всіма було буже легко співпрацювати, одразу знайшли спільну мову.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- If we need pagination -->
-                    <div class="reviews__pagination swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
+        <?php get_template_part('template-parts/sections/reviews-slider'); ?>
 
         <?php echo do_shortcode('[calculator]'); ?>
 
@@ -282,50 +191,7 @@ Template Name: Home
             </div>
         </section>
 
-        <section class="certificates">
-            <div class="certificates__container">
-                <div class="certificates__top-block">
-                    <h2 class="certificates__heading h2">
-                        Наші <span>cертифікати та нагороди</span>
-                    </h2>
-
-                    <div class="certificates__arowws">
-                        <div class="certificates__next swiper-button-next"></div>
-                        <div class="certificates__prev swiper-button-prev"></div>
-                    </div>
-                </div>
-
-                <div class="certificates__slider swiper">
-                    <div class="certificates__wrapper swiper-wrapper">
-                        <div class="certificates__slide swiper-slide">
-                            <div class="certificat">
-
-                            </div>
-                        </div>
-                        <div class="certificates__slide swiper-slide">
-                            <div class="certificat">
-
-                            </div>
-                        </div>
-                        <div class="certificates__slide swiper-slide">
-                            <div class="certificat">
-
-                            </div>
-                        </div>
-                        <div class="certificates__slide swiper-slide">
-                            <div class="certificat">
-
-                            </div>
-                        </div>
-                        <div class="certificates__slide swiper-slide">
-                            <div class="certificat">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php get_template_part('template-parts/sections/certificates-slider'); ?>
 
         <?php echo do_shortcode('[projects_section]'); ?>
 
