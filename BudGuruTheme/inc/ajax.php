@@ -56,8 +56,6 @@ function filter_portfolio() {
 add_action('wp_ajax_filter_portfolio', 'filter_portfolio');
 add_action('wp_ajax_nopriv_filter_portfolio', 'filter_portfolio');
 
-
-//--------------------------------------------------------------//
 function register_portfolio_scripts() {
     // Реєструємо скрипт пагінації
     wp_register_script(
@@ -136,7 +134,7 @@ function load_projects() {
     
     $args = array(
         'post_type' => 'projects',
-        'posts_per_page' => get_option('posts_per_page'),
+        'posts_per_page' => 12,
         'paged' => $page
     );
     

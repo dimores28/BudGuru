@@ -133,4 +133,4 @@ add_action('wp_enqueue_scripts', 'add_like_system_scripts');
 
 require_once get_template_directory() . '/inc/post-views.php';
 
-
+require_once get_template_directory() . '/inc/classes/class-service-section.php';

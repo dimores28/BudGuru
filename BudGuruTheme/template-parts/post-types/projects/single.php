@@ -117,6 +117,10 @@
     </section>
     <?php endwhile; endif; ?>
 
+    <?php get_template_part('template-parts/sections/info/videoplayer'); ?>
+
+    <?php get_template_part('template-parts/sections/clients-section'); ?>
+
     <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 

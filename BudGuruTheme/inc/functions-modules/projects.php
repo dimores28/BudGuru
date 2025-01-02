@@ -49,8 +49,13 @@ function getProjects($limit = -1) {
 } 
 
 function modify_projects_query($query) {
-    if (!is_admin() && $query->is_main_query() && is_post_type_archive('projects')) {
-        $query->set('posts_per_page', 12);
+    if (!is_admin() && $query->is_main_query()) {
+        // Перевіряємо чи це архів проектів або сторінка з потрібним шаблоном
+        if (is_post_type_archive('projects') || 
+            (is_page() && strpos(get_page_template(), 'template-parts/projects.php') !== false)) {
+            $query->set('post_type', 'projects');
+            $query->set('posts_per_page', 12);
+        }
     }
 }
 add_action('pre_get_posts', 'modify_projects_query');

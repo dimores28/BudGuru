@@ -99,6 +99,16 @@
         </div>
     </section> 
 
+    <?php get_template_part('template-parts/sections/info/why-us'); ?>
+
+    <?php get_template_part('template-parts/sections/partners-section'); ?>
+
+    <?php get_template_part('template-parts/sections/reviews-slider'); ?>
+
+    <?php get_template_part('template-parts/sections/team-slider'); ?>
+
+    <?php get_template_part('template-parts/sections/certificates-slider'); ?>
+
     <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 
