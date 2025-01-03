@@ -12,7 +12,12 @@
         echo do_shortcode(sprintf('[hero_section title="%s <span>%s</span>" show_link="false"]', implode(' ', $first_part), implode(' ', $second_part)));
     ?>
 
+	<?php get_template_part('template-parts/sections/partners-section'); ?>
+
+	<?php get_template_part('template-parts/sections/info/videoplayer'); ?>
+
 	<?php echo do_shortcode('[consultation_section]'); ?>
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); 
         $service_type = get_field('display_option');
         
@@ -708,11 +713,6 @@
 
     <?php endwhile; endif; ?>
 
-	<?php get_template_part('template-parts/sections/partners-section'); ?>
-
-    <?php get_template_part('template-parts/sections/info/videoplayer'); ?>
-
-    <?php echo do_shortcode('[consultation_section]'); ?>
 
 	<?php get_template_part('template-parts/sections/info/why-us'); ?>
 
@@ -776,6 +776,29 @@
 	<?php get_template_part('template-parts/sections/info/faq'); ?>
 
 	<?php get_template_part('template-parts/sections/clients-section'); ?>
+
+	<?php 
+		$master_section = new BudGuru_Service_Section(array(
+			'title_first' => __('Швидкий та зручний', 'budguru'),
+			'title_second' => __('виїзд майстра додому', 'budguru'),
+			'description' => __('Наші майстри приїдуть до вас у зручний час, щоб швидко та якісно вирішити будь-які побутові
+							завдання. Від дрібного ремонту до складних робіт – обирайте професійний сервіс, який
+							гарантує оперативність, доступність та надійний результат. Електрик, сантехнік чи плиточник
+							– замовити послугу легко, а про всі клопоти ми подбаємо за вас!
+							Довірте дрібний ремонт та побутові завдання професіоналам і звільніть свій час для важливих
+							справ! Ми гарантуємо надійний сервіс, швидку реакцію та 100% задоволення від результату.
+							Наш сервіс пропонує швидке рішення для тих, хто цінує свій час та комфорт. Вам більше не
+							потрібно відкладати ремонт чи витрачати час на пошуки майстрів – просто замовте виїзд
+							спеціаліста додому. Усі роботи будуть виконані професійно, а головне – без зайвих турбот для
+							вас. Будь то несправність у проводці, сантехніка або укладання плитки, наші майстри готові
+							допомогти саме тоді, коли вам зручно.', 'budguru'),
+			'image' => get_template_directory_uri() . '/assets/img/services/master.webp',
+			'button_text' => __('Викликати майстра', 'budguru'),
+			'button_url' => '#consultation-section'
+		));
+
+		get_template_part('template-parts/sections/info/master-call', null, array('section' => $master_section));
+	?>
 
 	<?php get_template_part('template-parts/sections/certificates-slider'); ?>
 

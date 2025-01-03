@@ -1,25 +1,37 @@
+<?php
+/**
+ * @var array $args
+ */
+
+// Отримуємо об'єкт секції з аргументів
+$section = isset($args['section']) ? $args['section'] : null;
+
+// Перевіряємо чи існує об'єкт
+if (!$section instanceof BudGuru_Service_Section) {
+    return;
+}
+?>
 <section class="master">
     <div class="master__container">
         <div class="master__lef-col">
             <h2 class="master__heading h2">
-                <span><?php _e('Виклик майстра на дім:', 'budguru'); ?></span> <?php _e('швидко та зручно', 'budguru'); ?>
+                <span><?php echo esc_html($section->get('title_first')); ?></span> <?php echo esc_html($section->get('title_second')); ?>
             </h2>
 
             <p class="master__text">
-                <?php _e('Послуга "Виклик майстра додому" забезпечує оперативну і професійну допомогу в питаннях ремонту та побутових робіт. Незалежно від того, чи потрібно вирішити дрібні проблеми з сантехнікою, електрикою, меблями або провести більш складний ремонт, наші майстри готові допомогти. Чоловік на годину приїде до вас у зручний для вас час і виконає потрібні роботи швидко та якісно, він виконає будь-яу задачу, повʼязану з ремонтом чи обслуговуванням будинку.', 'budguru'); ?>
-            </p>
-            <p class="master__text">
-                <?php _e('Забудьте про довгі пошуки майстрів або спроби самостійно справитися з ремонтом. Наші фахівці завжди готові прийти на допомогу в будь-яких питаннях дрібного ремонту чи обслуговуванні будинку!', 'budguru'); ?>
+                <?php echo wp_kses_post($section->get('description')); ?>
             </p>
         </div>
         <div class="master__right-col">
-            <a href="#calculator-form" class="master__btn btn"><?php _e('Викликати майстра', 'budguru'); ?></a>
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/master.webp" 
+            <a href="<?php echo esc_url($section->get('button_url')); ?>" class="master__btn btn">
+                <?php echo esc_html($section->get('button_text')); ?>
+            </a>
+            <img src="<?php echo esc_url($section->get('image')); ?>" 
                  width="680" 
                  height="550" 
                  class="master__img" 
-                 alt="<?php _e('Викликати майстра', 'budguru'); ?>"
+                 alt="<?php echo esc_attr($section->get('title_first')); ?>"
             >
         </div>
     </div>
-</section> 
+</section>

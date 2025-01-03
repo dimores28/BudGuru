@@ -49,7 +49,24 @@ Template Name: Home
 
         <?php get_template_part('template-parts/sections/partners-section'); ?>
 
-        <?php get_template_part('template-parts/sections/info/master-call'); ?>
+        <?php 
+            $master_section = new BudGuru_Service_Section(array(
+                'title_first' => __('Виклик майстра на дім:', 'budguru'),
+                'title_second' => __('швидко та зручно', 'budguru'),
+                'description' => __('Послуга "Виклик майстра додому" забезпечує оперативну і професійну допомогу в питаннях ремонту та
+							побутових робіт. Незалежно від того, чи потрібно вирішити дрібні проблеми з сантехнікою, електрикою,
+							меблями або провести більш складний ремонт, наші майстри готові допомогти. Чоловік на годину приїде до
+							вас у зручний для вас час і виконає потрібні роботи швидко та якісно, він виконає будь-яу задачу,
+							повʼязану з ремонтом чи обслуговуванням будинку.
+							Забудьте про довгі пошуки майстрів або спроби самостійно справитися з ремонтом. Наші фахівці завжди
+							готові прийти на допомогу в будь-яких питаннях дрібного ремонту чи обслуговуванні будинку!', 'budguru'),
+                'image' => get_template_directory_uri() . '/assets/img/master.webp',
+                'button_text' => __('Викликати майстра', 'budguru'),
+                'button_url' => '#consultation-section'
+            ));
+
+            get_template_part('template-parts/sections/info/master-call', null, array('section' => $master_section));
+        ?>
 
         <?php get_template_part('template-parts/sections/certificates-slider'); ?>
 

@@ -26,6 +26,9 @@ require_once get_template_directory() . '/inc/functions-modules/clients.php';
 require_once get_template_directory() . '/inc/functions-modules/team.php';
 require_once get_template_directory() . '/inc/functions-modules/reviews.php';
 require_once get_template_directory() . '/inc/functions-modules/certificates.php';
+require_once get_template_directory() . '/inc/post-views.php';
+require_once get_template_directory() . '/inc/like-system.php';
+require_once get_template_directory() . '/inc/classes/class-service-section.php';
 
 include_once('inc/menu.php');
 include_once('inc/modules.php');
@@ -118,8 +121,6 @@ function budguru_load_theme_textdomain() {
 }
 add_action('after_setup_theme', 'budguru_load_theme_textdomain');
 
-// Підключаємо систему лайків
-require_once get_template_directory() . '/inc/like-system.php';
 
 // Додаємо скрипти і стилі
 function add_like_system_scripts() {
@@ -131,6 +132,4 @@ function add_like_system_scripts() {
 }
 add_action('wp_enqueue_scripts', 'add_like_system_scripts');
 
-require_once get_template_directory() . '/inc/post-views.php';
 
-require_once get_template_directory() . '/inc/classes/class-service-section.php';
