@@ -33,7 +33,7 @@
 
                     <!-- Ваш існуючий код таблиці -->
                     <div class="design-prices__table-wrap">
-                    <table class="design-prices__table table">
+                    	<table class="design-prices__table table">
 							<thead class="table__header">
 								<tr class="table__row">
 									<th class="table__head table__head--packages"><?php _e('Пакети', 'budguru'); ?></th>
@@ -45,7 +45,7 @@
 							</thead>
 							<tbody class="table__body">
 								<tr class="table__row">
-									<td class="table__cell table__cell--title">Склад проекту</td>
+									<td class="table__cell table__cell--title"><?php _e('Склад проекту', 'budguru'); ?></td>
 									<td class="table__cell">
 										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
@@ -652,7 +652,7 @@
 								</tr>
 
 								<tr class="table__row table__row-divider table__row-last">
-									<td class="table__cell table__cell--title">Вартість:</td>
+									<td class="table__cell table__cell--title"><?php _e('Вартість:', 'budguru'); ?></td>
 									<td class="table__cell">
                                         <?php echo $prices['vizual']; ?>
 										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
