@@ -253,4 +253,6 @@ import "./libs/dynamic_adapt.js";
 import "./files/script.js";
 import "./files/validation_form.js";
 import "./files/calculator_form.js";
+import "./files/calculators.js";
+import "./files/calculator-validation.js";
 //============================================================================================================================================================================================================================================

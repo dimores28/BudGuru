@@ -11,45 +11,40 @@ import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
-	if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
-		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
-			connect: [true, false],
-			range: {
-				'min': [0],
-				'max': [5000]
-			},
-			step: 1,
-			tooltips: wNumb({ decimals: 0, suffix: ' м²' })
-			
-			// format: wNumb({
-			// 	decimals: 0
-			// })
-			
-		});
-		/*
-		const priceStart = document.getElementById('price-start');
-		const priceEnd = document.getElementById('price-end');
-		priceStart.addEventListener('change', setPriceValues);
-		priceEnd.addEventListener('change', setPriceValues);
-		*/
-		function setPriceValues() {
-			let priceStartValue;
-			let priceEndValue;
-			if (priceStart.value != '') {
-				priceStartValue = priceStart.value;
-			}
-			if (priceEnd.value != '') {
-				priceEndValue = priceEnd.value;
-			}
-			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-		}
+	const designPriceSlider = document.querySelector('#design-range');
+	const repairPriceSlider = document.querySelector('#repair-range');
 
-		priceSlider.noUiSlider.on('update', function (values) {
-			document.querySelector('#range-nput').value = values;
-		});
+	// Функція для створення слайдера з однаковими налаштуваннями
+	function createSlider(slider, inputId) {
+		if (slider) {
+			let textFrom = slider.getAttribute('data-from');
+			
+			noUiSlider.create(slider, {
+				start: 0,
+				connect: [true, false],
+				range: {
+					'min': [0],
+					'max': [5000]
+				},
+				step: 1,
+				tooltips: wNumb({ decimals: 0, suffix: ' м²' })
+			});
+
+			// Перевіряємо наявність input елемента перед встановленням обробника
+			const inputElement = document.querySelector(inputId);
+			if (inputElement) {
+				slider.noUiSlider.on('update', function (values) {
+					inputElement.value = values[0];
+				});
+			}
+		}
 	}
+
+	// Ініціалізація всіх слайдерів
+	if (priceSlider) createSlider(priceSlider, '#range-input');
+	if (designPriceSlider) createSlider(designPriceSlider, '#design-range-input');
+	if (repairPriceSlider) createSlider(repairPriceSlider, '#repair-range-input');
 }
-rangeInit();
+
+// Викликаємо ініціалізацію після завантаження DOM
+document.addEventListener('DOMContentLoaded', rangeInit);

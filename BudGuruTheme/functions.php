@@ -22,6 +22,7 @@ include_once('inc/functions-modules/projects.php');
 include_once('inc/functions-modules/contacts.php');
 require_once get_template_directory() . '/inc/ajax/form-handlers.php';
 require_once get_template_directory() . '/inc/ajax/calculator-handler.php';
+require_once get_template_directory() . '/inc/ajax/calculator-handlers.php';
 
 require_once get_template_directory() . '/inc/functions-modules/partners.php';
 require_once get_template_directory() . '/inc/functions-modules/clients.php';
@@ -152,3 +153,9 @@ add_action('wp_ajax_nopriv_consultation_form_handler', 'consultation_form_handle
 
 add_action('wp_ajax_calculator_form_handler', 'calculator_form_handler');
 add_action('wp_ajax_nopriv_calculator_form_handler', 'calculator_form_handler'); 
+
+add_action('wp_ajax_repair_calculator_handler', 'repair_calculator_handler');
+add_action('wp_ajax_nopriv_repair_calculator_handler', 'repair_calculator_handler');
+
+add_action('wp_ajax_design_calculator_handler', 'design_calculator_handler');
+add_action('wp_ajax_nopriv_design_calculator_handler', 'design_calculator_handler');

@@ -7,16 +7,16 @@
     </div>
     <div class="calculator__radio-wrap">
         <div class="custon-radio-btn">
-            <input type="radio" name="rooms" id="living-quarters">
-            <label for="living-quarters"><?php _e('Житлове', 'budguru'); ?></label>
+            <input type="radio" name="rooms" id="design-living-quarters">
+            <label for="design-living-quarters"><?php _e('Житлове', 'budguru'); ?></label>
         </div>
 
         <div class="custon-radio-btn">
-            <input type="radio" name="rooms" id="commercial-premises">
-            <label for="commercial-premises"><?php _e('Комерційне', 'budguru'); ?></label>
+            <input type="radio" name="rooms" id="design-commercial-premises">
+            <label for="design-commercial-premises"><?php _e('Комерційне', 'budguru'); ?></label>
         </div>
     </div>
-    <button class="calculator__nextstep-btn btn">
+    <button type="button" class="calculator__nextstep-btn btn">
         <?php _e('Далі', 'budguru'); ?>
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white" />
@@ -34,11 +34,11 @@
     </div>
 
     <div class="calculator__range-wrap">
-        <div id="range" data-from="1"></div>
-        <input type="text" name="area" id="range-input">
+        <div id="design-range" data-from="1"></div>
+        <input type="text" name="area" id="design-range-input">
     </div>
 
-    <button class="calculator__nextstep-btn btn">
+    <button type="button" class="calculator__nextstep-btn btn">
         <?php _e('Далі', 'budguru'); ?>
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white" />
@@ -57,17 +57,17 @@
 
     <div class="calculator__radio-wrap">
         <div class="custon-radio-btn">
-            <input type="radio" name="desing" id="need-desing">
-            <label for="need-desing"><?php _e('Потрібен', 'budguru'); ?></label>
+            <input type="radio" name="desing" id="design-need-desing">
+            <label for="design-need-desing"><?php _e('Потрібен', 'budguru'); ?></label>
         </div>
 
         <div class="custon-radio-btn">
-            <input type="radio" name="desing" id="without-design">
-            <label for="without-design"><?php _e('Без дизайну', 'budguru'); ?></label>
+            <input type="radio" name="desing" id="design-without-design">
+            <label for="design-without-design"><?php _e('Без дизайну', 'budguru'); ?></label>
         </div>
     </div>
 
-    <button class="calculator__nextstep-btn btn">
+    <button type="button" class="calculator__nextstep-btn btn">
         <?php _e('Далі', 'budguru'); ?>
         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="17" cy="17" r="17" transform="rotate(90 17 17)" fill="white" />
@@ -85,10 +85,9 @@
     </div>
 
     <div class="calculator__input-wrap">
-        <input class="calculator__input input" type="text" name="user-name" placeholder="Ваше імʼя">
-        <input class="calculator__input input" type="text" name="user-phone" placeholder="Номер телефону">
-        <textarea class="calculator__textarea input textarea" name="user-question" placeholder="Ваше питання"></textarea>
+        <input class="calculator__input input" type="text" name="user-name" id="design-user-name" placeholder="Ваше імʼя">
+        <input class="calculator__input input" type="text" name="user-phone" id="design-user-phone" placeholder="Номер телефону">
+        <textarea class="calculator__textarea input textarea" name="user-question" id="design-user-question" placeholder="Ваше питання"></textarea>
         <input class="calculator__btn-submit btn" type="submit" value="<?php _e('Відправити заявку', 'budguru'); ?>" aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
     </div>
-
 </div>

@@ -19,15 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Обробник кліку на кнопку Play
-    playButton.addEventListener("click", togglePlay);
+    playButton?.addEventListener("click", togglePlay);
 
     // Показати кнопку, коли відео зупинено або на паузі
-    video.addEventListener("pause", () => {
+    video?.addEventListener("pause", () => {
         playButton.style.display = "block";
     });
 
     // Додатково: Обробка завершення відео (повернення кнопки)
-    video.addEventListener("ended", () => {
+    video?.addEventListener("ended", () => {
         playButton.style.display = "block";
     });
 

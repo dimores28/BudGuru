@@ -22,6 +22,36 @@ Template Name: Calculators
         ));
     ?>
 
+    <section class="calculator">
+        <div class="calculator__btn-wrapp">
+            <button class="calculator__tab active" data-calculator="repair">
+                <?php _e('Калькулятор вартості ремонту', 'budguru'); ?>
+            </button>
+            <button class="calculator__tab" data-calculator="design">
+                <?php _e('Калькулятор вартості дизайну', 'budguru'); ?>
+            </button>
+        </div>
+        
+        <div class="calculator__container">
+            <div class="calculator__ilustration">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/calculator/calculator.webp" 
+                    width="740" height="770" 
+                    alt="<?php _e('Калькулятор', 'budguru'); ?>">
+            </div>
+
+            <div class="calculator__steps">
+                <!-- Контейнери для калькуляторів -->
+                <div class="calculator-container active" data-calculator="repair">
+                    <?php include get_template_directory() . '/template-parts/calculators/repair-calculator.php'; ?>
+                </div>
+                
+                <div class="calculator-container" data-calculator="design">
+                    <?php include get_template_directory() . '/template-parts/calculators/design-calculator.php'; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <?php get_template_part('template-parts/sections/info/faq'); ?>
 
     <?php echo do_shortcode('[consultation_section]'); ?>

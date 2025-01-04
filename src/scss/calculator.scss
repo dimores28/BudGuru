@@ -331,3 +331,14 @@
         margin-bottom: 0;
     }
 }
+
+.calculator-container {
+    display: none;
+    flex: 1 1 610px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.calculator-container.active {
+    display: flex;
+}
