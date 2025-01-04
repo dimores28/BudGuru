@@ -18,26 +18,26 @@
                                type="text" 
                                id="user-name" 
                                name="user-name" 
-                               placeholder="Ваше імʼя" 
-                               aria-label="Ваше імʼя">
+                               placeholder="<?php _e('Ваше імʼя', 'budguru'); ?>" 
+                               aria-label="<?php _e('Ваше імʼя', 'budguru'); ?>">
                         
                         <input class="consultation__form-input" 
                                type="text" 
                                id="input-phone" 
                                name="phone" 
-                               placeholder="Номер телефону" 
-                               aria-label="Номер телефону" />
+                               placeholder="<?php _e('Номер телефону', 'budguru'); ?>" 
+                               aria-label="<?php _e('Номер телефону', 'budguru'); ?>" />
                         
                         <textarea class="consultation__form-input consultation__form-textarea" 
                                   name="question" 
                                   id="input-question" 
-                                  placeholder="Ваше питання" 
-                                  aria-label="Ваше питання"></textarea>
+                                  placeholder="<?php _e('Ваше питання', 'budguru'); ?>" 
+                                  aria-label="<?php _e('Ваше питання', 'budguru'); ?>"></textarea>
                         
                         <input class="consultation__btn-submit btn" 
                                type="submit" 
-                               value="Відправити заявку" 
-                               aria-label="Відправити заявку">
+                               value="<?php _e('Відправити заявку', 'budguru'); ?>" 
+                               aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
                     </div>
 
                     <div class="consultation__form-success form-success">

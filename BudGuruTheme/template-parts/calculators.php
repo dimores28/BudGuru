@@ -22,6 +22,8 @@ Template Name: Calculators
         ));
     ?>
 
+    <?php get_template_part('template-parts/sections/info/faq'); ?>
+
     <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 

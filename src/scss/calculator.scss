@@ -310,3 +310,24 @@
         background: #F9C98C;
     }
 }
+
+.calculator-form._sending {
+    opacity: 0.5;
+}
+
+.calculator-form.success {
+    opacity: 1;
+
+    .calculator__step {
+        display: none;
+    }
+
+    .form-success {
+        display: flex;
+        padding-top: 0;
+    }
+
+    .form-success p {
+        margin-bottom: 0;
+    }
+}

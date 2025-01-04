@@ -82,6 +82,7 @@
         flex: 1 1 auto;
         font-weight: 500;
         @include adaptiveValue("font-size", 30 , 18);
+        margin-bottom: 0;
 
         @media (max-width:$mobile){
              margin-bottom: -22px; 

@@ -13,6 +13,19 @@
                 <!-- ... Решта коду форми ... -->
                 <?php include get_template_directory() . '/template-parts/forms/calculator-steps.php'; ?>
 
+                <div class="form-success">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smile.webp" 
+                            class="form-success__img" 
+                            width="120" 
+                            height="120" 
+                            alt="smile">
+                    <h3 class="form-success__heading">
+                        <?php _e('Дякуємо за звернення!', 'budguru'); ?>
+                    </h3>
+                    <p class="form-success__text">
+                        <?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+                    </p>
+                </div>
             </form>
         </div>
     </div>

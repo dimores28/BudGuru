@@ -180,6 +180,10 @@
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, #F9C98C 0px 0px 0px 3px;
         }
 
+        &._notvalid {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, red 0px 0px 0px 3px;
+        }
+
         @media (max-width:$mobile){
              padding: 8px 20px; 
         }

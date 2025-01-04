@@ -20,6 +20,8 @@ include_once('inc/functions-modules/jobs.php');
 include_once('inc/functions-modules/portfolio.php');
 include_once('inc/functions-modules/projects.php');
 include_once('inc/functions-modules/contacts.php');
+require_once get_template_directory() . '/inc/ajax/form-handlers.php';
+require_once get_template_directory() . '/inc/ajax/calculator-handler.php';
 
 require_once get_template_directory() . '/inc/functions-modules/partners.php';
 require_once get_template_directory() . '/inc/functions-modules/clients.php';
@@ -39,7 +41,18 @@ add_action('wp_enqueue_scripts', function(){
     wp_enqueue_style('main', WPTEST_DIR_CSS . 'style.min.css');
 
     wp_enqueue_script('main', WPTEST_DIR_JS . 'app.min.js', [], false, true);
+    
+    // Створюємо новий nonce з унікальним ідентифікатором
+    $action = 'consultation_form_' . time();
+    $nonce = wp_create_nonce($action);
+    
+    wp_localize_script('main', 'budguruAjax', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'nonce' => $nonce,
+        'action_id' => $action // Передаємо ідентифікатор дії
+    ));
 });
+
 
 
 
@@ -133,3 +146,9 @@ function add_like_system_scripts() {
 add_action('wp_enqueue_scripts', 'add_like_system_scripts');
 
 
+// Реєструємо обробник для AJAX-запитів
+add_action( 'wp_ajax_consultation_form_handler', 'consultation_form_handler' );
+add_action('wp_ajax_nopriv_consultation_form_handler', 'consultation_form_handler');
+
+add_action('wp_ajax_calculator_form_handler', 'calculator_form_handler');
+add_action('wp_ajax_nopriv_calculator_form_handler', 'calculator_form_handler'); 

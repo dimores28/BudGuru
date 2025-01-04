@@ -89,6 +89,10 @@
     @media (max-width:$mobile){
          padding: 8px 20px; 
     }
+
+    &._notvalid {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, red 0px 0px 0px 3px;
+    }
 }
 
 .textarea {
@@ -99,6 +103,10 @@
     @media (max-width:$mobile){
         height: 74px; 
         border-radius: 20px;
+    }
+
+    &._notvalid {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, red 0px 0px 0px 3px;
     }
 }
 
@@ -300,4 +308,6 @@ h5, .h5 {
     font-weight: 400;
 }
 
-
+.form-success {
+    display: none;
+}
