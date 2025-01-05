@@ -2,7 +2,7 @@
     <div class="why-us__container">
         <div class="why-us__head-block">
             <h2 class="why-us__heding"><?php _e('Чому', 'budguru'); ?> <span>BudGuru?</span></h2>
-            <a href="#" class="btn why-us__btn">
+            <a href="#consultation-section" class="btn why-us__btn">
                 <?php _e('Обговорити проект', 'budguru'); ?>
             </a>
         </div>

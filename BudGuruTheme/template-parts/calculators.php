@@ -52,7 +52,7 @@ Template Name: Calculators
         </div>
     </section>
 
-    <?php get_template_part('template-parts/sections/info/faq'); ?>
+    <?php get_template_part('template-parts/sections/info/why-us'); ?>
 
     <?php echo do_shortcode('[consultation_section]'); ?>
 </main>

@@ -55,3 +55,43 @@ function theme_customize_register($wp_customize) {
     )));
 }
 add_action('customize_register', 'theme_customize_register');
+
+// Додаємо нові налаштування в Customizer
+function budguru_customize_promo($wp_customize) {
+    // Додаємо секцію якщо її ще немає
+    if (!$wp_customize->get_section('site_options')) {
+        $wp_customize->add_section('site_options', array(
+            'title'    => __('Налаштування сайту', 'budguru'),
+            'priority' => 30,
+        ));
+    }
+
+    // Налаштування для відображення акції
+    $wp_customize->add_setting('show_hero_promo', array(
+        'default'           => true,
+        'sanitize_callback' => 'wp_validate_boolean',
+        'transport'         => 'refresh',
+    ));
+
+    $wp_customize->add_control('show_hero_promo', array(
+        'label'       => __('Відображати акцію в шапці', 'budguru'),
+        'description' => __('Увімкніть, щоб показати блок з акцією на головній сторінці', 'budguru'),
+        'section'     => 'site_options',
+        'type'        => 'checkbox',
+        'priority'    => 10,
+    ));
+
+    // Налаштування для заголовку акції
+    $wp_customize->add_setting('promo_title', array(
+        'default'           => __('Замовте ремонт під ключ', 'budguru'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('promo_title', array(
+        'label'    => __('Заголовок акції', 'budguru'),
+        'section'  => 'site_options',
+        'type'     => 'text',
+        'priority' => 20,
+    ));
+}
+add_action('customize_register', 'budguru_customize_promo');

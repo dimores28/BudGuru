@@ -87,39 +87,41 @@
         </div>
 
         <div class="hero__bottom-block">
-            <div class="hero__sticker sticker">
-                <div class="sticker__desc">
-                    <?php _e('сучасний ремонт та дизайн', 'budguru'); ?>
-                </div>
+            <?php if (get_theme_mod('show_hero_promo', true)) : ?>
+                <div class="hero__sticker sticker">
+                    <div class="sticker__desc">
+                        <?php _e('сучасний ремонт та дизайн', 'budguru'); ?>
+                    </div>
 
-                <h3 class="sticker__heading">
-                    <?php _e('Замовте ремонт під ключ', 'budguru'); ?> 
-                    <span><?php _e('та отримайте', 'budguru'); ?></span> 
-                    <mark><?php _e('дизайн проект у подарунок', 'budguru'); ?></mark>
-                </h3>
+                    <h3 class="sticker__heading">
+                        <?php _e('Замовте ремонт під ключ', 'budguru'); ?> 
+                        <span><?php _e('та отримайте', 'budguru'); ?></span> 
+                        <mark><?php _e('дизайн проект у подарунок', 'budguru'); ?></mark>
+                    </h3>
 
-                <a href="/contact" class="sticker__btn btn">
-                    <?php _e('Обговорити проект', 'budguru'); ?>
-                </a>
-            </div>
-
-            <div class="hero__baner baner">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/3d-house.webp" alt="house" class="baner__img">
-                <div class="baner__content">
-                    <h4 class="baner__heading">
-                        <?php _e('Готові проекти будинків', 'budguru'); ?>
-                    </h4>
-                    <p class="baner__text">
-                        <?php _e('Переходтье в наше архітектурне бюро та дізнайтеся більше про готові проекти будинків', 'budguru'); ?>
-                    </p>
-                    <a href="/about" class="baner__link">
-                        <span><?php _e('Детальніше', 'budguru'); ?></span>
-                        <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.8865 9.93992L10.0889 22.7375M22.8865 9.93992L22.8476 20.8704M22.8865 9.93992L11.956 9.97882" stroke="white" stroke-width="1.28358" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <a href="<?php echo esc_url(get_theme_mod('promo_link', '/contact')); ?>" class="sticker__btn btn">
+                        <?php _e('Обговорити проект', 'budguru'); ?>
                     </a>
                 </div>
-            </div>
+
+                <div class="hero__baner baner">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/3d-house.webp" alt="house" class="baner__img">
+                    <div class="baner__content">
+                        <h4 class="baner__heading">
+                            <?php _e('Готові проекти будинків', 'budguru'); ?>
+                        </h4>
+                        <p class="baner__text">
+                            <?php _e('Переходтье в наше архітектурне бюро та дізнайтеся більше про готові проекти будинків', 'budguru'); ?>
+                        </p>
+                        <a href="/about" class="baner__link">
+                            <span><?php _e('Детальніше', 'budguru'); ?></span>
+                            <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.8865 9.93992L10.0889 22.7375M22.8865 9.93992L22.8476 20.8704M22.8865 9.93992L11.956 9.97882" stroke="white" stroke-width="1.28358" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section> 
