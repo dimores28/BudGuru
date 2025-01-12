@@ -100,10 +100,12 @@
         background: #F9C98C;
         border-radius: 20px;
         padding: 6px 12px;
+        margin-top: -32px;
 
         @media (max-width: 1200px) {
             padding: 4px 10px;
             margin-left: auto;
+            margin-top: 0;
         }
 
         @media (max-width:$mobile){

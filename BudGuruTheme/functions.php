@@ -20,9 +20,9 @@ include_once('inc/functions-modules/jobs.php');
 include_once('inc/functions-modules/portfolio.php');
 include_once('inc/functions-modules/projects.php');
 include_once('inc/functions-modules/contacts.php');
-require_once get_template_directory() . '/inc/ajax/form-handlers.php';
-require_once get_template_directory() . '/inc/ajax/calculator-handler.php';
-require_once get_template_directory() . '/inc/ajax/calculator-handlers.php';
+require_once get_template_directory() . '/inc/ajax/form-handlers-t.php';
+require_once get_template_directory() . '/inc/ajax/calculator-handler-t.php';
+require_once get_template_directory() . '/inc/ajax/calculator-handlers-t.php';
 
 require_once get_template_directory() . '/inc/functions-modules/partners.php';
 require_once get_template_directory() . '/inc/functions-modules/clients.php';

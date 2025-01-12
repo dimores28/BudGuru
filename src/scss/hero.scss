@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     border-radius: 40px;
-    @include adaptiveValue("padding-top", 138, 34);
+    @include adaptiveValue("padding-top", 138, 104);
     @include adaptiveValue("padding-bottom", 90, 60);
 
     @media (max-width:$mobile){
