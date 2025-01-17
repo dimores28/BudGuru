@@ -24,7 +24,7 @@ export function rangeInit() {
 				connect: [true, false],
 				range: {
 					'min': [0],
-					'max': [5000]
+					'max': [700]
 				},
 				step: 1,
 				tooltips: wNumb({ decimals: 0, suffix: ' м²' })

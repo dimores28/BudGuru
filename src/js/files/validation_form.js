@@ -1,3 +1,6 @@
+// Підключення функціоналу "Чертоги Фрілансера"
+import { flsModules } from './modules.js';
+
 // Функції валідації
 function isValidPhone(p) {
     const phoneRe = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/g;
@@ -9,87 +12,97 @@ function isValidName(value) {
     return /^[а-яёъыэА-ЯЁЪЫЭіІїЇєЄґҐ\-\s']+$/.test(value);
 }
 
-// Отримуємо елементи форми
-const consultationForm = document.querySelector('.consultation__form');
-const userName = document.querySelector('#user-name');
-const userPhone = document.querySelector('#input-phone');
-const userQuestion = document.querySelector('#input-question');
+// Функція ініціалізації форми
+function initConsultationForm() {
+    // Шукаємо всі форми на сторінці
+    const consultationForms = document.querySelectorAll('.consultation__form');
+    
+    if (!consultationForms.length) return;
 
-// Валідація при введенні
-userName?.addEventListener('input', function() {
-    if (!isValidName(userName.value)) {
-        userName.classList.add('_notvalid');
-    } else {
-        userName.classList.remove('_notvalid');
-    }
-});
+    consultationForms.forEach(consultationForm => {
+        // Знаходимо поля в межах конкретної форми
+        const userName = consultationForm.querySelector('#user-name');
+        const userPhone = consultationForm.querySelector('#input-phone');
+        const userQuestion = consultationForm.querySelector('#input-question');
 
-userPhone?.addEventListener('input', function() {
-    if (!isValidPhone(userPhone.value)) {
-        userPhone.classList.add('_notvalid');
-    } else {
-        userPhone.classList.remove('_notvalid');
-    }
-});
+        // Валідація при введенні
+        userName?.addEventListener('input', function() {
+            if (!isValidName(userName.value)) {
+                userName.classList.add('_notvalid');
+            } else {
+                userName.classList.remove('_notvalid');
+            }
+        });
 
-// Обробка відправки форми
-consultationForm?.addEventListener('submit', async function(e) {
-    e.preventDefault();
+        userPhone?.addEventListener('input', function() {
+            if (!isValidPhone(userPhone.value)) {
+                userPhone.classList.add('_notvalid');
+            } else {
+                userPhone.classList.remove('_notvalid');
+            }
+        });
 
-    // Перевіряємо валідність
-    let isValid = 
-        isValidName(userName.value) && 
-        isValidPhone(userPhone.value) && 
-        userQuestion.value.trim() !== '';
+        // Обробка відправки форми
+        consultationForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-    if (isValid) {
-        consultationForm.classList.add('_sending');
+            // Перевіряємо валідність
+            let isValid = 
+                isValidName(userName.value) && 
+                isValidPhone(userPhone.value) && 
+                userQuestion.value.trim() !== '';
 
-        try {
-            let formData = new FormData(consultationForm);
-            // Додаємо додаткові поля до formData
-            formData.append('action', 'consultation_form_handler'); // Назва дії для обробника
-            formData.append('nonce', budguruAjax.nonce);    // CSRF-токен
+            if (isValid) {
+                consultationForm.classList.add('_sending');
 
-            // Виконуємо fetch-запит
-            let response = await fetch(budguruAjax.ajaxurl, {
-                method: 'POST',
-                body: formData,
-            });
+                try {
+                    let formData = new FormData(consultationForm);
+                    formData.append('action', 'consultation_form_handler');
+                    formData.append('nonce', budguruAjax.nonce);
 
-            if (response.ok) {
-                const result = await response.json(); // Перетворення відповіді у формат JSON
-                if (result.success) {
-                    // Показуємо повідомлення про успіх
-                    consultationForm.classList.add('success');
-                    consultationForm.reset();
-                } else {
-                    console.error('Помилка обробки форми:', result.data.message);
+                    let response = await fetch(budguruAjax.ajaxurl, {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        if (result.success) {
+                            consultationForm.classList.add('success');
+                            consultationForm.reset();
+                        } else {
+                            console.error('Помилка обробки форми:', result.data.message);
+                        }
+                    } else {
+                        console.error('Помилка відправки форми. Статус:', response.status);
+                    }
+                } catch (error) {
+                    console.error('Помилка:', error);
+                } finally {
+                    consultationForm.classList.remove('_sending');
                 }
             } else {
-                console.error('Помилка відправки форми. Статус:', response.status);
+                if (!isValidName(userName.value)) userName.classList.add('_notvalid');
+                if (!isValidPhone(userPhone.value)) userPhone.classList.add('_notvalid');
+                if (userQuestion.value.trim() === '') userQuestion.classList.add('_notvalid');
             }
-        } catch (error) {
-            console.error('Помилка:', error);
-        } finally {
-            consultationForm.classList.remove('_sending');
-        }
+        });
+    });
+}
 
-    } else {
-        // Підсвічуємо невалідні поля
-        if (!isValidName(userName.value)) userName.classList.add('_notvalid');
-        if (!isValidPhone(userPhone.value)) userPhone.classList.add('_notvalid');
-        if (userQuestion.value.trim() === '') userQuestion.classList.add('_notvalid');
-    }
+// Ініціалізуємо форми при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', initConsultationForm);
+
+// Обробник кліку по кнопці відкриття попапу
+document.querySelector('.sticker__btn')?.addEventListener('click', function () {
+    flsModules.popup.open('#popup');
 });
-
 
 // Валідація форми калькулятора
 const calculatorForm = document.querySelector('#calculator-form');
 const calculatorName = calculatorForm?.querySelector('input[name="user-name"]');
 const calculatorPhone = calculatorForm?.querySelector('input[name="user-phone"]');
 const calculatorQuestion = calculatorForm?.querySelector('textarea[name="user-question"]');
-
 
 // Обробка відправки форми
 calculatorForm?.addEventListener('submit', async function(e) {

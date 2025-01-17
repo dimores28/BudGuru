@@ -93,7 +93,7 @@
 						</ul>
 
 						<div class="footer__social">
-							<h5 class="footer__social_title">Ми в соцмережах:</h5>
+							<h5 class="footer__social_title"><?php _e('Ми в соцмережах:', 'budguru'); ?></h5>
 							<ul class="footer__social_list">
 								<li class="footer__social_list-item">
 									<a href="<?echo get_field('instagram', 'option'); ?>">
@@ -128,23 +128,23 @@
 					</div>
 
 					<div class="footer__col footer__col_our-services">
-						<h4 class="footer__title ">Наші послуги</h4>
+						<h4 class="footer__title "><?php _e('Наші послуги', 'budguru'); ?></h4>
 						<?php render_footer_menu('footer-services'); ?>
 					</div>
 
 					<div class="footer__col">
-						<h4 class="footer__title">Про компанію</h4>
+						<h4 class="footer__title"><?php _e('Про компанію', 'budguru'); ?></h4>
 						<?php render_footer_menu('footer-about'); ?>
 					</div>
 
 					<div class="footer__col">
-						<h4 class="footer__title">Користувачам</h4>
+						<h4 class="footer__title"><?php _e('Користувачам', 'budguru'); ?></h4>
 						<?php render_footer_menu('footer-users'); ?>
 					</div>
 
 				</div>
 				<div class="footer_copyright">
-					<p>Студія ремонту та дизайну інтерʼєру Budguru. Всі права захищені</p>
+					<p><?php _e('Студія ремонту та дизайну інтерʼєру Budguru. Всі права захищені', 'budguru'); ?></p>
 				</div>
 
 				<button class="footer__scroll-to" id="scroll-top">
@@ -154,6 +154,87 @@
 				</button>
 			</div>
 		</footer>
+
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+						</svg>
+					</button>
+					<div class="popup__text">
+						<div class="consultation__container">
+							<div class="consultation__content">
+								<div class="consultation__head-block">
+									<h2 class="consultation__heading">
+										<?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
+									</h2>
+								</div>
+
+								<div class="consultation__form-wrap">
+									<form class="consultation__form">
+										<div class="consultation__field-wrap">
+											<p class="consultation__text">
+												<?php _e('Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя, вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+											</p>
+
+											<input class="consultation__form-input" 
+												type="text" 
+												id="user-name" 
+												name="user-name" 
+												placeholder="<?php _e('Ваше імʼя', 'budguru'); ?>" 
+												aria-label="<?php _e('Ваше імʼя', 'budguru'); ?>">
+											
+											<input class="consultation__form-input" 
+												type="text" 
+												id="input-phone" 
+												name="phone" 
+												placeholder="<?php _e('Номер телефону', 'budguru'); ?>" 
+												aria-label="<?php _e('Номер телефону', 'budguru'); ?>" />
+											
+											<textarea class="consultation__form-input consultation__form-textarea" 
+													name="question" 
+													id="input-question" 
+													placeholder="<?php _e('Ваше питання', 'budguru'); ?>" 
+													aria-label="<?php _e('Ваше питання', 'budguru'); ?>"></textarea>
+											
+											<input class="consultation__btn-submit btn" 
+												type="submit" 
+												value="<?php _e('Відправити заявку', 'budguru'); ?>" 
+												aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
+										</div>
+
+										<div class="consultation__form-success form-success">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/smile.webp" 
+												class="form-success__img" 
+												width="120" 
+												height="120" 
+												alt="smile">
+											<h3 class="form-success__heading">
+												<?php _e('Дякуємо за звернення!', 'budguru'); ?>
+											</h3>
+											<p class="form-success__text">
+												<?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+											</p>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="consultation__illustration">
+								<img class="consultation__img" 
+									src="<?php echo get_template_directory_uri(); ?>/assets/img/Rectangle26103829.webp" 
+									width="740" 
+									height="720" 
+									alt="form illustration">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<?php wp_footer() ?>
 </body>

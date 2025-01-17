@@ -95,3 +95,23 @@ function budguru_customize_promo($wp_customize) {
     ));
 }
 add_action('customize_register', 'budguru_customize_promo');
+
+add_filter('acf/settings/save_json', function ($path) {
+    // Зберігаємо файли JSON у папку ACF у вашій темі
+    return get_stylesheet_directory() . '/acf-json';
+});
+
+add_filter('acf/settings/load_json', function ($paths) {
+    // Додаємо папку з JSON у список шляхів
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+});
+
+
+add_filter('acf/options_page/settings', function ($settings) {
+    if (function_exists('pll_get_post_language')) {
+        $current_language = pll_current_language(); 
+        $settings['menu_slug'] .= '_' . $current_language; 
+    }
+    return $settings;
+});

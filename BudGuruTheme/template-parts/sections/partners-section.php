@@ -6,7 +6,7 @@
 
         <div class="partners__row">
             <?php 
-            $logos = get_field('logo_clients', 'option');
+            $logos = get_field('partner_logos', 'option');
             
             if($logos): 
                 foreach($logos as $logo): 

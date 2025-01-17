@@ -1,3 +1,7 @@
+<?php 
+$projects = getProjects(6); // Отримуємо 6 останніх проектів
+if (!empty($projects)): // Перевіряємо чи є проекти
+?>
 <section class="projects">
     <div class="projects__container">
         <div class="projects__top-block">
@@ -36,7 +40,6 @@
 
         <div class="projects__row">
             <?php 
-            $projects = getProjects(6); // Отримуємо 6 останніх проектів
             foreach($projects as $project): 
             ?>
                 <div class="projects__col project">
@@ -60,3 +63,4 @@
         <div class="projects__btn-wrap"></div>
     </div>
 </section> 
+<?php endif; ?> 

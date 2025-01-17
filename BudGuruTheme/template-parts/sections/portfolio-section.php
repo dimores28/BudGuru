@@ -1,3 +1,7 @@
+<?php 
+$portfolio_items = getPortfolio();
+if (!empty($portfolio_items)):
+?>
 <section class="work-performed">
     <div class="work-performed__container">
         <div class="work-performed__top-block">
@@ -26,7 +30,7 @@
         </div>
 
         <div class="work-performed__grid work" id="portfolio-grid">
-            <?php $i = 1; foreach(getPortfolio() as $portfolio): ?>
+            <?php $i = 1; foreach($portfolio_items as $portfolio): ?>
                 <div class="work__card <?php echo "work__card_". $i ; ?>">
                     <a href="<?php echo $portfolio['link']; ?>" class="work__link">
                         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,3 +50,4 @@
 
     </div>
 </section>
+<?php endif; ?>
