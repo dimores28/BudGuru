@@ -15,11 +15,33 @@ Template Name: About
         $first_part = array_slice($words, 0, $middle);
         $second_part = array_slice($words, $middle);
 
-        echo do_shortcode(sprintf(
-            '[hero_section title="%s <span>%s</span>" show_link="false"]',
-            implode(' ', $first_part),
-            implode(' ', $second_part)
-        ));
+        // Отримуємо URL та alt текст головного зображення
+        $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
+        $bg_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $bg_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
+        
+        $shortcode_args = array(
+            'title' => sprintf('%s <span>%s</span>', 
+                implode(' ', $first_part), 
+                implode(' ', $second_part)
+            ),
+            'show_link' => 'false'
+        );
+
+        // Додаємо параметри зображення тільки якщо воно є
+        if ($bg_image) {
+            $shortcode_args['bg_image'] = $bg_image;
+            $shortcode_args['bg_alt'] = esc_attr($bg_alt);
+        }
+        
+        // Формуємо шорткод
+        $shortcode = '[hero_section';
+        foreach ($shortcode_args as $key => $value) {
+            $shortcode .= sprintf(' %s="%s"', $key, $value);
+        }
+        $shortcode .= ']';
+        
+        echo do_shortcode($shortcode);
     ?>
     
     <?php get_template_part('template-parts/sections/info/about'); ?>
@@ -32,44 +54,11 @@ Template Name: About
 
     <?php get_template_part('template-parts/sections/clients-section'); ?>
 
-    <section class="man_hour">
-        <div class="man_hour__container">
-            <h2 class="man_hour__heading h2">
-                <span><?php _e('Чоловік на годину:', 'budguru'); ?></span> <?php _e('домашній майстер на різного роду дріб’язок!', 'budguru'); ?>
-            </h2>
-
-            <div class="man_hour__content">
-                <div class="man_hour__text-box">
-                    <p class="man_hour__text">
-                        <?php _e('Послуга "Чоловік на годину" — ідеальне рішення для швидкого та якісного виконання
-                        різноманітних побутових завдань і ремонтних робіт вдома або в офісі. Наші майстри
-                        оперативно вирішують такі питання, як дрібний ремонт, встановлення техніки, монтаж
-                        меблів, сантехнічні та електротехнічні роботи, а також інші побутові задачі. Це зручно,
-                        швидко і дозволяє заощадити час, не витрачаючи зусиль на пошук різних спеціалістів. Якщо
-                        у вас виникли проблеми з електрикою, сантехнікою , меблями або іншими побутовими
-                        пристроями , то ви можете викликати майстра на дім, він швидко та якісно виконає
-                        необхідні роботи, дозволяючи вам економити свій час та сили.
-                        Коли виникають проблеми з сантехнікою в будинку або квартирі, це завжди викликає
-                        незручності. Якщо запустити проблему й вчасно її не вирішити, згодом її усунення
-                        обійдеться дорожче. Щоб уникнути неприємних наслідків та повернути комфорт, оптимальним
-                        рішенням буде викликати сантехніка на дім. Майстри BUDGURU мають досвід для вирішення
-                        будь-яких проблем з ремонту, заміни та обслуговування сантехніки.
-                        Професійні фахівці надають сантехнічні послуги під ключ: від виявлення проблеми до її
-                        усунення. Сантехніки можуть замінити протікаючий бачок, встановити нову душову кабіну,
-                        відновити цілісність труб або створити проект каналізаційної системи. Будь-яка з цих
-                        сантехнічних послуг надається відповідно до норм безпеки та чинних технічних стандартів.', 'budguru'); ?>
-                    </p>
-
-                    <a href="#calculator-form" class="man_hour__btn btn" data-da=".man_hour__illustration, 768, 1">
-                        <?php _e('Викликати майстра', 'budguru'); ?>
-                    </a>
-                </div>
-                <div class="man_hour__illustration">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/about/men.webp" width="552" height="598" alt="Викликати майстра">
-                </div>
-            </div>
+    <article class="post-content">
+        <div class="post-content__container">
+                <?php the_content(); ?>
         </div>
-    </section>
+    </article>
 
     <?php echo do_shortcode('[portfolio_section]'); ?>
 

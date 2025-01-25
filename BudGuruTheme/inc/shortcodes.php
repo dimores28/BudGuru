@@ -39,7 +39,9 @@ function hero_section_shortcode($atts) {
     $atts = shortcode_atts(
         array(
             'title' => '',
-            'show_link' => 'true' // за замовчуванням true
+            'show_link' => 'true',
+            'bg_image' => get_template_directory_uri() . '/assets/img/hero_bg.webp',
+            'bg_alt' => __('Hero background', 'budguru')
         ),
         $atts,
         'hero_section'
@@ -53,8 +55,7 @@ function hero_section_shortcode($atts) {
     include get_template_directory() . '/template-parts/sections/hero-section.php';
     return ob_get_clean();
 }
-add_shortcode('hero_section', 'hero_section_shortcode'); 
-
+add_shortcode('hero_section', 'hero_section_shortcode');
 
 function calculator_shortcode($atts) {
     // Буферизуємо вивід

@@ -15,10 +15,18 @@ Template Name: Calculators
         $first_part = array_slice($words, 0, $middle);
         $second_part = array_slice($words, $middle);
 
+        // Отримуємо URL та alt текст головного зображення
+        $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
+        $bg_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $bg_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', true);
+        
+        
         echo do_shortcode(sprintf(
-            '[hero_section title="%s <span>%s</span>" show_link="false"]',
+            '[hero_section title="%s <span>%s</span>" show_link="false" bg_image="%s" bg_alt="%s"]',
             implode(' ', $first_part),
-            implode(' ', $second_part)
+            implode(' ', $second_part),
+            $bg_image ? $bg_image : '',
+            $bg_alt ? esc_attr($bg_alt) : ''
         ));
     ?>
 

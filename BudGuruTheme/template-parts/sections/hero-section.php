@@ -1,14 +1,20 @@
 <?php
     $defaults = array(
         'title' => __('Студія <span>дизайну інтерʼєру</span> та <span>ремонту</span>', 'budguru'),
-        'show_link' => true
+        'show_link' => true,
+        'bg_image' => get_template_directory_uri() . '/assets/img/hero_bg.webp',
+        'bg_alt' => __('Hero background', 'budguru')
     );
 
     $args = wp_parse_args($atts, $defaults);
 ?>
 
 <section class="hero">
-    <img src="<?php bloginfo('template_url'); ?>/assets/img/hero_bg.webp" class="hero__bg-image" width="1920" height="1100" alt="hero">
+    <img src="<?php echo esc_url($args['bg_image']); ?>" 
+         class="hero__bg-image" 
+         width="1920" 
+         height="1100" 
+         alt="<?php echo esc_attr($args['bg_alt']); ?>">
     <div class="hero__container">
         <div class="hero__top-block">
             <h1 class="hero__heading h1">
@@ -125,3 +131,4 @@
         </div>
     </div>
 </section> 
+
