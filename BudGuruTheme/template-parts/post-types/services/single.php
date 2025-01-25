@@ -44,629 +44,91 @@
 								</tr>
 							</thead>
 							<tbody class="table__body">
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Склад проекту', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Обмірний план', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План розташування стін', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Візуалізація', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Підбір матеріалів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План розміщення меблів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План демонтажу', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План підлоги із зазначенням типу покриття, плінтуса і теплої підлоги', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План стелі', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План розташування розеток і вимикачів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План привʼязки світильників зі схемою включення', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План оздоблення стін', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Відомість обробки із зазначенням типу, кількості та назви покриттів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('План привʼязки сантехнічного обладнання', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Розгортки стін санвузла та кухні зі схемою розкладки плитки', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Специфікація електрофурнітури', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Специфікація освітлювальних приладів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Специфікація сантехнічного обладнання', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Розгортки стін усіх приміщень', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Креслення меблів', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row table__row-divider">
-									<td class="table__cell table__cell--title"><?php _e('Правки', 'budguru'); ?></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('До 3-х правок на кожний етап', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-											<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title"><?php _e('Необмежена кількість правок', 'budguru'); ?></td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
-
-								<tr class="table__row">
-									<td class="table__cell table__cell--title">
-										<?php _e('Авторський нагляд', 'budguru'); ?>
-										(<?php _e('до 4 виїздів на обʼєкт', 'budguru'); ?>)
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E" />
-										</svg>
-									</td>
-									<td class="table__cell">
-										<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-											<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-										</svg>
-									</td>
-								</tr>
+								<?php if($prices['price_table_row']): 
+									foreach($prices['price_table_row'] as $row): 
+										if($row['empty_row']): ?>
+											<tr class="table__row table__row-divider">
+												<td class="table__cell table__cell--title"><?php echo $row['row_name']; ?></td>
+												<td class="table__cell"></td>
+												<td class="table__cell"></td>
+												<td class="table__cell"></td>
+												<td class="table__cell"></td>
+											</tr>
+										<?php else: ?>
+											<tr class="table__row">
+												<td class="table__cell table__cell--title"><?php echo $row['row_name']; ?></td>
+												
+												<td class="table__cell">
+													<?php if(!$row['visual_option']): ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
+														</svg>
+													<?php else: ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
+															<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
+														</svg>
+													<?php endif; ?>
+												</td>
+												
+												<td class="table__cell">
+													<?php if(!$row['tehnical_option']): ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
+														</svg>
+													<?php else: ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
+															<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
+														</svg>
+													<?php endif; ?>
+												</td>
+												
+												<td class="table__cell">
+													<?php if(!$row['all_option']): ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.507812" y="0.640625" width="37" height="37" stroke="#1E1E1E" />
+														</svg>
+													<?php else: ?>
+														<svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
+															<path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
+														</svg>
+													<?php endif; ?>
+												</td>
+												
+												<td class="table__cell">
+													<?php if(!$row['max_option']): ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
+														</svg>
+													<?php else: ?>
+														<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
+															<path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
+														</svg>
+													<?php endif; ?>
+												</td>
+											</tr>
+										<?php endif;
+									endforeach;
+								endif; ?>
 
 								<tr class="table__row table__row-divider table__row-last">
 									<td class="table__cell table__cell--title"><?php _e('Вартість:', 'budguru'); ?></td>
 									<td class="table__cell">
-                                        <?php echo $prices['vizual']; ?>
+										<?php echo $prices['vizual']; ?>
 										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
-                                        <?php echo $prices['tehnical']; ?>
+										<?php echo $prices['tehnical']; ?>
 										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
-                                        <?php echo $prices['everything_considered'] ?? '32$/m2'; ?>
+										<?php echo $prices['everything_considered'] ?? '32$/m2'; ?>
 										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
-                                        <?php echo $prices['maximum'] ?? '45$/m2'; ?>
+										<?php echo $prices['maximum'] ?? '45$/m2'; ?>
 										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 								</tr>
