@@ -1,8 +1,8 @@
 <section class="partners">
     <div class="partners__container">
-        <h2 class="partners__heading h2">
+        <h3 class="partners__heading h2">
             <?php _e('Наші', 'budguru'); ?> <span><?php _e('клієнти', 'budguru'); ?></span>
-        </h2>
+        </h3>
 
         <div class="partners__row">
             <?php 

@@ -1,7 +1,7 @@
 <section class="why-us">
     <div class="why-us__container">
         <div class="why-us__head-block">
-            <h2 class="why-us__heding"><?php _e('Чому', 'budguru'); ?> <span>BudGuru?</span></h2>
+            <h3 class="why-us__heding"><?php _e('Чому', 'budguru'); ?> <span>BudGuru?</span></h3>
             <a href="#consultation-section" class="btn why-us__btn">
                 <?php _e('Обговорити проект', 'budguru'); ?>
             </a>

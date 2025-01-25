@@ -17,7 +17,8 @@ function register_services_post_type() {
         'public'              => true,
         'has_archive'         => true, // Для сторінки зі списком всіх послуг
         'menu_icon'           => 'dashicons-clipboard', // Іконка в адмінці
-        'supports'            => array('title', 'thumbnail'),
+        'supports'            => array('title', 'thumbnail', 'editor'),
+        'show_in_rest'        => true, // Додали підтримку REST API для Gutenberg
         'rewrite'            => array('slug' => 'services'),
     );
 

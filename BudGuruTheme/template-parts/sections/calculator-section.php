@@ -6,9 +6,9 @@
 
         <div class="calculator__steps">
             <form class="calculator-form" id="calculator-form">
-                <h2 class="calculator__heading h2">
+                <h3 class="calculator__heading h2">
                     <?php _e('Калькулятор вартості', 'budguru'); ?> <span><?php _e('ремонту', 'budguru'); ?></span>
-                </h2>
+                </h3>
 
                 <!-- ... Решта коду форми ... -->
                 <?php include get_template_directory() . '/template-parts/forms/calculator-steps.php'; ?>

@@ -8,6 +8,11 @@
 		border-radius: 30px;
 		padding: 6px 20px;
 
+		@media (min-width: 1199px) {
+			min-height: 42px;
+			display: flex;
+        	align-items: center;
+		}
 
 		@media (max-width: 1200px) {
 			position: fixed;
@@ -155,6 +160,12 @@
 		@media (max-width:$mobile){
 			 padding-bottom: 6px;
 			 text-align: left; 
+		}
+
+		.menu__link {
+			&.active {
+				border-radius: 0;
+			}
 		}
 	}
 

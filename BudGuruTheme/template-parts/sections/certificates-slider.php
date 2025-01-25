@@ -1,9 +1,9 @@
 <section class="certificates">
     <div class="certificates__container">
         <div class="certificates__top-block">
-            <h2 class="certificates__heading h2">
+            <h3 class="certificates__heading h2">
                 <?php _e('Наші', 'budguru'); ?> <span><?php _e('cертифікати та нагороди', 'budguru'); ?></span>
-            </h2>
+            </h3>
 
             <div class="certificates__arowws">
                 <div class="certificates__next swiper-button-next"></div>

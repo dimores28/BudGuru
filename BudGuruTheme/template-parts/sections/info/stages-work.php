@@ -1,8 +1,8 @@
 <section class="stages-work">
     <div class="stages-work__container">
-        <h2 class="stages-work__heading h2">
+        <h3 class="stages-work__heading h2">
             <span><?php _e('Етапи', 'budguru'); ?></span> <?php _e('роботи', 'budguru'); ?>
-        </h2>
+        </h3>
 
         <div class="stages-work__stages stages">
             <div class="stages__col">
@@ -11,9 +11,9 @@
                         01
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Обговорення проекту', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('Перший зідзіон та обговорення всіх деталей проекту та ваших побажань', 'budguru'); ?>
@@ -27,9 +27,9 @@
                         02
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Зустріч та консультація', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('На консультації ми обговорюємо всі варіанти реалізації проекту та ви отриимуєте відповіді на всі запитання', 'budguru'); ?>
@@ -43,9 +43,9 @@
                         03
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Укладення договору', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('Укладаємо та підписуємо договір про співпрацю, в якому вказані всі важдиві моменти.', 'budguru'); ?>
@@ -60,9 +60,9 @@
                         04
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Виїзд на проект', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('Приїжджаємо на обʼєкт з метою оцінки роботи та планування.', 'budguru'); ?>
@@ -76,9 +76,9 @@
                         05
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Розробка плану робіт', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('Плануємо роботи та всі задачі по проекту', 'budguru'); ?>
@@ -92,9 +92,9 @@
                         06
                     </div>
                     <div class="stages__desc">
-                        <h3 class="stages__title">
+                        <h4 class="stages__title">
                             <?php _e('Реалізація та здача проекту', 'budguru'); ?>
-                        </h3>
+                        </h4>
 
                         <p class="stages__text">
                             <?php _e('Виконуємо всі роботи згідно плану та здаємо проект.', 'budguru'); ?>

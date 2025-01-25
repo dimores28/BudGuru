@@ -1,8 +1,8 @@
 <section class="faq">
     <div class="faq__container">
-        <h2 class="faq__heading h2">
+        <h3 class="faq__heading h2">
             <span><?php _e('Відповіді', 'budguru'); ?></span> <?php _e('на найчастіші запитання', 'budguru'); ?>
-        </h2>
+        </h3>
 
         <div class="faq__wrapp">
             <div data-spollers data-one-spoller class="faq__spollers spollers">

@@ -2,9 +2,9 @@
     <div class="consultation__container">
         <div class="consultation__content">
             <div class="consultation__head-block">
-                <h2 class="consultation__heading">
+                <h3 class="consultation__heading">
                     <?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
-                </h2>
+                </h3>
             </div>
 
             <div class="consultation__form-wrap">
@@ -46,9 +46,9 @@
                              width="120" 
                              height="120" 
                              alt="smile">
-                        <h3 class="form-success__heading">
+                        <div class="form-success__heading">
                             <?php _e('Дякуємо за звернення!', 'budguru'); ?>
-                        </h3>
+                        </div>
                         <p class="form-success__text">
                             <?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
                         </p>

@@ -1,9 +1,9 @@
 <section class="reviews">
     <div class="reviews__container">
         <div class="reviews__top-block">
-            <h2 class="reviews__heading h2">
+            <h3 class="reviews__heading h2">
                 <span><?php _e('Відгуки', 'budguru'); ?></span> <?php _e('наших клієнтів', 'budguru'); ?>
-            </h2>
+            </h3>
             <div class="reviews__btn-wrap">
                 <a href="<?php echo esc_url(get_field('review_form_link', 'option')); ?>" class="reviews__btn btn">
                     <?php _e('Опишіть ваші враження', 'budguru'); ?>

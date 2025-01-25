@@ -33,7 +33,7 @@
         @include adaptiveValue("font-size", 16, 14);
         font-style: normal;
         text-align: left;
-        font-family: "Jost",sans-serif;
+        font-family: "Jost", sans-serif;
         font-weight: 400;
         line-height: 1.6;
         @include adaptiveValue("margin-bottom", 44, 20);

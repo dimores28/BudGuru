@@ -9,6 +9,7 @@
     &_top-block {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 16px;
         @include adaptiveValue("margin-bottom", 40, 20);
     }
@@ -354,6 +355,27 @@
         line-height: 1.5;
         list-style: square;
     }
+
+    h2, .h2 {
+        @include adaptiveValue("margin-bottom", 32, 20);
+    }
+
+    h3, .h3 {
+        @include adaptiveValue("margin-bottom", 24, 16);
+    }
+
+    h4, .h4 {
+        @include adaptiveValue("margin-bottom", 20, 12);
+    }
+
+    h5, .h5 {
+        @include adaptiveValue("margin-bottom", 16, 10);
+    }
+
+    h6, .h6 {
+        @include adaptiveValue("margin-bottom", 12, 8);
+    }
+
 }
 
 

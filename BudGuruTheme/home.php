@@ -37,7 +37,28 @@ Template Name: Home
 
         <?php echo do_shortcode('[portfolio_section]'); ?>
 
-        <?php get_template_part('template-parts/sections/info/man-hour'); ?>
+
+        <section class="man_hour">
+            <div class="man_hour__container">
+                <h2 class="man_hour__heading h2">
+                    <?php echo get_field('section_heading'); ?>
+                </h2>
+
+                <div class="man_hour__content post-content">
+                    <div class="man_hour__text-box">
+                         <?php echo get_field('text_section'); ?>
+                    </div>
+
+                    <div class="man_hour__illustration">
+                        <img src="<?php echo get_field('section_img'); ?>" 
+                            width="552" 
+                            height="598" 
+                            alt="<?php echo get_field('section_alt'); ?>"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section> 
 
         <?php get_template_part('template-parts/sections/info/stages-work'); ?>
 
@@ -49,24 +70,11 @@ Template Name: Home
 
         <?php get_template_part('template-parts/sections/partners-section'); ?>
 
-        <?php 
-            $master_section = new BudGuru_Service_Section(array(
-                'title_first' => __('Виклик майстра на дім:', 'budguru'),
-                'title_second' => __('швидко та зручно', 'budguru'),
-                'description' => __('Послуга "Виклик майстра додому" забезпечує оперативну і професійну допомогу в питаннях ремонту та
-							побутових робіт. Незалежно від того, чи потрібно вирішити дрібні проблеми з сантехнікою, електрикою,
-							меблями або провести більш складний ремонт, наші майстри готові допомогти. Чоловік на годину приїде до
-							вас у зручний для вас час і виконає потрібні роботи швидко та якісно, він виконає будь-яу задачу,
-							повʼязану з ремонтом чи обслуговуванням будинку.
-							Забудьте про довгі пошуки майстрів або спроби самостійно справитися з ремонтом. Наші фахівці завжди
-							готові прийти на допомогу в будь-яких питаннях дрібного ремонту чи обслуговуванні будинку!', 'budguru'),
-                'image' => get_template_directory_uri() . '/assets/img/master.webp',
-                'button_text' => __('Викликати майстра', 'budguru'),
-                'button_url' => '#consultation-section'
-            ));
-
-            get_template_part('template-parts/sections/info/master-call', null, array('section' => $master_section));
-        ?>
+        <article class="post-content">
+            <div class="post-content__container">
+                    <?php the_content(); ?>
+            </div>
+        </article>
 
         <?php get_template_part('template-parts/sections/certificates-slider'); ?>
 

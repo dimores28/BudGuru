@@ -10,7 +10,7 @@ $posts_query = new WP_Query([
     <div class="blog__container">
         <div class="blog_top-block">
             <div class="blog__box">
-                <h2 class="blog__heading h2">Блог</h2>
+                <h3 class="blog__heading h2">Блог</h3>
                 <div class="blog__filters filters" data-da=".filters-wrap,1120,0">
                     <a href="#" class="filters__item active" data-category="all">
                         <?php _e('Всі теми', 'budguru'); ?>
