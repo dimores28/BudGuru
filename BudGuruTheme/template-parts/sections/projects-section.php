@@ -8,7 +8,10 @@ if (!empty($projects)): // Перевіряємо чи є проекти
             <h2 class="projects__heading h2">
                 <?php _e('Готові', 'budguru'); ?> <span><?php _e('проекти будинків', 'budguru'); ?></span>
             </h2>
-            <a href="/projects" class="projects__btn btn" data-da=".projects__btn-wrap,768,0">
+            <a href="/projects" 
+                class="projects__btn btn" 
+                data-da=".projects__btn-wrap,768,0"
+                aria-label="<?php _e('Переглянути всі проекти будинків', 'budguru'); ?>">
                 <?php _e('Дивитися більше', 'budguru'); ?>
             </a>
         </div>
@@ -48,7 +51,15 @@ if (!empty($projects)): // Перевіряємо чи є проекти
                          width="510" 
                          height="436" 
                          alt="<?php echo $project['title']; ?>">
-                    <a href="<?php echo $project['link']; ?>" class="project__link">
+                    <a href="<?php echo $project['link']; ?>" 
+                        class="project__link"
+                        aria-label="<?php 
+                            printf(
+                                /* translators: %s: project title */
+                                __('Переглянути проект: %s', 'budguru'), 
+                                $project['title']
+                            ); 
+                        ?>">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.9281 1.74743L1.77208 23.9034M23.9281 1.74743L23.8607 20.6709M23.9281 1.74743L5.00457 1.81477" stroke="#1E1E1E" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>

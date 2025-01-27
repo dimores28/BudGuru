@@ -6,8 +6,12 @@
             </h2>
 
             <div>
-                <div class="our-team__next swiper-button-next"></div>
-                <div class="our-team__prev swiper-button-prev"></div>
+                <div class="our-team__next swiper-button-next" 
+                    aria-label="<?php _e('Наступний слайд', 'budguru'); ?>">
+                </div>
+                <div class="our-team__prev swiper-button-prev"
+                    aria-label="<?php _e('Попередній слайд', 'budguru'); ?>">
+                </div>
             </div>
         </div>
 

@@ -43,7 +43,15 @@
                     <p class="about__card-text">
                         <?php _e('Контроль якості', 'budguru'); ?>
                     </p>
-                    <a href="#" class="about__card-link rounded-link">
+                    <a href="#" 
+                        class="about__card-link rounded-link"
+                        aria-label="<?php 
+                            printf(
+                                /* translators: %s: card title */
+                                __('Дізнатися більше про %s', 'budguru'), 
+                                __('контроль якості', 'budguru')
+                            ); 
+                        ?>">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.9281 1.74694L1.77208 23.9029M23.9281 1.74694L23.8607 20.6705M23.9281 1.74694L5.00457 1.81428" 
                                   stroke="#1E1E1E" 

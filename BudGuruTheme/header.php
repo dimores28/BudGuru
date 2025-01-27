@@ -36,7 +36,12 @@
 				?>
 
 				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<button type="button" 
+						class="menu__icon icon-menu"
+						aria-label="<?php _e('Відкрити меню', 'budguru'); ?>"
+						aria-expanded="false">
+						<span></span>
+					</button>
 					<?php
 						class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 							public function start_lvl(&$output, $depth = 0, $args = null) {
@@ -107,7 +112,15 @@
 
 				</div>
 
-				<a href="tel:<?echo get_field('phone', 'option'); ?>" class="header__phone">
+				<a href="tel:<?echo get_field('phone', 'option'); ?>" 
+					class="header__phone"
+					aria-label="<?php 
+						printf(
+							/* translators: %s: phone number */
+							__('Зателефонувати: %s', 'budguru'), 
+							get_field('view_phone', 'option')
+						); 
+					?>">
 					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10.2175 7.90169L8.73586 7.73253C8.56164 7.71206 8.38504 7.73135 8.21935 7.78894C8.05365 7.84653 7.90317 7.94092 7.77919 8.06503L6.70586 9.13836C5.05 8.29599 3.70406 6.95005 2.86169 5.29419L3.94086 4.21503C4.19169 3.96419 4.31419 3.61419 4.27336 3.25836L4.10419 1.78836C4.07124 1.50375 3.93471 1.24121 3.72063 1.05079C3.50654 0.860373 3.22987 0.755393 2.94336 0.755861H1.93419C1.27502 0.755861 0.72669 1.30419 0.767524 1.96336C1.07669 6.94503 5.06086 10.9234 10.0367 11.2325C10.6959 11.2734 11.2442 10.725 11.2442 10.0659V9.05669C11.25 8.46753 10.8067 7.97169 10.2175 7.90169Z" />
 					</svg>

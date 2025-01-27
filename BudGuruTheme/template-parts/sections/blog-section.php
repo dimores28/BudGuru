@@ -12,20 +12,32 @@ $posts_query = new WP_Query([
             <div class="blog__box">
                 <h3 class="blog__heading h2">Блог</h3>
                 <div class="blog__filters filters" data-da=".filters-wrap,1120,0">
-                    <a href="#" class="filters__item active" data-category="all">
+                    <a href="#" 
+                        class="filters__item active" 
+                        data-category="all"
+                        aria-label="<?php _e('Фільтрувати: показати всі теми', 'budguru'); ?>">
                         <?php _e('Всі теми', 'budguru'); ?>
                     </a>
                     <?php foreach($categories as $category): ?>
                         <a href="#" 
                            class="filters__item" 
-                           data-category="<?php echo $category->term_id; ?>">
+                           data-category="<?php echo $category->term_id; ?>"
+                           aria-label="<?php 
+                                printf(
+                                    /* translators: %s: category name */
+                                    __('Фільтрувати за категорією: %s', 'budguru'), 
+                                    $category->name
+                                ); 
+                            ?>">
                             <?php echo $category->name; ?>
                         </a>
                     <?php endforeach; ?>
                 </div>
             </div>
 
-            <a href="/blog" class="blog__btn btn">
+            <a href="/blog" 
+                class="blog__btn btn"
+                aria-label="<?php _e('Перейти до всіх статей блогу', 'budguru'); ?>">
                 <?php _e('Дивитися більше', 'budguru'); ?>
             </a>
         </div>
@@ -61,7 +73,15 @@ $posts_query = new WP_Query([
                             <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                         </p>
 
-                        <a href="<?php the_permalink(); ?>" class="post__url">
+                        <a href="<?php the_permalink(); ?>" 
+                            class="post__url"
+                            aria-label="<?php 
+                                printf(
+                                    /* translators: %s: post title */
+                                    __('Читати статтю: %s', 'budguru'), 
+                                    get_the_title()
+                                ); 
+                            ?>">
                             <?php _e('Дивитися більше', 'budguru'); ?>
                         </a>
                     </div>

@@ -5,12 +5,18 @@
                 <span><?php _e('Відгуки', 'budguru'); ?></span> <?php _e('наших клієнтів', 'budguru'); ?>
             </h3>
             <div class="reviews__btn-wrap">
-                <a href="<?php echo esc_url(get_field('review_form_link', 'option')); ?>" class="reviews__btn btn">
+                <a href="<?php echo esc_url(get_field('review_form_link', 'option')); ?>" 
+                    class="reviews__btn btn"
+                    aria-label="<?php _e('Залишити свій відгук', 'budguru'); ?>">
                     <?php _e('Опишіть ваші враження', 'budguru'); ?>
                 </a>
 
-                <div class="reviews__next swiper-button-next"></div>
-                <div class="reviews__prev swiper-button-prev"></div>
+                <div class="reviews__next swiper-button-next"
+                    aria-label="<?php _e('Наступний відгук', 'budguru'); ?>">
+                </div>
+                <div class="reviews__prev swiper-button-prev"
+                    aria-label="<?php _e('Попередній відгук', 'budguru'); ?>">
+                </div>
             </div>
         </div>
 
