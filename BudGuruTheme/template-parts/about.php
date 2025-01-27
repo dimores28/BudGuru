@@ -54,11 +54,16 @@ Template Name: About
 
     <?php get_template_part('template-parts/sections/clients-section'); ?>
 
-    <article class="post-content">
-        <div class="post-content__container">
-                <?php the_content(); ?>
-        </div>
-    </article>
+    <?php 
+	$content = get_the_content();
+	if (!empty($content)): 
+	?>
+		<article class="post-content">
+			<div class="post-content__container">
+				<?php the_content(); ?>
+			</div>
+		</article>
+	<?php endif; ?>
 
     <?php echo do_shortcode('[portfolio_section]'); ?>
 

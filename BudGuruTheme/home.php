@@ -70,11 +70,16 @@ Template Name: Home
 
         <?php get_template_part('template-parts/sections/partners-section'); ?>
 
-        <article class="post-content">
-            <div class="post-content__container">
+        <?php 
+        $content = get_the_content();
+        if (!empty($content)): 
+        ?>
+            <article class="post-content">
+                <div class="post-content__container">
                     <?php the_content(); ?>
-            </div>
-        </article>
+                </div>
+            </article>
+        <?php endif; ?>
 
         <?php get_template_part('template-parts/sections/certificates-slider'); ?>
 

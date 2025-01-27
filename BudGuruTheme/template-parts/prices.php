@@ -202,6 +202,17 @@ Template Name: Prices
         </section>
     </div>
 
+    <?php 
+	$content = get_the_content();
+	if (!empty($content)): 
+	?>
+		<article class="post-content">
+			<div class="post-content__container">
+				<?php the_content(); ?>
+			</div>
+		</article>
+	<?php endif; ?>
+
     <?php echo do_shortcode('[consultation_section]'); ?>
 
 </main>

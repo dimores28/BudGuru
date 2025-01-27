@@ -9,7 +9,8 @@ function register_portfolio_post_type() {
             'edit_item'         => 'Редагувати проект',
         ),
         'public'              => true,
-        'supports'            => array('title', 'thumbnail'),
+        'supports'            => array('title', 'thumbnail', 'editor'),
+        'show_in_rest'        => true,
         'menu_icon'           => 'dashicons-portfolio',
         'has_archive'         => true,
         'rewrite'            => array('slug' => 'portfolio')

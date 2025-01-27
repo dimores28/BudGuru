@@ -16,8 +16,9 @@ function register_projects_post_type() {
         'labels'              => $labels,
         'public'              => true,
         'has_archive'         => true,
+        'show_in_rest'        => true,
         'menu_icon'           => 'dashicons-admin-home',
-        'supports'            => array('title', 'thumbnail'),
+        'supports'            => array('title', 'thumbnail', 'editor'),
         'rewrite'            => array('slug' => 'projects'),
     );
 

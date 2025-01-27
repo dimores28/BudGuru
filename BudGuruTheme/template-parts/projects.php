@@ -146,6 +146,17 @@ Template Post Type: page
         </div>
     </section> 
 
+    <?php 
+	$content = get_the_content();
+	if (!empty($content)): 
+	?>
+		<article class="post-content">
+			<div class="post-content__container">
+				<?php the_content(); ?>
+			</div>
+		</article>
+	<?php endif; ?>
+
     <?php get_template_part('template-parts/sections/info/why-us'); ?>
 
     <?php get_template_part('template-parts/sections/partners-section'); ?>

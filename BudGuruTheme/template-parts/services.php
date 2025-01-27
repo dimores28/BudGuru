@@ -45,6 +45,17 @@ Template Name: Services
         echo do_shortcode($shortcode);
     ?>
 
+    <?php 
+	$content = get_the_content();
+	if (!empty($content)): 
+	?>
+		<article class="post-content">
+			<div class="post-content__container">
+				<?php the_content(); ?>
+			</div>
+		</article>
+	<?php endif; ?>
+
 
     <?php get_template_part('template-parts/sections/partners-section'); ?>
 
