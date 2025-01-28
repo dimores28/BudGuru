@@ -34,7 +34,18 @@
                         </a>
                         <img src="<?php echo $services[$i]['img']; ?>" alt="<?php echo $services[$i]['title']; ?>" width="600" height="400" class="our-services__img">
                         <div class="our-services__desc">
-                            <h3 class="our-services__text"><?php echo $services[$i]['title']; ?></h3>
+                            <h3 class="our-services__text">
+                                <a href="<?php echo $services[$i]['link']; ?>" 
+                                   aria-label="<?php 
+                                        printf(
+                                            /* translators: %s: service title */
+                                            __('Перейти до послуги: %s', 'budguru'), 
+                                            $services[$i]['title']
+                                        ); 
+                                    ?>">
+                                    <?php echo $services[$i]['title']; ?>
+                                </a>
+                            </h3>
                         </div>
                     </div>
 
@@ -56,7 +67,18 @@
                             </a>
                             <img src="<?php echo $services[$i + 1]['img']; ?>" alt="<?php echo $services[$i + 1]['title']; ?>" width="970" height="400" class="our-services__img">
                             <div class="our-services__desc">
-                                <h3 class="our-services__text"><?php echo $services[$i + 1]['title']; ?></h3>
+                                <h3 class="our-services__text">
+                                    <a href="<?php echo $services[$i + 1]['link']; ?>" 
+                                       aria-label="<?php 
+                                            printf(
+                                                /* translators: %s: service title */
+                                                __('Перейти до послуги: %s', 'budguru'), 
+                                                $services[$i + 1]['title']
+                                            ); 
+                                        ?>">
+                                        <?php echo $services[$i + 1]['title']; ?>
+                                    </a>
+                                </h3>
                                 <a href="<?php echo $services[$i + 1]['link']; ?>" 
                                     class="our-services__big-col_link"
                                     aria-label="<?php 

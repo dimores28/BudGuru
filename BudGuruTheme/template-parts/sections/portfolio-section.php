@@ -58,11 +58,20 @@ if (!empty($portfolio_items)):
                     </a>
                     <div class="work__text">
                         <h4 class="work__title">
-                            <?php echo $portfolio['title']; ?>
+                            <a href="<?php echo $portfolio['link']; ?>" 
+                               aria-label="<?php 
+                                   printf(
+                                       /* translators: %s: portfolio item title */
+                                       __('Переглянути проект: %s', 'budguru'), 
+                                       $portfolio['title']
+                                   ); 
+                               ?>">
+                                <?php echo $portfolio['title']; ?>
+                            </a>
                         </h4>
                     </div>
-                    <img src="<?php echo $portfolio['img']; ?>" class="work__bg-img" alt="Дизайн">
-                    <img src="<?php echo $portfolio['mobile_thumbnail']; ?>" class="work__bg-mobile" alt="Дизайн">
+                    <img src="<?php echo $portfolio['img']; ?>" class="work__bg-img" alt="<?php echo $portfolio['title']; ?>">
+                    <img src="<?php echo $portfolio['mobile_thumbnail']; ?>" class="work__bg-mobile" alt="<?php echo $portfolio['title']; ?>">
                 </div>
             <?php $i++; endforeach; ?>
         </div>

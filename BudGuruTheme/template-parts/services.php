@@ -45,6 +45,8 @@ Template Name: Services
         echo do_shortcode($shortcode);
     ?>
 
+    <?php echo do_shortcode('[services_section]'); ?>
+
     <?php 
 	$content = get_the_content();
 	if (!empty($content)): 
@@ -63,7 +65,7 @@ Template Name: Services
 
     <?php echo do_shortcode('[consultation_section]'); ?>
 
-    <?php echo do_shortcode('[services_section]'); ?>
+ 
 
     <?php get_template_part('template-parts/sections/info/why-us'); ?>
 

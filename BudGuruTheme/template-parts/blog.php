@@ -18,7 +18,7 @@ Template Name: Blog
 ?>
 
 <main class="page">
-<?php
+    <?php
         $page_title = get_the_title();
         $words = explode(' ', $page_title);
 
@@ -81,15 +81,15 @@ Template Name: Blog
                             <div class="post__tags">
                             <?php 
                                 $post_tags = get_the_tags();
-                            if($post_tags): 
-                                foreach($post_tags as $tag): 
+                                if($post_tags): 
+                                    foreach($post_tags as $tag): 
                             ?>
                                 <p class="post__tag">
                                     <?php echo $tag->name; ?>
                                 </p>
                             <?php 
-                                endforeach;
-                            endif; 
+                                    endforeach;
+                                endif; 
                             ?>
                             </div>
                         </div>
@@ -97,18 +97,37 @@ Template Name: Blog
                         <div class="post__content">
                             <div class="post__date"><?php echo get_the_date('d.m.Y'); ?></div>
                             <h4 class="post__title">
-                                <?php echo wp_trim_words(get_the_title(), 10); ?>
+                                <a href="<?php the_permalink(); ?>" 
+                                   aria-label="<?php 
+                                       printf(
+                                           /* translators: %s: post title */
+                                           __('Читати статтю: %s', 'budguru'), 
+                                           get_the_title()
+                                       ); 
+                                   ?>">
+                                    <?php echo wp_trim_words(get_the_title(), 10); ?>
+                                </a>
                             </h4>
                             <p class="post__text">
                                 <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                             </p>
 
-                            <a href="<?php the_permalink(); ?>" class="post__url">Дивитись більше</a>
+                            <a href="<?php the_permalink(); ?>" 
+                               class="post__url"
+                               aria-label="<?php 
+                                   printf(
+                                       /* translators: %s: post title */
+                                       __('Читати статтю: %s', 'budguru'), 
+                                       get_the_title()
+                                   ); 
+                               ?>">
+                                <?php _e('Дивитись більше', 'budguru'); ?>
+                            </a>
                         </div>
                         <?php if(has_post_thumbnail()): ?>
                             <img src="<?php the_post_thumbnail_url(); ?>" 
-                                class="post__image" 
-                                alt="<?php the_title(); ?>">
+                                 class="post__image" 
+                                 alt="<?php echo esc_attr(get_the_title()); ?>">
                         <?php endif; ?>
                     </div>
                 <?php endwhile; endif; wp_reset_postdata(); ?>

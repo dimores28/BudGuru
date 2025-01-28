@@ -67,7 +67,16 @@ $posts_query = new WP_Query([
                     <div class="post__content">
                         <div class="post__date"><?php echo get_the_date('d.m.Y'); ?></div>
                         <h4 class="post__title">
-                            <?php echo wp_trim_words(get_the_title(), 10); ?>
+                            <a href="<?php the_permalink(); ?>" 
+                               aria-label="<?php 
+                                   printf(
+                                       /* translators: %s: post title */
+                                       __('Читати статтю: %s', 'budguru'), 
+                                       get_the_title()
+                                   ); 
+                               ?>">
+                                <?php echo wp_trim_words(get_the_title(), 10); ?>
+                            </a>
                         </h4>
                         <p class="post__text">
                             <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
@@ -88,7 +97,7 @@ $posts_query = new WP_Query([
                     <?php if(has_post_thumbnail()): ?>
                         <img src="<?php the_post_thumbnail_url(); ?>" 
                              class="post__image" 
-                             alt="<?php the_title(); ?>">
+                             alt="<?php echo esc_attr(get_the_title()); ?>">
                     <?php endif; ?>
                 </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>

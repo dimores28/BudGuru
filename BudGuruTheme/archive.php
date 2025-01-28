@@ -10,11 +10,23 @@ $categories = get_categories();
             <h1 class="blog__heading h2">Блог</h1>
 
             <div class="blog__filters filters">
-                <a href="#" class="filters__item active" data-category="all">Всі теми</a>
+                <a href="#" 
+                   class="filters__item active" 
+                   data-category="all"
+                   aria-label="<?php _e('Фільтрувати: показати всі теми', 'budguru'); ?>">
+                    <?php _e('Всі теми', 'budguru'); ?>
+                </a>
                 <?php foreach($categories as $category): ?>
                     <a href="#" 
                        class="filters__item" 
-                       data-category="<?php echo $category->term_id; ?>">
+                       data-category="<?php echo $category->term_id; ?>"
+                       aria-label="<?php 
+                           printf(
+                               /* translators: %s: category name */
+                               __('Фільтрувати за категорією: %s', 'budguru'), 
+                               $category->name
+                           ); 
+                       ?>">
                         <?php echo $category->name; ?>
                     </a>
                 <?php endforeach; ?>
@@ -27,15 +39,15 @@ $categories = get_categories();
                         <div class="post__tags">
                         <?php 
                             $post_tags = get_the_tags();
-                        if($post_tags): 
-                            foreach($post_tags as $tag): 
+                            if($post_tags): 
+                                foreach($post_tags as $tag): 
                         ?>
                             <p class="post__tag">
                                 <?php echo $tag->name; ?>
                             </p>
                         <?php 
-                            endforeach;
-                        endif; 
+                                endforeach;
+                            endif; 
                         ?>
                         </div>
                     </div>
@@ -43,18 +55,37 @@ $categories = get_categories();
                     <div class="post__content">
                         <div class="post__date"><?php echo get_the_date('d.m.Y'); ?></div>
                         <h4 class="post__title">
-                            <?php echo wp_trim_words(get_the_title(), 10); ?>
+                            <a href="<?php the_permalink(); ?>" 
+                               aria-label="<?php 
+                                   printf(
+                                       /* translators: %s: post title */
+                                       __('Читати статтю: %s', 'budguru'), 
+                                       get_the_title()
+                                   ); 
+                               ?>">
+                                <?php echo wp_trim_words(get_the_title(), 10); ?>
+                            </a>
                         </h4>
                         <p class="post__text">
                             <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                         </p>
 
-                        <a href="<?php the_permalink(); ?>" class="post__url">Дивитись більше</a>
+                        <a href="<?php the_permalink(); ?>" 
+                           class="post__url"
+                           aria-label="<?php 
+                               printf(
+                                   /* translators: %s: post title */
+                                   __('Читати статтю: %s', 'budguru'), 
+                                   get_the_title()
+                               ); 
+                           ?>">
+                            <?php _e('Дивитись більше', 'budguru'); ?>
+                        </a>
                     </div>
                     <?php if(has_post_thumbnail()): ?>
                         <img src="<?php the_post_thumbnail_url(); ?>" 
                              class="post__image" 
-                             alt="<?php the_title(); ?>">
+                             alt="<?php echo esc_attr(get_the_title()); ?>">
                     <?php endif; ?>
                 </div>
                 <?php endwhile; endif; ?>

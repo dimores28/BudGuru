@@ -65,7 +65,16 @@ if (!empty($projects)): // Перевіряємо чи є проекти
                         </svg>
                     </a>
                     <div class="projects__title">
-                        <?php echo $project['title']; ?>
+                        <a href="<?php echo $project['link']; ?>" 
+                           aria-label="<?php 
+                               printf(
+                                   /* translators: %s: project title */
+                                   __('Переглянути проект: %s', 'budguru'), 
+                                   $project['title']
+                               ); 
+                           ?>">
+                            <?php echo $project['title']; ?>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>

@@ -180,27 +180,35 @@
 
 	<?php echo do_shortcode('[portfolio_section]'); ?>
 
-	<section class="man_hour">
-		<div class="man_hour__container">
-			<h2 class="man_hour__heading h2">
-				<?php echo get_field('section_heading'); ?>
-			</h2>
+	<?php 
+	$section_heading = get_field('section_heading');
+	$text_section = get_field('text_section');
+	$section_img = get_field('section_img');
+	
+	if ($section_heading && $text_section && $section_img): 
+	?>
+		<section class="man_hour">
+			<div class="man_hour__container">
+				<h2 class="man_hour__heading h2">
+					<?php echo $section_heading; ?>
+				</h2>
 
-			<div class="man_hour__content post-content">
-				<div class="man_hour__text-box">
-						<?php echo get_field('text_section'); ?>
-				</div>
+				<div class="man_hour__content post-content">
+					<div class="man_hour__text-box">
+						<?php echo $text_section; ?>
+					</div>
 
-				<div class="man_hour__illustration">
-					<img src="<?php echo get_field('section_img'); ?>" 
-						width="552" 
-						height="598" 
-						alt="<?php echo get_field('section_alt'); ?>"
-					>
+					<div class="man_hour__illustration">
+						<img src="<?php echo $section_img; ?>" 
+							width="552" 
+							height="598" 
+							alt="<?php echo get_field('section_alt'); ?>"
+						>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section> 
+		</section>
+	<?php endif; ?>
 
 	<?php get_template_part('template-parts/sections/info/stages-work'); ?>
 
