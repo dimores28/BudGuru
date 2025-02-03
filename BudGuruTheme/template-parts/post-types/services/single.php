@@ -16,7 +16,81 @@
 
 	<?php get_template_part('template-parts/sections/info/videoplayer'); ?>
 
-	<?php echo do_shortcode('[consultation_section]'); ?>
+	<section class="consultation" id="consultation-section">
+		<div class="consultation__container">
+			<div class="consultation__content">
+				<div class="consultation__head-block">
+					<h3 class="consultation__heading">
+						<?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
+					</h3>
+				</div>
+
+				<div class="consultation__form-wrap">
+					<form class="consultation__form">
+						<div class="consultation__field-wrap">
+							<p class="consultation__text">
+								<?php _e('Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя, вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+							</p>
+
+							<input class="consultation__form-input" 
+								type="text" 
+								id="user-name" 
+								name="user-name" 
+								placeholder="<?php _e('Ваше імʼя', 'budguru'); ?>" 
+								aria-label="<?php _e('Ваше імʼя', 'budguru'); ?>">
+							
+							<input class="consultation__form-input" 
+								type="text" 
+								id="input-phone" 
+								name="phone" 
+								placeholder="<?php _e('Номер телефону', 'budguru'); ?>" 
+								aria-label="<?php _e('Номер телефону', 'budguru'); ?>" />
+
+							<input class="consultation__form-input" 
+								type="text" 
+								id="consultation-package" 
+								name="consultation-package" 
+								placeholder="<?php _e('Пакет', 'budguru'); ?>" 
+								aria-label="<?php _e('Пакет', 'budguru'); ?>" />
+							
+							<textarea class="consultation__form-input consultation__form-textarea" 
+									name="question" 
+									id="input-question" 
+									placeholder="<?php _e('Ваше питання', 'budguru'); ?>" 
+									aria-label="<?php _e('Ваше питання', 'budguru'); ?>"></textarea>
+							
+							<input class="consultation__btn-submit btn" 
+								type="submit" 
+								value="<?php _e('Відправити заявку', 'budguru'); ?>" 
+								aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
+						</div>
+
+						<div class="consultation__form-success form-success">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/smile.webp" 
+								class="form-success__img" 
+								width="120" 
+								height="120" 
+								alt="smile">
+							<div class="form-success__heading">
+								<?php _e('Дякуємо за звернення!', 'budguru'); ?>
+							</div>
+							<p class="form-success__text">
+								<?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+							</p>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="consultation__illustration">
+				<img class="consultation__img" 
+					src="<?php echo get_template_directory_uri(); ?>/assets/img/Rectangle26103829.webp" 
+					width="740" 
+					height="720" 
+					alt="form illustration">
+			</div>
+		</div>
+	</section> 
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); 
         $service_type = get_field('display_option');
@@ -117,19 +191,19 @@
 									<td class="table__cell table__cell--title"><?php _e('Вартість:', 'budguru'); ?></td>
 									<td class="table__cell">
 										<?php echo $prices['vizual']; ?>
-										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
+										<a href="#consultation-section" class="table__link" data-package="<?php _e('Візуальний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
 										<?php echo $prices['tehnical']; ?>
-										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
+										<a href="#consultation-section" class="table__link" data-package="<?php _e('Технічний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
 										<?php echo $prices['everything_considered'] ?? '32$/m2'; ?>
-										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
+										<a href="#consultation-section" class="table__link" data-package="<?php _e('Все враховано', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 									<td class="table__cell">
 										<?php echo $prices['maximum'] ?? '45$/m2'; ?>
-										<a href="#consultation-section" class="table__link"><?php _e('Замовити', 'budguru'); ?></a>
+										<a href="#consultation-section" class="table__link" data-package="<?php _e('Максимальний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
 									</td>
 								</tr>
 

@@ -142,3 +142,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // document.querySelector('.sticker__btn')?.addEventListener('click', function () {
 //    flsModules.popup.open('#popup');
 // });
+
+
+// Функція для обробки вибору пакету
+function initPackageSelector() {
+   // Знаходимо всі посилання з класом table__link
+   const packageLinks = document.querySelectorAll('.table__link');
+   // Знаходимо поле для пакету
+   const packageInput = document.getElementById('consultation-package');
+   
+   if (!packageLinks.length || !packageInput) return;
+
+   // Додаємо обробник для кожного посилання
+   packageLinks.forEach(link => {
+       link.addEventListener('click', function(e) {
+           // Отримуємо значення з data-атрибуту
+           const selectedPackage = this.getAttribute('data-package');
+           // Встановлюємо значення в поле форми
+           packageInput.value = selectedPackage;
+       });
+   });
+}
+
+// Ініціалізуємо при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', initPackageSelector);

@@ -15,19 +15,26 @@ function consultation_form_handler() {
         $name = sanitize_text_field($_POST['user-name']);
         $phone = sanitize_text_field($_POST['phone']);
         $question = sanitize_textarea_field($_POST['question']);
+        $package = sanitize_text_field($_POST['consultation-package']);
 
-        // Формуємо повідомлення
-        $message = sprintf(
-            "📬 *Нова заявка на консультацію*\n\n".
-            "📝 *Ім'я*: %s\n".
-            "📞 *Телефон*: %s\n".
-            "❓ *Питання*: %s\n".
-            "📅 *Отримано*: %s",
-            esc_html($name),
-            esc_html($phone),
-            esc_html($question),
-            date_i18n('d.m.Y H:i')
+        // Формуємо базове повідомлення
+        $message_parts = array(
+            "📬 *Нова заявка на консультацію*\n\n",
+            "📝 *Ім'я*: " . esc_html($name) . "\n",
+            "📞 *Телефон*: " . esc_html($phone) . "\n"
         );
+
+        // Додаємо пакет тільки якщо він вказаний
+        if (!empty($package)) {
+            $message_parts[] = "📦 *Обраний пакет*: " . esc_html($package) . "\n";
+        }
+
+        // Додаємо питання та дату
+        $message_parts[] = "❓ *Питання*: " . esc_html($question) . "\n";
+        $message_parts[] = "📅 *Отримано*: " . date_i18n('d.m.Y H:i');
+
+        // Об'єднуємо всі частини повідомлення
+        $message = implode('', $message_parts);
 
         // Отримуємо параметри Telegram з ACF
         $telegram_bot_token = get_field('token', 'option'); // Поле 'token' у сторінці опцій
@@ -64,9 +71,10 @@ function consultation_form_handler() {
             if ($response_body['ok']) {
                 // Логуємо успішну відправку
                 error_log(sprintf(
-                    'Consultation form sent to Telegram. Name: %s, Phone: %s',
+                    'Consultation form sent to Telegram. Name: %s, Phone: %s, Package: %s',
                     $name,
-                    $phone
+                    $phone,
+                    $package
                 ));
 
                 wp_send_json_success(array(
