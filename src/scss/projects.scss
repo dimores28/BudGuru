@@ -137,6 +137,14 @@
         @media (max-width:$mobile){
             border-radius: 0 0 22px 22px; 
         }
+
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #F9C98C;
+            }
+        }
     }
 }
 

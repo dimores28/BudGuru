@@ -251,6 +251,15 @@
         font-weight: 600;
         line-height: normal;
         letter-spacing: -1px;
+
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #fff;
+            }
+
+        }
     }
 
     // .post__text

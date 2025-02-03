@@ -23,6 +23,7 @@ include_once('inc/functions-modules/contacts.php');
 require_once get_template_directory() . '/inc/ajax/form-handlers-t.php';
 require_once get_template_directory() . '/inc/ajax/calculator-handler-t.php';
 require_once get_template_directory() . '/inc/ajax/calculator-handlers-t.php';
+require_once get_template_directory() . '/inc/ajax/cooperation-handler-t.php';
 
 require_once get_template_directory() . '/inc/functions-modules/partners.php';
 require_once get_template_directory() . '/inc/functions-modules/clients.php';
@@ -198,3 +199,8 @@ function wpturbo_handle_upload_convert_to_webp( $upload ) {
     return $upload;
 }
 //---------------==============================------------------------//
+
+
+// Додаємо обробники для форми співпраці
+add_action('wp_ajax_cooperation_form_handler', 'cooperation_form_handler');
+add_action('wp_ajax_nopriv_cooperation_form_handler', 'cooperation_form_handler');

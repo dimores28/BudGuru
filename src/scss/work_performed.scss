@@ -427,6 +427,14 @@
             color: #f9c98c; 
         }
 
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #F9C98C;
+            }
+        }
+
     }
 
     // .work__bg-img

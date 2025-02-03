@@ -90,8 +90,89 @@ function initConsultationForm() {
     });
 }
 
-// Ініціалізуємо форми при завантаженні сторінки
-document.addEventListener('DOMContentLoaded', initConsultationForm);
+// Функція ініціалізації форми співпраці
+function initCooperationForm() {
+    const cooperationForm = document.querySelector('#cooperation-form');
+    if (!cooperationForm) return;
+
+    const userName = cooperationForm.querySelector('#user-name');
+    const userPhone = cooperationForm.querySelector('#input-phone');
+    const userQuestion = cooperationForm.querySelector('#input-question');
+    const company = cooperationForm.querySelector('#company');
+    const siteUrl = cooperationForm.querySelector('#site-url');
+
+    // Валідація при введенні
+    userName?.addEventListener('input', function() {
+        if (!isValidName(userName.value)) {
+            userName.classList.add('_notvalid');
+        } else {
+            userName.classList.remove('_notvalid');
+        }
+    });
+
+    userPhone?.addEventListener('input', function() {
+        if (!isValidPhone(userPhone.value)) {
+            userPhone.classList.add('_notvalid');
+        } else {
+            userPhone.classList.remove('_notvalid');
+        }
+    });
+
+    // Обробка відправки форми
+    cooperationForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Перевіряємо валідність обов'язкових полів
+        let isValid = 
+            isValidName(userName.value) && 
+            isValidPhone(userPhone.value) && 
+            company.value.trim() !== '' &&
+            userQuestion.value.trim() !== '';
+
+        if (isValid) {
+            cooperationForm.classList.add('_sending');
+
+            try {
+                let formData = new FormData(cooperationForm);
+                formData.append('action', 'cooperation_form_handler');
+                formData.append('nonce', budguruAjax.nonce);
+
+                let response = await fetch(budguruAjax.ajaxurl, {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success) {
+                        cooperationForm.classList.add('success');
+                        cooperationForm.reset();
+                    } else {
+                        console.error('Помилка обробки форми:', result.data.message);
+                    }
+                } else {
+                    console.error('Помилка відправки форми. Статус:', response.status);
+                }
+            } catch (error) {
+                console.error('Помилка:', error);
+            } finally {
+                cooperationForm.classList.remove('_sending');
+            }
+        } else {
+            // Підсвічуємо невалідні поля
+            if (!isValidName(userName.value)) userName.classList.add('_notvalid');
+            if (!isValidPhone(userPhone.value)) userPhone.classList.add('_notvalid');
+            if (company.value.trim() === '') company.classList.add('_notvalid');
+            if (userQuestion.value.trim() === '') userQuestion.classList.add('_notvalid');
+        }
+    });
+}
+
+// Ініціалізуємо форму при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', function() {
+    initConsultationForm();
+    initCooperationForm();
+});
 
 // Обробник кліку по кнопці відкриття попапу
 document.querySelector('.sticker__btn')?.addEventListener('click', function () {
@@ -165,3 +246,5 @@ calculatorForm?.addEventListener('submit', async function(e) {
         if (!isValidPhone(calculatorPhone.value)) calculatorPhone.classList.add('_notvalid');
     }
 });
+
+

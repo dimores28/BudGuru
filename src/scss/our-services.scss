@@ -167,7 +167,16 @@
         @media (max-width:$mobile){
             letter-spacing: -2px;  
         }
+
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #F9C98C;
+            }
+        }
     }
+
 
     // .our-services__big-col
     &__big-col {

@@ -36,7 +36,7 @@
         font-family: "Jost", sans-serif;
         font-weight: 400;
         line-height: 1.6;
-        @include adaptiveValue("margin-bottom", 44, 20);
+        @include adaptiveValue("margin-bottom", 44, 26);
     }
 
     // .about__futured
@@ -55,7 +55,7 @@
         @media (max-width:$mobile){
              position: absolute; 
              left: 0;
-             bottom: 20px;
+             bottom: 0px;
              gap: 10px;
         }
     }

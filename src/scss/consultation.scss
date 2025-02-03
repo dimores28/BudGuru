@@ -312,3 +312,15 @@
         }
     }
 }
+
+.cooperation__form {
+    &.success {
+        .consultation__form-success {
+            display: flex;
+        }
+
+        .consultation__field-wrap {
+            display: none;
+        }
+    }
+}
