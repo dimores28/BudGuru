@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
-// document.querySelector('.sticker__btn')?.addEventListener('click', function () {
-//    flsModules.popup.open('#popup');
-// });
+document.querySelector('.reviews__btn')?.addEventListener('click', function () {
+   flsModules.popup.open('#reviews-popup');
+});
 
 
 // Функція для обробки вибору пакету

@@ -204,3 +204,10 @@ function wpturbo_handle_upload_convert_to_webp( $upload ) {
 // Додаємо обробники для форми співпраці
 add_action('wp_ajax_cooperation_form_handler', 'cooperation_form_handler');
 add_action('wp_ajax_nopriv_cooperation_form_handler', 'cooperation_form_handler');
+
+// Додаємо новий include для обробника відгуків
+require_once get_template_directory() . '/inc/ajax/feedback-handler.php';
+
+// Оновлюємо секцію AJAX дій
+add_action('wp_ajax_feedback_form_handler', 'feedback_form_handler');
+add_action('wp_ajax_nopriv_feedback_form_handler', 'feedback_form_handler');

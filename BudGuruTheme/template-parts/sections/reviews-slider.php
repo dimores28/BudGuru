@@ -5,8 +5,9 @@
                 <span><?php _e('Відгуки', 'budguru'); ?></span> <?php _e('наших клієнтів', 'budguru'); ?>
             </h3>
             <div class="reviews__btn-wrap">
-                <a href="<?php echo esc_url(get_field('review_form_link', 'option')); ?>" 
-                    class="reviews__btn btn"
+                <a href="#feedback" 
+                    data-popup="#feedback"
+                    class="reviews__btn btn popup-link"
                     aria-label="<?php _e('Залишити свій відгук про нашу роботу', 'budguru'); ?>">
                     <?php _e('Опишіть ваші враження', 'budguru'); ?>
                 </a>
@@ -24,7 +25,10 @@
             </div>
         </div>
 
-        <?php if($reviews = get_field('reviews', 'option')): ?>
+        <?php 
+        $reviews = getReviews(6); // Отримуємо 6 останніх відгуків
+        if($reviews): 
+        ?>
             <div class="reviews__slider swiper" 
                  role="region" 
                  aria-label="<?php _e('Слайдер відгуків', 'budguru'); ?>">
@@ -41,43 +45,33 @@
                                  ); 
                              ?>">
                             <div class="review-card">
-                                <?php if($review['rating']): ?>
-                                    <div class="review-card__rating" 
-                                         role="img" 
-                                         aria-label="<?php 
-                                             printf(
-                                                 /* translators: %s: rating value */
-                                                 __('Оцінка: %s з 5', 'budguru'), 
-                                                 $review['rating']
-                                             ); 
-                                         ?>">
-                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/reviews/rating.webp" 
-                                             width="184" 
-                                             height="32" 
-                                             alt=""
-                                        >
-                                    </div>
-                                <?php endif; ?>
+                                <div data-rating="5" 
+                                     data-rating-value="<?php echo esc_attr($review['rating']); ?>" 
+                                     class="rating">
+                                </div>
                                 
                                 <div class="review-card__bio">
                                     <h4 class="review-card__user-name">
-                                        <?php echo esc_html($review['name']); ?>
+                                        <?php echo esc_html($review['title']); ?>
                                     </h4>
 
-                                    <?php if($review['avatar']): ?>
-                                        <img src="<?php echo esc_url($review['avatar']); ?>" 
-                                             class="review-card__avatar" 
-                                             width="60" 
-                                             height="60" 
-                                             alt="<?php 
-                                                 printf(
-                                                     /* translators: %s: reviewer name */
-                                                     __('Фото користувача %s', 'budguru'), 
-                                                     esc_attr($review['name'])
-                                                 ); 
-                                             ?>"
-                                        >
-                                    <?php endif; ?>
+                                    <?php 
+                                    $image_url = $review['photo'] 
+                                        ? esc_url($review['photo'])
+                                        : get_template_directory_uri() . '/assets/img/reviews/avatar.png';
+                                    ?>
+                                    <img src="<?php echo $image_url; ?>" 
+                                         class="review-card__avatar" 
+                                         width="60" 
+                                         height="60" 
+                                         alt="<?php 
+                                             printf(
+                                                 /* translators: %s: reviewer name */
+                                                 __('Фото користувача %s', 'budguru'), 
+                                                 esc_attr($review['title'])
+                                             ); 
+                                         ?>"
+                                    >
                                 </div>
                                 
                                 <div class="review-card__text" 
@@ -85,10 +79,10 @@
                                          printf(
                                              /* translators: %s: reviewer name */
                                              __('Відгук від %s', 'budguru'), 
-                                             esc_attr($review['name'])
+                                             esc_attr($review['title'])
                                          ); 
                                      ?>">
-                                    <?php echo esc_html($review['text']); ?>
+                                    <?php echo esc_html($review['content']); ?>
                                 </div>
                             </div>
                         </div>

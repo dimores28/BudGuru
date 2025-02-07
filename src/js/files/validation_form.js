@@ -2,14 +2,22 @@
 import { flsModules } from './modules.js';
 
 // Функції валідації
-function isValidPhone(p) {
-    const phoneRe = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/g;
-    const digits = p.replace(/\D/g, "");
-    return phoneRe.test(digits);
+function isValidName(name) {
+    return name.length >= 2 && !/\d/.test(name);
 }
 
-function isValidName(value) {
-    return /^[а-яёъыэА-ЯЁЪЫЭіІїЇєЄґҐ\-\s']+$/.test(value);
+function isValidPhone(phone) {
+    const cleanPhone = phone.replace(/[\s()-]/g, '');
+    return cleanPhone.length >= 10 && /^\d+$/.test(cleanPhone);
+}
+
+function isValidReview(review) {
+    return review.trim().length >= 6;
+}
+
+function isValidRating() {
+    const selectedRating = document.querySelector('input[name="rating"]:checked');
+    return selectedRating !== null;
 }
 
 // Функція ініціалізації форми
@@ -168,10 +176,119 @@ function initCooperationForm() {
     });
 }
 
+// Додаємо нову функцію для валідації форми відгуків
+function initFeedbackForm() {
+    const feedbackForm = document.querySelector('#feedback-form');
+    if (!feedbackForm) return;
+
+    const nameField = feedbackForm.querySelector('#name');
+    const phoneField = feedbackForm.querySelector('#phone');
+    const reviewField = feedbackForm.querySelector('#review');
+    const ratingWrapper = feedbackForm.querySelector('[data-rating="set"]');
+    const ratingInput = feedbackForm.querySelector('input[name="rating"]');
+    const fileInput = feedbackForm.querySelector('#photo');
+
+    // Додаємо обробник зміни рейтингу
+    ratingWrapper?.addEventListener('change', function() {
+        const rating = ratingInput.value;
+        this.classList.toggle('_notvalid', !rating || rating === '0');
+    });
+
+    // Валідація при введенні
+    nameField?.addEventListener('input', function() {
+        this.classList.toggle('_notvalid', !isValidName(this.value));
+    });
+
+    phoneField?.addEventListener('input', function() {
+        this.classList.toggle('_notvalid', !isValidPhone(this.value));
+    });
+
+    // Функція перевірки рейтингу
+    const isValidRating = () => {
+        const rating = ratingInput.value;
+        return rating && rating !== '0';
+    };
+
+    // Функція скидання форми
+    const resetForm = () => {
+        feedbackForm.reset();
+        nameField?.classList.remove('_notvalid');
+        phoneField?.classList.remove('_notvalid');
+        reviewField?.classList.remove('_notvalid');
+        ratingWrapper?.classList.remove('_notvalid');
+        if (ratingInput) ratingInput.value = '0';
+    };
+
+    // Обробка відправки форми
+    feedbackForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // Перевірка полів
+        if (!isValidName(nameField.value)) {
+            nameField.classList.add('_notvalid');
+            isValid = false;
+        }
+        if (!isValidPhone(phoneField.value)) {
+            phoneField.classList.add('_notvalid');
+            isValid = false;
+        }
+        if (!isValidReview(reviewField.value)) {
+            reviewField.classList.add('_notvalid');
+            isValid = false;
+        }
+        if (!isValidRating()) {
+            ratingWrapper.classList.add('_notvalid');
+            isValid = false;
+        }
+
+        if (isValid) {
+            feedbackForm.classList.add('_sending');
+            
+            try {
+                const formData = new FormData(feedbackForm);
+                formData.append('action', 'feedback_form_handler');
+                formData.append('nonce', budguruAjax.nonce);
+                
+                if (fileInput.files[0]) {
+                    formData.append('photo', fileInput.files[0]);
+                }
+
+                const response = await fetch(budguruAjax.ajaxurl, {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    feedbackForm.querySelector('.feedback-form__message-success').hidden = false;
+                    resetForm(); // Використовуємо нову функцію для скидання форми
+                    setTimeout(() => {
+                        feedbackForm.querySelector('.feedback-form__message-success').hidden = true;
+                        flsModules.popup.close();
+                    }, 3000);
+                } else {
+                    feedbackForm.querySelector('.feedback-form__message-error').hidden = false;
+                    setTimeout(() => {
+                        feedbackForm.querySelector('.feedback-form__message-error').hidden = true;
+                    }, 3000);
+                }
+            } catch (error) {
+                console.error('Помилка:', error);
+                feedbackForm.querySelector('.feedback-form__message-error').hidden = false;
+            } finally {
+                feedbackForm.classList.remove('_sending');
+            }
+        }
+    });
+}
+
 // Ініціалізуємо форму при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', function() {
     initConsultationForm();
     initCooperationForm();
+    initFeedbackForm();
 });
 
 // Обробник кліку по кнопці відкриття попапу
