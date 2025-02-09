@@ -1,6 +1,6 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
-		<div class="popup__content">
+		<div class="popup__content popup__content--consultation">
 			<button data-close type="button" class="popup__close">
 				<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
@@ -8,7 +8,57 @@
 				</svg>
 			</button>
 			<div class="popup__text">
-				content
+				<section class="consultation">
+					<div class="consultation__container">
+				
+						<div class="consultation__content">
+							<div class="consultation__head-block">
+								<h2 class="consultation__heading">
+									Потрібна <span>консультація спеціаліста?</span>
+								</h2>
+							</div>
+				
+							<div class="consultation__form-wrap">
+								<form class="consultation__form">
+				
+									<div class="consultation__field-wrap">
+										<p class="consultation__text">
+											Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя,
+											вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!
+										</p>
+					
+										<input class="consultation__form-input _notvalid" type="text" id="user-name" name="user-name"
+											placeholder="Ваше імʼя" aria-label="Ваше імʼя">
+										<input class="consultation__form-input _notvalid" type="text" id="input-phone" name="phone"
+											placeholder="Номер телефону" aria-label="Номер телефону" />
+										<textarea class="consultation__form-input consultation__form-textarea _notvalid" name="question" id="input-question"
+											placeholder="Ваше питання" aria-label="Ваше питання"></textarea>
+										<input class="consultation__btn-submit btn" type="submit" value="Відправити заявку"
+											aria-label="Відправити заявку">
+									</div>
+				
+									<div class="consultation__form-success form-success">
+										<img src="@img/smile.png" class="form-success__img" width="120" height="120" alt="smile">
+										<h3 class="form-success__heading">
+											Дякуємо за звернення!
+										</h3>
+										<p class="form-success__text">
+											Наші спеціалісти звʼяжуться з вами найближчим часом!
+										</p>
+									</div>
+								</form>
+				
+								
+							</div>
+				
+						</div>
+				
+						<div class="consultation__illustration">
+							<img class="consultation__img" src="@img/Rectangle26103829.png" width="740" height="720"
+								alt="form illustration">
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>

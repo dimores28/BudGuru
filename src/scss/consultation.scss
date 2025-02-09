@@ -86,6 +86,7 @@
         line-height: 1.1;
         letter-spacing: -3px;
         text-transform: none;
+        transition: opacity 0.3s ease;
 
         @media (max-width:$tablet){
             letter-spacing: -2px;
@@ -323,4 +324,51 @@
             display: none;
         }
     }
+}
+
+.popup__content--consultation {
+    .consultation__illustration {
+        width: 44%;
+
+        @media (max-width:$tablet){
+            display: none;
+        }
+    }
+
+    .consultation__content {
+        width: 56%;
+
+        @media (max-width:$tablet){
+            width: 100%;
+        }
+        
+    }
+
+
+    .consultation {
+        margin: 0;
+        margin-top: 10px;
+
+        @media (max-width:$mobile){
+            margin: 24px -10px 0;
+            padding: 20px 16px;
+        }
+
+
+    }
+
+
+
+
+    .consultation__form-wrap {
+        @media (max-width:$tablet){
+            max-width: 100%;
+        }
+
+        @media (max-width:$mobile){
+            margin-bottom: 0;
+        }
+    }
+
+
 }

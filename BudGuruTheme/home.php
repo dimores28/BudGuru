@@ -39,9 +39,9 @@ Template Name: Home
 
 
         <?php 
-        $section_heading = get_field('section_heading');
-        $text_section = get_field('text_section');
-        $section_img = get_field('section_img');
+            $section_heading = get_field('section_heading');
+            $text_section = get_field('text_section');
+            $section_img = get_field('section_img');
         
         if ($section_heading && $text_section && $section_img): 
         ?>

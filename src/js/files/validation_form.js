@@ -76,8 +76,17 @@ function initConsultationForm() {
                     if (response.ok) {
                         const result = await response.json();
                         if (result.success) {
+                            // Знаходимо найближчу секцію consultation і в ній шукаємо заголовок
+                            const section = consultationForm.closest('.consultation');
+                            const heading = section.querySelector('.consultation__heading');
+                            
+                            if (heading) {
+                                heading.style.opacity = '0';
+                            }
+
                             consultationForm.classList.add('success');
                             consultationForm.reset();
+
                         } else {
                             console.error('Помилка обробки форми:', result.data.message);
                         }

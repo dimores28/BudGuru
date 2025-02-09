@@ -187,7 +187,7 @@
 
 		<div id="popup" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
-				<div class="popup__content">
+				<div class="popup__content popup__content--consultation">
 					<button data-close type="button" class="popup__close">
 						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
@@ -195,72 +195,74 @@
 						</svg>
 					</button>
 					<div class="popup__text">
-						<div class="consultation__container">
-							<div class="consultation__content">
-								<div class="consultation__head-block">
-									<h2 class="consultation__heading">
-										<?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
-									</h2>
+						<section class="consultation">
+							<div class="consultation__container">
+								<div class="consultation__content">
+									<div class="consultation__head-block">
+										<h2 class="consultation__heading">
+											<?php _e('Потрібна', 'budguru'); ?> <span><?php _e('консультація спеціаліста?', 'budguru'); ?></span>
+										</h2>
+									</div>
+	
+									<div class="consultation__form-wrap">
+										<form class="consultation__form">
+											<div class="consultation__field-wrap">
+												<p class="consultation__text">
+													<?php _e('Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя, вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+												</p>
+	
+												<input class="consultation__form-input" 
+													type="text" 
+													id="user-name" 
+													name="user-name" 
+													placeholder="<?php _e('Ваше імʼя', 'budguru'); ?>" 
+													aria-label="<?php _e('Ваше імʼя', 'budguru'); ?>">
+												
+												<input class="consultation__form-input" 
+													type="text" 
+													id="input-phone" 
+													name="phone" 
+													placeholder="<?php _e('Номер телефону', 'budguru'); ?>" 
+													aria-label="<?php _e('Номер телефону', 'budguru'); ?>" />
+												
+												<textarea class="consultation__form-input consultation__form-textarea" 
+														name="question" 
+														id="input-question" 
+														placeholder="<?php _e('Ваше питання', 'budguru'); ?>" 
+														aria-label="<?php _e('Ваше питання', 'budguru'); ?>"></textarea>
+												
+												<input class="consultation__btn-submit btn" 
+													type="submit" 
+													value="<?php _e('Відправити заявку', 'budguru'); ?>" 
+													aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
+											</div>
+	
+											<div class="consultation__form-success form-success">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/img/smile.webp" 
+													class="form-success__img" 
+													width="120" 
+													height="120" 
+													alt="smile">
+												<h3 class="form-success__heading">
+													<?php _e('Дякуємо за звернення!', 'budguru'); ?>
+												</h3>
+												<p class="form-success__text">
+													<?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
+												</p>
+											</div>
+										</form>
+									</div>
 								</div>
-
-								<div class="consultation__form-wrap">
-									<form class="consultation__form">
-										<div class="consultation__field-wrap">
-											<p class="consultation__text">
-												<?php _e('Якщо вам потрібна консультація спеціаліста по ремонту чи дизайну чи у вас є будь-які запитанняя, вкажіть їх у формі нижче і наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
-											</p>
-
-											<input class="consultation__form-input" 
-												type="text" 
-												id="user-name" 
-												name="user-name" 
-												placeholder="<?php _e('Ваше імʼя', 'budguru'); ?>" 
-												aria-label="<?php _e('Ваше імʼя', 'budguru'); ?>">
-											
-											<input class="consultation__form-input" 
-												type="text" 
-												id="input-phone" 
-												name="phone" 
-												placeholder="<?php _e('Номер телефону', 'budguru'); ?>" 
-												aria-label="<?php _e('Номер телефону', 'budguru'); ?>" />
-											
-											<textarea class="consultation__form-input consultation__form-textarea" 
-													name="question" 
-													id="input-question" 
-													placeholder="<?php _e('Ваше питання', 'budguru'); ?>" 
-													aria-label="<?php _e('Ваше питання', 'budguru'); ?>"></textarea>
-											
-											<input class="consultation__btn-submit btn" 
-												type="submit" 
-												value="<?php _e('Відправити заявку', 'budguru'); ?>" 
-												aria-label="<?php _e('Відправити заявку', 'budguru'); ?>">
-										</div>
-
-										<div class="consultation__form-success form-success">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/smile.webp" 
-												class="form-success__img" 
-												width="120" 
-												height="120" 
-												alt="smile">
-											<h3 class="form-success__heading">
-												<?php _e('Дякуємо за звернення!', 'budguru'); ?>
-											</h3>
-											<p class="form-success__text">
-												<?php _e('Наші спеціалісти звʼяжуться з вами найближчим часом!', 'budguru'); ?>
-											</p>
-										</div>
-									</form>
+	
+								<div class="consultation__illustration">
+									<img class="consultation__img" 
+										src="<?php echo get_template_directory_uri(); ?>/assets/img/Rectangle26103829.webp" 
+										width="740" 
+										height="720" 
+										alt="form illustration">
 								</div>
 							</div>
-
-							<div class="consultation__illustration">
-								<img class="consultation__img" 
-									src="<?php echo get_template_directory_uri(); ?>/assets/img/Rectangle26103829.webp" 
-									width="740" 
-									height="720" 
-									alt="form illustration">
-							</div>
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>
@@ -282,7 +284,15 @@
 								<h3 class="feedback__title"><?php _e('Залиште свій відгук', 'budguru'); ?></h3>
 								<p class="feedback__subtitle"><?php _e('Наш менеджер зв\'яжеться з вами найближчим часом для обговорення завдань.', 'budguru'); ?></p>
 								<div class="feedback__image-container">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/feadback.webp" width="465" height="478" alt="Залишити відгук" class="feedback__image">
+									<?php 
+									$custom_logo_id = get_theme_mod('custom_logo');
+									$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+									?>
+									<img src="<?php echo esc_url($logo[0]); ?>" 
+										 width="<?php echo esc_attr($logo[1]); ?>" 
+										 height="<?php echo esc_attr($logo[2]); ?>" 
+										 alt="<?php echo esc_attr(get_bloginfo('name')); ?>" 
+										 class="feedback__image"> 
 								</div>
 							</div>
 
@@ -341,7 +351,7 @@
 								<button type="submit" class="feedback-form__submit btn"><?php _e('Надіслати відгук', 'budguru'); ?></button>
 								<p class="feedback-form__agreement">
 									<?php _e('Натискаючи на кнопку, ви погоджуєтесь з умовами', 'budguru'); ?>
-									<a href="#"><?php _e('політики обробки персональних даних', 'budguru'); ?></a>
+									<a href="/privacy-policy/"><?php _e('політики обробки персональних даних', 'budguru'); ?></a>
 								</p>
 
 

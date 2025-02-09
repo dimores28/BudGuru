@@ -12,14 +12,15 @@ if(have_rows('faq_question')):
                 <div data-spollers 
                      data-one-spoller 
                      class="faq__spollers spollers"
-                     role="list">
+                     role="region"
+                     aria-label="<?php _e('Часті запитання', 'budguru'); ?>">
                     <?php
                     while(have_rows('faq_question')): the_row();
                         $question = get_sub_field('question');
                         $answer = get_sub_field('answer');
                     ?>
-                        <details class="spollers__item" role="listitem">
-                            <summary class="spollers__title">
+                        <details class="spollers__item">
+                            <summary class="spollers__title" role="button">
                                 <?php echo esc_html($question); ?>
                             </summary>
                             <div class="spollers__body">
