@@ -344,6 +344,27 @@
         span {
             font-weight: 400;
         }
+
+        &-main {
+            display: block;
+            font-size: 36px;
+            @include adaptiveValue("font-size", 30, 22);
+            font-weight: 600;
+        }
+
+        &-sub {
+            font-size: 36px;
+            @include adaptiveValue("font-size", 30, 22);
+            font-weight: 400;
+        }
+
+        &-accent {
+            color: #f9c98c;
+            font-size: 36px;
+            @include adaptiveValue("font-size", 30, 22);
+            font-weight: 500;
+            background: transparent;
+        }
     }
 
     // .sticker__btn
@@ -617,4 +638,18 @@
     &::after {
         transform: translateY(-50%) rotate(225deg);
     }
+}
+
+.sticker__heading-main {
+    display: block;
+    font-size: 1.2em;
+}
+
+.sticker__heading-sub {
+    font-size: 1em;
+}
+
+.sticker__heading-accent {
+    font-size: 1em;
+    background: transparent;
 }

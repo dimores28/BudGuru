@@ -107,9 +107,9 @@
                 </div>
 
                 <h3 class="sticker__heading">
-                    <?php _e('Замовте ремонт під ключ', 'budguru'); ?> 
-                    <span><?php _e('та отримайте', 'budguru'); ?></span> 
-                    <mark><?php _e('дизайн проект у подарунок', 'budguru'); ?></mark>
+                    <span class="sticker__heading-main"><?php _e('Замовте ремонт під ключ', 'budguru'); ?></span>
+                    <span class="sticker__heading-sub"><?php _e('та отримайте', 'budguru'); ?></span> 
+                    <mark class="sticker__heading-accent"><?php _e('дизайн проект у подарунок', 'budguru'); ?></mark>
                 </h3>
 
                 <button  class="sticker__btn btn">

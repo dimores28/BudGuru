@@ -20,7 +20,7 @@
 						$custom_logo_id = get_theme_mod('custom_logo');
 						$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 						if ($logo) {
-							echo '<a href="' . esc_url(home_url('/')) . '" class="header__logo-link" rel="home" aria-label="' . esc_attr(get_bloginfo('name')) . ' - На головну">';
+							echo '<a href="' . esc_url(home_url('/')) . '" class="header__logo" rel="home" aria-label="' . esc_attr(get_bloginfo('name')) . ' - На головну">';
 							echo '<img src="' . esc_url($logo[0]) . '" alt="' . esc_attr(get_bloginfo('name')) . ' - логотип">';
 							echo '</a>';
 						}
