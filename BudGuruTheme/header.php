@@ -44,12 +44,12 @@
 					<?php
 						class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 							public function start_lvl(&$output, $depth = 0, $args = null) {
-								if ($depth >= 1) return; // Забороняємо більше 2 рівнів вкладеності
+								if ($depth >= 2) return; // Забороняємо більше 3 рівнів вкладеності
 								$output .= '<ul class="sub-menu">';
 							}
 
 							public function end_lvl(&$output, $depth = 0, $args = null) {
-								if ($depth >= 1) return;
+								if ($depth >= 2) return;
 								$output .= '</ul>';
 							}
 

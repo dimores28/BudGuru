@@ -43,10 +43,10 @@
 		}
 
 		@media (max-width:$mobile){
-			 width: 180px; 
+			 width: 260px; 
 			 border-radius: 0;
 			 height: auto;
-			 padding: toRem(64) toRem(0) toRem(15) toRem(0);
+			 padding: toRem(70) toRem(0) toRem(15) toRem(0);
 			 border-bottom-left-radius: 20px;
 		}
 	}
@@ -142,13 +142,34 @@
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		top: 10px;
+		top: 12px;
 		left: 0;
 		display: none;
 		
 		padding-top: 16px;
 		padding-bottom: 16px;
 		transition: all 0.3s ease-in;
+
+		.menu__item{
+			@media (max-width:$mobile){
+				padding: 5px 10px; 
+			}
+		}
+
+		// Стилі для підменю третього рівня
+		.sub-menu {
+			left: 100%;
+			top: 0;
+			width: 100%;
+			background: #FFF2E1;
+			
+			@media (max-width: 1200px) {
+				left: 20px;
+				width: calc(100% - 20px);
+				padding-left: 10px;
+				background: rgba(249, 201, 140, 0.1);
+			}
+		}
 
 		@media (max-width: 1200px) {
 			position: relative;
@@ -171,7 +192,7 @@
 
 	.menu-item {
 		width: 100%;
-		min-width: 144px;
+		min-width: 164px;
 		a {
 			padding: 8px 12px;
 			display: block;
@@ -210,9 +231,20 @@
 	}
 
 	@media (min-width:toEm(1199)){
-		.menu__item:hover .sub-menu,
+		.menu__item:hover > .sub-menu,
+		.menu-item:hover > .sub-menu,
 		.sub-menu:hover {
 			display: block;
+		}
+
+		.sub-menu .menu__item a {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		.sub-menu .menu__item a .dropdown-nav-toggle {
+			margin-bottom: 4px;
 		}
 	}
 
@@ -225,7 +257,7 @@
 		transition: all 0.3s ease-in;
 	}
 
-	.menu__item:hover .dropdown-nav-toggle {
+	.menu__link:hover > .dropdown-nav-toggle {
 		transform: rotate(180deg);
 		transform-origin: center;
 	}
