@@ -45,7 +45,8 @@ Template Name: Reviews
         echo do_shortcode($shortcode);
     ?>
 
-
+    <?php get_template_part('template-parts/sections/reviews-slider'); ?>
+    
     <?php echo do_shortcode('[consultation_section]'); ?>
 </main>
 
