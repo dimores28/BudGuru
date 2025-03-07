@@ -9,7 +9,8 @@
         </div>
         
         <?php 
-            $services = getServices();
+            // Отримуємо тільки послуги верхнього рівня (з parent=0)
+            $services = getServices(0);
             $total_services = count($services);
 
             for($i = 0; $i < $total_services; $i += 2): 
@@ -44,6 +45,9 @@
                                         ); 
                                     ?>">
                                     <?php echo $services[$i]['title']; ?>
+                                    <?php if($services[$i]['has_children']): ?>
+                                        <span class="service-has-children"></span>
+                                    <?php endif; ?>
                                 </a>
                             </h3>
                         </div>
@@ -77,6 +81,9 @@
                                             ); 
                                         ?>">
                                         <?php echo $services[$i + 1]['title']; ?>
+                                        <?php if($services[$i + 1]['has_children']): ?>
+                                            <span class="service-has-children"></span>
+                                        <?php endif; ?>
                                     </a>
                                 </h3>
                                 <a href="<?php echo $services[$i + 1]['link']; ?>" 

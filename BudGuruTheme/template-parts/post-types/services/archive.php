@@ -18,7 +18,7 @@
 
         <?php echo do_shortcode('[consultation_section]'); ?>
 
-        <?php echo do_shortcode('[services_section]'); ?>
+        <?php echo do_shortcode('[services_section parent="0"]'); ?>
 
         <?php get_template_part('template-parts/sections/info/why-us'); ?>
 
