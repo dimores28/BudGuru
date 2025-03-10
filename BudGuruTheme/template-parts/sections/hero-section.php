@@ -82,21 +82,29 @@
             </a>
 
             <ul class="hero__social">
+                <?php if (get_field('whatsapp', 'option')): ?>
                 <li class="hero__social_item">
-                    <a href="<?echo get_field('whatsapp', 'option'); ?>" class="hero__social_link">
+                    <a href="<?php echo get_field('whatsapp', 'option'); ?>" class="hero__social_link">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/whatsapp-icon.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                     </a>
                 </li>
+                <?php endif; ?>
+                
+                <?php if (get_field('telegram', 'option')): ?>
                 <li class="hero__social_item">
-                    <a href="<?echo get_field('telegram', 'option'); ?>" class="hero__social_link">
+                    <a href="<?php echo get_field('telegram', 'option'); ?>" class="hero__social_link">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/telegram.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                     </a>
                 </li>
+                <?php endif; ?>
+                
+                <?php if (get_field('viber', 'option')): ?>
                 <li class="hero__social_item">
-                    <a href="<?echo get_field('viber', 'option'); ?>" class="hero__social_link">
+                    <a href="<?php echo get_field('viber', 'option'); ?>" class="hero__social_link">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/viber.webp" width="32" height="32" class="hero__social_icon" alt="Image">
                     </a>
                 </li>
+                <?php endif; ?>
             </ul>
         </div>
 
