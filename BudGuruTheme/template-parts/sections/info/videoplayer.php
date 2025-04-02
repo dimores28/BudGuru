@@ -1,8 +1,11 @@
+<?php
+$video_url = get_field('video_url', 'option');
+
+// Додаємо перевірку на наявність посилання
+if (!empty(trim($video_url))) : ?>
 <section class="videoplayer">
     <div class="videoplayer__container">
         <?php 
-        $video_url = get_field('video_url', 'option');
-        
         // Перевіряємо чи це YouTube URL
         if (preg_match('/^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)/', $video_url)) {
             // Отримуємо ID відео з URL
@@ -83,4 +86,5 @@
             height: 100%;
         }
     </style>
-</section> 
+</section>
+<?php endif; ?> 

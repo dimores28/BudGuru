@@ -70,10 +70,18 @@ Template Name: Prices
                         <thead class="table__header">
                             <tr class="table__row">
                                 <th class="table__head table__head--packages"><?php _e('Пакети', 'budguru'); ?></th>
-                                <th class="table__head table__head--visual"><?php _e('Візуальний', 'budguru'); ?></th>
-                                <th class="table__head table__head--technical"><?php _e('Технічний', 'budguru'); ?></th>
-                                <th class="table__head table__head--all-included"><?php _e('Все враховано', 'budguru'); ?></th>
-                                <th class="table__head table__head--maximum"><?php _e('Максимальний', 'budguru'); ?></th>
+                                <?php 
+                                if($prices['columns']): 
+                                    foreach($prices['columns'] as $key => $column): 
+                                        $column_class = ($key === 2) ? 'table__head--all-included' : 'table__head--technical';
+                                    ?>
+                                        <th class="table__head <?php echo $column_class; ?>">
+                                            <?php echo $column['column_name']; ?>
+                                        </th>
+                                    <?php 
+                                    endforeach;
+                                endif; 
+                                ?>
                             </tr>
                         </thead>
                         <tbody class="table__body">
@@ -82,65 +90,40 @@ Template Name: Prices
                                     if($row['empty_row']): ?>
                                         <tr class="table__row table__row-divider">
                                             <td class="table__cell table__cell--title"><?php echo $row['row_name']; ?></td>
-                                            <td class="table__cell"></td>
-                                            <td class="table__cell"></td>
-                                            <td class="table__cell"></td>
-                                            <td class="table__cell"></td>
+                                            <?php 
+                                            if($prices['columns']): 
+                                                foreach($prices['columns'] as $column): ?>
+                                                    <td class="table__cell"></td>
+                                                <?php 
+                                                endforeach;
+                                            endif; 
+                                            ?>
                                         </tr>
                                     <?php else: ?>
                                         <tr class="table__row">
                                             <td class="table__cell table__cell--title"><?php echo $row['row_name']; ?></td>
                                             
-                                            <td class="table__cell">
-                                                <?php if(!$row['visual_option']): ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-                                                    </svg>
-                                                <?php else: ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-                                                        <path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-                                                    </svg>
-                                                <?php endif; ?>
-                                            </td>
-                                            
-                                            <td class="table__cell">
-                                                <?php if(!$row['tehnical_option']): ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-                                                    </svg>
-                                                <?php else: ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-                                                        <path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-                                                    </svg>
-                                                <?php endif; ?>
-                                            </td>
-                                            
-                                            <td class="table__cell">
-                                                <?php if(!$row['all_option']): ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-                                                    </svg>
-                                                <?php else: ?>
-                                                    <svg width="36" height="37" viewBox="0 0 36 37" style="background: #1E1E1E;" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M31.5059 10.6384L13.5059 28.6384L5.25586 20.3884L7.37086 18.2734L13.5059 24.3934L29.3909 8.52344L31.5059 10.6384Z" fill="white" />
-                                                    </svg>
-                                                <?php endif; ?>
-                                            </td>
-                                            
-                                            <td class="table__cell">
-                                                <?php if(!$row['max_option']): ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
-                                                    </svg>
-                                                <?php else: ?>
-                                                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
-                                                        <path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
-                                                    </svg>
-                                                <?php endif; ?>
-                                            </td>
+                                            <?php 
+                                            if($prices['columns']): 
+                                                foreach($prices['columns'] as $key => $column): 
+                                                    $option_value = $row['column_options'][$key]['option_enabled'] ?? false;
+                                                    ?>
+                                                    <td class="table__cell">
+                                                        <?php if(!$option_value): ?>
+                                                            <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="0.507812" y="0.640625" width="37" height="37" stroke="white" />
+                                                            </svg>
+                                                        <?php else: ?>
+                                                            <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect x="0.0078125" y="0.140625" width="38" height="38" fill="white" />
+                                                                <path d="M32.5059 11.6384L14.5059 29.6384L6.25586 21.3884L8.37086 19.2734L14.5059 25.3934L30.3909 9.52344L32.5059 11.6384Z" fill="#1E1E1E" />
+                                                            </svg>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                <?php 
+                                                endforeach;
+                                            endif; 
+                                            ?>
                                         </tr>
                                     <?php endif;
                                 endforeach;
@@ -148,24 +131,25 @@ Template Name: Prices
 
                             <tr class="table__row table__row-divider table__row-last">
                                 <td class="table__cell table__cell--title"><?php _e('Вартість:', 'budguru'); ?></td>
-                                <td class="table__cell">
-                                    <?php echo $prices['vizual']; ?>
-                                    <a href="#consultation-section" class="table__link" data-package="<?php _e('Візуальний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
-                                </td>
-                                <td class="table__cell">
-                                    <?php echo $prices['tehnical']; ?>
-                                    <a href="#consultation-section" class="table__link" data-package="<?php _e('Технічний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
-                                </td>
-                                <td class="table__cell">
-                                    <?php echo $prices['everything_considered'] ?? '32$/m2'; ?>
-                                    <a href="#consultation-section" class="table__link" data-package="<?php _e('Все враховано', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
-                                </td>
-                                <td class="table__cell">
-                                    <?php echo $prices['maximum'] ?? '45$/m2'; ?>
-                                    <a href="#consultation-section" class="table__link" data-package="<?php _e('Максимальний', 'budguru'); ?>" aria-label="<?php _e('Замовити', 'budguru'); ?>"><?php _e('Замовити', 'budguru'); ?></a>
-                                </td>
+                                <?php 
+                                if($prices['columns']): 
+                                    foreach($prices['columns'] as $column): ?>
+                                        <td class="table__cell">
+                                            <p class="table__price">
+                                                <?php echo $column['price']; ?>
+                                            </p>
+                                            <a href="#consultation-section" 
+                                                class="table__link" 
+                                                data-package="<?php echo $column['column_name']; ?>" 
+                                                aria-label="<?php _e('Замовити', 'budguru'); ?>">
+                                                <?php _e('Замовити', 'budguru'); ?>
+                                            </a>
+                                        </td>
+                                    <?php 
+                                    endforeach;
+                                endif; 
+                                ?>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
